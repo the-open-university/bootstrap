@@ -2,7 +2,7 @@
 
 OU ICE is a set of design patterns, components and templates so we can provide our students with a consistent user experience.
 
-It is a part of the same family of work as the design used for the OU public website but is more tailored to the requirements of our students and their study journey. This is the fourth version of the framework (v4). It is an evolution from the previous versions of the OU ICE framework but is mostly backwards-compatible.
+It is a part of the same family of work as the design used for the OU public website but is more tailored to the requirements of our students and their study journey. This is the fifth version of the framework (v5).
 
 To get started, check out <http://the-open-university.github.io/ouice/>!
 
