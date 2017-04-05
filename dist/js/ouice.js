@@ -1,5 +1,5 @@
 /*!
- * OUICE v3.3.7 (http://the-open-university.github.io/ouice)
+ * OU ICE v3.3.7 (http://the-open-university.github.io/ouice)
  * Copyright 2011-2017 The Open University
  * Licensed under the MIT license
  */
