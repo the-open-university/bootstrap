@@ -41,7 +41,7 @@ module.exports = function (grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
-            ' * OUICE v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * OU ICE v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under the <%= pkg.license %> license\n' +
             ' */\n',
@@ -153,6 +153,13 @@ module.exports = function (grunt) {
     },
 
     less: {
+      compileBootstrap: {
+        options: {
+          strictMath: true
+        },
+        src: 'less/bootstrap.less',
+        dest: 'dist/css/bootstrap.css'
+      },
       compileCore: {
         options: {
           strictMath: true,
@@ -161,9 +168,10 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= pkg.name %>.css.map',
           sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
         },
-        src: 'less/ouice.less',
+        src: 'less/<%= pkg.name %>.less',
         dest: 'dist/css/<%= pkg.name %>.css'
-      }/*,
+      }
+      /*,
 
       // Removed theme compilation to simplify dist files. - JB
 
@@ -478,7 +486,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify:core', 'commonjs']);
 
   // CSS distribution task.
-  grunt.registerTask('less-compile', ['less:compileCore'/*, 'less:compileTheme'*/]);
+  grunt.registerTask('less-compile', ['less:compileBootstrap', 'less:compileCore'/*, 'less:compileTheme'*/]);
   grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core'/*, 'autoprefixer:theme'*/, 'csscomb:dist', 'cssmin:minifyCore'/*, 'cssmin:minifyTheme'*/]);
 
   // Full distribution task.

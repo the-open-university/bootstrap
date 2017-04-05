@@ -1,0 +1,11 @@
+
+// Namespace all styles
+.ouice-bs {
+	/*
+	Import pre-compiled core bootstrap so that prefixing works correctly, see https://github.com/less/less.js/issues/2052#issuecomment-45681469 for an
+	explanation of the issues surrounding Bootstrap and LESS's "Parent Selectors"
+	and namespacing.
+	*/
+
+	@import (less) "../dist/css/bootstrap.css";
+}
