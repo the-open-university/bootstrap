@@ -249,11 +249,11 @@ module.exports = function (grunt) {
       minifyCore: {
         src: 'dist/css/<%= pkg.name %>.css',
         dest: 'dist/css/<%= pkg.name %>.min.css'
-      }/*,
+      },/*
       minifyTheme: {
         src: 'dist/css/<%= pkg.name %>-theme.css',
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
-      }*/,
+      },*/
       docs: {
         src: [
           'docs/assets/css/ie10-viewport-bug-workaround.css',
