@@ -1,6 +1,6 @@
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * OU ICE v3.3.7 (http://the-open-university.github.io/ouice)
+ * Copyright 2011-2017 The Open University
  * Licensed under the MIT license
  */
 
