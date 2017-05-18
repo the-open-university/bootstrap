@@ -6,15 +6,34 @@
 // Base class
 .well {
   min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
+  padding: @grid-gutter-width;
+  margin-bottom: @grid-gutter-width;
   background-color: @well-bg;
-  border: 1px solid @well-border;
-  border-radius: @border-radius-base;
-  .box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+  //border: 1px solid @well-border;
+  //border-radius: @border-radius-base;
+  //.box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+
+  p {
+    margin-bottom: 0;
+  }
+
   blockquote {
     border-color: #ddd;
     border-color: rgba(0,0,0,.15);
+  }
+
+  &.bg-black,
+  &.bg-dark-grey,
+  &.bg-red,
+  &.bg-pink,
+  &.bg-dark-blue,
+  &.bg-purple,
+  &.bg-orange,
+  &.bg-burgundy,
+  &.bg-dark-green,
+  &.bg-green,
+  &.bg-blue {
+    color: #fff;
   }
 }
 

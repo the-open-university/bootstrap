@@ -31,16 +31,15 @@ th {
       > th,
       > td {
         padding: @table-cell-padding;
-        line-height: @line-height-base;
+        //line-height: @line-height-base;
         vertical-align: top;
-        border-top: 1px solid @table-border-color;
+        border: 1px solid @table-border-color;
       }
     }
   }
   // Bottom align for column headings
   > thead > tr > th {
     vertical-align: bottom;
-    border-bottom: 2px solid @table-border-color;
   }
   // Remove top border from thead by default
   > caption + thead,
@@ -49,7 +48,7 @@ th {
     > tr:first-child {
       > th,
       > td {
-        border-top: 0;
+
       }
     }
   }
@@ -111,7 +110,7 @@ th {
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
 .table-striped {
-  > tbody > tr:nth-of-type(odd) {
+  > tbody > tr:nth-of-type(even) {
     background-color: @table-bg-accent;
   }
 }

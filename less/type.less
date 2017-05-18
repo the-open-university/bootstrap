@@ -24,8 +24,8 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: @line-height-computed;
-  margin-bottom: (@line-height-computed / 2);
+  margin-top: 0;
+  margin-bottom: @grid-gutter-width;
 
   small,
   .small {
@@ -35,8 +35,8 @@ h3, .h3 {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: (@line-height-computed / 2);
-  margin-bottom: (@line-height-computed / 2);
+  margin-top: 0;
+  margin-bottom: @grid-gutter-width;
 
   small,
   .small {
@@ -61,13 +61,13 @@ p {
 
 .lead {
   margin-bottom: @line-height-computed;
-  font-size: floor((@font-size-base * 1.15));
+  font-size: 17px;
   font-weight: 300;
   line-height: 1.4;
 
-  @media (min-width: @screen-sm-min) {
-    font-size: (@font-size-base * 1.5);
-  }
+  // @media (min-width: @screen-sm-min) {
+  //   font-size: (@font-size-base * 1.5);
+  // }
 }
 
 
@@ -171,6 +171,11 @@ ol {
 .list-unstyled {
   padding-left: 0;
   list-style: none;
+
+  ul {
+    list-style: none;
+    padding-left: 30px;
+  }
 }
 
 // Inline turns list items into inline-block
@@ -185,6 +190,32 @@ ol {
   }
 }
 
+// Arrows turns list style into arrows
+.list-arrows {
+  padding-left: 15px;
+
+  li {
+    position: relative;
+    list-style: none;
+    list-style-type: none;
+    margin-left: 0;
+
+    &:before {
+      display: inline-block;
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 5px solid #999;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      position: absolute;
+      top: 6px;
+      left: -15px;
+    }
+  }
+}
+
 // Description Lists
 dl {
   margin-top: 0; // Remove browser default
@@ -196,9 +227,11 @@ dd {
 }
 dt {
   font-weight: bold;
+  margin-bottom: 8px;
 }
 dd {
   margin-left: 0; // Undo browser default
+  margin-bottom: 15px;
 }
 
 // Horizontal description lists
@@ -216,7 +249,7 @@ dd {
       float: left;
       width: (@dl-horizontal-offset - 20);
       clear: left;
-      text-align: right;
+      text-align: left;
       .text-overflow();
     }
     dd {
@@ -243,16 +276,58 @@ abbr[data-original-title] {
 
 // Blockquotes
 blockquote {
-  padding: (@line-height-computed / 2) @line-height-computed;
+  background-color: #333;
+  padding: 30px 30px 35px 90px;
   margin: 0 0 @line-height-computed;
   font-size: @blockquote-font-size;
-  border-left: 5px solid @blockquote-border-color;
+  color: #fff;
+  position: relative;
+  .retina('../images/icons/icon-quotemarks.png', 2, 51px 42px, 25px 32px no-repeat #333);
+
+  &.bg-white,
+  &.bg-grey,
+  &.bg-light-green,
+  &.bg-turquoise,
+  &.bg-light-blue,
+  &.bg-yellow,
+  &.bg-beige,
+  &.bg-light-grey {
+    color: #000;
+
+    .btn {
+      color: #fff;
+    }
+  }
+
+  .pull-right {
+    margin: 0 0 15px 25px;
+  }
+
+  .pull-left {
+    margin: 0 25px 15px 0;
+  }
 
   p,
   ul,
   ol {
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 9px 12px;
+    font-size: 13px;
+    font-weight: normal;
+    color: inherit;
+
+    &:hover {
+      background-color: #000000;
     }
   }
 
@@ -265,9 +340,20 @@ blockquote {
     font-size: 80%; // back to default font-size
     line-height: @line-height-base;
     color: @blockquote-small-color;
+    opacity: 0.7;
+    font-style: normal;
+
+    cite {
+      font-style: inherit;
+    }
+
+    a {
+      color: #000;
+      text-decoration: underline;
+    }
 
     &:before {
-      content: '\2014 \00A0'; // em dash, nbsp
+      //content: '\2014 \00A0'; // em dash, nbsp
     }
   }
 }

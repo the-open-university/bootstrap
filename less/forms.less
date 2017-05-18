@@ -22,11 +22,11 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: @line-height-computed;
-  font-size: (@font-size-base * 1.5);
+  font-size: (@font-size-base * 1.15);
   line-height: inherit;
   color: @legend-color;
   border: 0;
-  border-bottom: 1px solid @legend-border-color;
+  font-weight: bold;
 }
 
 label {
@@ -34,6 +34,10 @@ label {
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
   margin-bottom: 5px;
   font-weight: bold;
+
+  fieldset[disabled] & {
+    color: #999;
+  }
 }
 
 
@@ -115,9 +119,8 @@ output {
   display: block;
   width: 100%;
   height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: @padding-base-vertical @padding-base-horizontal;
+  padding: 9px 10px;
   font-size: @font-size-base;
-  line-height: @line-height-base;
   color: @input-color;
   background-color: @input-bg;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
@@ -146,6 +149,7 @@ output {
   &[disabled],
   &[readonly],
   fieldset[disabled] & {
+    color: #999;
     background-color: @input-bg-disabled;
     opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
   }
@@ -154,11 +158,11 @@ output {
   fieldset[disabled] & {
     cursor: @cursor-disabled;
   }
+}
 
-  // Reset height for `textarea`s
-  textarea& {
-    height: auto;
-  }
+// Reset height for `textarea`s
+textarea.form-control {
+  height: auto;
 }
 
 
@@ -212,6 +216,15 @@ input[type="search"] {
 
 .form-group {
   margin-bottom: @form-group-margin-bottom;
+
+  &.required {
+    > label {
+      &:after {
+        content:" *";
+        color:red;
+      }
+    }
+  }
 }
 
 
@@ -244,7 +257,9 @@ input[type="search"] {
 }
 
 .radio + .radio,
-.checkbox + .checkbox {
+.checkbox + .checkbox,
+legend + .checkbox,
+legend + .radio {
   margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
 }
 
@@ -454,8 +469,8 @@ input[type="checkbox"] {
 
 .help-block {
   display: block; // account for any element using help-block
-  margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  font-size: 13px;
   color: lighten(@text-color, 25%); // lighten the text some for contrast
 }
 
@@ -479,7 +494,14 @@ input[type="checkbox"] {
     .form-group {
       display: inline-block;
       margin-bottom: 0;
-      vertical-align: middle;
+
+      // Align elements to the bottom so that inputs and buttons line up
+      vertical-align: bottom;
+
+      // Force the labels to appear above the inputs
+      > label {
+        display: block;
+      }
     }
 
     // In navbar-form, allow folks to *not* use `.form-group`
@@ -576,7 +598,7 @@ input[type="checkbox"] {
   // labels on narrow viewports stack the same as a default form example.
   @media (min-width: @screen-sm-min) {
     .control-label {
-      text-align: right;
+      text-align: left;
       margin-bottom: 0;
       padding-top: (@padding-base-vertical + 1); // Default padding plus a border
     }

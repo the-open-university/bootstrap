@@ -1,9 +1,13 @@
 .media {
+  border-bottom: 1px solid #ddd;
   // Proper spacing between instances of .media
-  margin-top: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 
-  &:first-child {
-    margin-top: 0;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -28,12 +32,12 @@
 
 .media-right,
 .media > .pull-right {
-  padding-left: 10px;
+  padding-left: @grid-gutter-width;
 }
 
 .media-left,
 .media > .pull-left {
-  padding-right: 10px;
+  padding-right: @grid-gutter-width;
 }
 
 .media-left,
@@ -55,6 +59,10 @@
 .media-heading {
   margin-top: 0;
   margin-bottom: 5px;
+
+  a {
+    display: block;
+  }
 }
 
 // Media list variation
@@ -63,4 +71,67 @@
 .media-list {
   padding-left: 0;
   list-style: none;
+}
+
+// Set some implicit image sizes
+.media {
+  .media-left {
+    img {
+      width: 140px;
+    }
+  }
+
+  &.media-lg {
+    .media-left {
+      img {
+        width: 180px;
+      }
+    }
+  }
+
+  &.media-sm {
+    .media-left {
+      img {
+        width: 100px;
+      }
+    }
+
+    .media-body {
+      .media-heading {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// Striped
+.media-striped {
+  .media {
+    padding: @grid-gutter-width;
+    margin: 0;
+    border: 0;
+
+    &:nth-child(odd) {
+      background: #e7eff7;
+    }
+  }
+}
+
+// Stacked
+.media-stacked {
+  .media {
+    padding-bottom: 0;
+    border: 0;
+
+    .media-left {
+      display: block;
+      padding: 0;
+      margin-bottom: (@grid-gutter-width/2);
+
+      img {
+        .img-responsive();
+        width: auto;
+      }
+    }
+  }
 }

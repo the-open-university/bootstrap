@@ -12,7 +12,6 @@
   position: relative;
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
-  border: 1px solid transparent;
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
@@ -413,18 +412,39 @@
     > li > a {
       color: @navbar-default-link-color;
 
+      // Add in pseudo element for underline
+      position: relative;
+
+      &:before {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: @padding-base-horizontal;
+        right: @padding-base-horizontal;
+        border-bottom: 2px solid transparent;
+      }
+
       &:hover,
       &:focus {
         color: @navbar-default-link-hover-color;
         background-color: @navbar-default-link-hover-bg;
+
+        &:before {
+          border-bottom-color: #ccc;
+        }
       }
     }
     > .active > a {
       &,
       &:hover,
       &:focus {
+        font-weight: bold;
         color: @navbar-default-link-active-color;
         background-color: @navbar-default-link-active-bg;
+
+        &:before {
+          border-bottom-color: #036;
+        }
       }
     }
     > .disabled > a {
