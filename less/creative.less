@@ -1,0 +1,177 @@
+.creative {
+  background-color: #e7eff7;
+	color: #222;
+	position:relative;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  .caption {
+    background: #fff;
+  	background: rgba(255,255,255, 0.9);
+    padding: 20px 25px;
+
+    .caption-heading {
+      color: inherit;
+    }
+
+    @media (min-width: @screen-sm-min) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: (@container-sm * (6 / 12) - @grid-gutter-width);
+      margin-left: -(@container-sm * 0.5 - (@grid-gutter-width/2));
+    }
+
+    @media (min-width: @screen-md-min) {
+      width: (@container-md * (5 / 12) - @grid-gutter-width);
+      margin-left: -(@container-md * 0.5 - (@grid-gutter-width/2));
+    }
+
+    @media (min-width: @screen-lg-min) {
+      width: (@container-lg * (4 / 12) - @grid-gutter-width);
+      margin-left: -(@container-lg * 0.5 - (@grid-gutter-width/2));
+    }
+
+    .creative-heading {
+    	margin: 0;
+    	font-size: 26px;
+    	background-color: transparent;
+    }
+
+    p {
+      margin: (@line-height-computed/2) 0 0 0;
+      color: #666;
+    }
+  }
+}
+
+
+// Revert to 'Hero' if the Creative is placed inside a container
+.container {
+  .creative {
+    margin: 0 auto @line-height-computed auto;
+
+    .caption {
+      transform: translate(0);
+      left: auto;
+      right: 0;
+      top: auto;
+      bottom: 0;
+      color: #000;
+
+      p {
+        color: inherit;
+      }
+
+      &.bg-black {
+        background: #000000 !important;
+        background: rgba(0, 0, 0, 0.8) !important;
+        color: #fff;
+      }
+
+      &.bg-dark-grey {
+        background: #333333 !important;
+        background: rgba(51, 51, 51, 0.8) !important;
+        color: #fff;
+      }
+
+      &.bg-red {
+        background: #E3294A !important;
+        background: rgba(227, 41, 74, 0.8) !important;
+        color: #fff;
+      }
+
+      &.bg-pink {
+        background: #E80074 !important;
+        background: rgba(232, 0, 116, 0.8) !important;
+        color: #fff;
+      }
+
+      &.bg-dark-blue {
+        background: #003366 !important;
+        background: rgba(0, 51, 102, 0.8) !important;
+        color: #fff;
+      }
+
+      &.bg-purple {
+        background: #5F4997 !important;
+        background: rgba(95, 73, 151, 0.8) !important;
+        color: #fff;
+      }
+
+      &.bg-orange {
+        background: #C5540A !important;
+        background: rgba(197, 84, 10, 0.8) !important;
+        color: #fff;
+      }
+
+      &.bg-burgundy {
+        background: #7B003F !important;
+        background: rgba(123, 0, 63, 0.8) !important;
+        color: #fff;
+      }
+
+      &.bg-dark-green {
+        background: #3F644A !important;
+        background: rgba(63, 100, 74, 0.8) !important;
+        color: #fff;
+      }
+
+      &.bg-green {
+        background: #539d3c !important;
+        background: rgba(83, 157, 60, 0.8) !important;
+        color: #fff;
+      }
+
+      &.bg-blue {
+        background: #0E56A7 !important;
+        background: rgba(14, 86, 167, 0.8) !important;
+        color: #fff;
+      }
+
+      &.bg-white {
+        background: #FFFFFF !important;
+        background: rgba(255, 255, 255, 0.8) !important;
+      }
+
+      &.bg-grey {
+        background: #A7A9AC !important;
+        background: rgba(167, 169, 172, 0.8) !important;
+      }
+
+      &.bg-light-green {
+        background: #A2B52D !important;
+        background: rgba(162, 181, 45, 0.8) !important;
+      }
+
+      &.bg-turquoise {
+        background: #00B7B2 !important;
+        background: rgba(0, 183, 178, 0.8) !important;
+      }
+
+      &.bg-light-blue {
+        background: #549DD0 !important;
+        background: rgba(84, 157, 208, 0.8) !important;
+      }
+
+      &.bg-yellow {
+        background: #FFD400 !important;
+        background: rgba(255, 212, 0, 0.8) !important;
+      }
+
+      &.bg-beige {
+        background: #CFC285 !important;
+        background: rgba(207, 194, 133, 0.8) !important;
+      }
+
+      &.bg-light-grey {
+        background: #e7eff7 !important;
+        background: rgba(231, 239, 247, 0.8) !important;
+      }
+    }
+  }
+}

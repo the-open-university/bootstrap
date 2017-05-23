@@ -5,117 +5,109 @@
 .pagination {
   margin: @line-height-computed 0;
   text-align: center;
+  display: inline-block;
+  padding-left: 0;
 
-  .page {
-    color: #777777;
-    margin-bottom: @line-height-computed;
-  }
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    > a,
+    > span {
+      position: relative;
+      float: left; // Collapse white-space
+      padding: @padding-base-vertical 10px;
+      line-height: @line-height-base;
+      text-decoration: none;
+      color: @pagination-color;
+      background-color: @pagination-bg;
+      margin-left: -1px;
 
-  ul {
-    display: inline-block;
-    padding-left: 0;
+      &.prev,
+      &.next {
+        &:before,
+        &:after {
+          color: #999;
+          background-color: transparent;
+          font-family: "Hiragino Mincho ProN";
+          font-size: 10px;
+          content: "\25c0";
+          display: inline-block;
+          margin: 0 6px 0 0;
+        }
 
-    > li {
-      display: inline; // Remove list-style and block-level defaults
-      > a,
-      > span {
-        position: relative;
-        float: left; // Collapse white-space
-        padding: @padding-base-vertical 10px;
-        line-height: @line-height-base;
-        text-decoration: none;
-        color: @pagination-color;
-        background-color: @pagination-bg;
-        margin-left: -1px;
-
-        &.prev,
-        &.next {
+        &:hover {
           &:before,
           &:after {
-            color: #999;
-            background-color: transparent;
-            font-family: "Hiragino Mincho ProN";
-            font-size: 10px;
-            content: "\25c0";
-            display: inline-block;
-            margin: 0 6px 0 0;
-          }
-
-          &:hover {
-            &:before,
-            &:after {
-              color: #ffffff;
-            }
-          }
-        }
-
-        &.prev {
-          &:after {
-            display: none;
-          }
-        }
-
-        &.next {
-          &:before {
-            display: none;
-          }
-
-          &:after {
-            content: "\25b6";
-            margin: 0 0 0 6px;
+            color: #ffffff;
           }
         }
       }
-      &:first-child {
-        > a,
-        > span {
-          margin-left: 0;
+
+      &.prev {
+        &:after {
+          display: none;
         }
       }
-      &:last-child {
-        > a,
-        > span {
+
+      &.next {
+        &:before {
+          display: none;
+        }
+
+        &:after {
+          content: "\25b6";
+          margin: 0 0 0 6px;
         }
       }
     }
-
-    > li > a,
-    > li > span {
-      &:hover,
-      &:focus {
-        z-index: 2;
-        color: @pagination-hover-color;
-        background-color: @pagination-hover-bg;
-        border-color: @pagination-hover-border;
-      }
-    }
-
-    > .active > a,
-    > .active > span {
-      &,
-      &:hover,
-      &:focus {
-        z-index: 3;
-        color: @pagination-active-color;
-        background-color: @pagination-active-bg;
-        border-color: @pagination-active-border;
-        cursor: default;
-        font-weight: bold;
-      }
-    }
-
-    > .disabled {
-      > span,
-      > span:hover,
-      > span:focus,
+    &:first-child {
       > a,
-      > a:hover,
-      > a:focus {
-        color: @pagination-disabled-color;
-        background-color: @pagination-disabled-bg;
-        border-color: @pagination-disabled-border;
-        cursor: @cursor-disabled;
+      > span {
+        margin-left: 0;
       }
+    }
+    &:last-child {
+      > a,
+      > span {
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      z-index: 2;
+      color: @pagination-hover-color;
+      background-color: @pagination-hover-bg;
+      border-color: @pagination-hover-border;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 3;
+      color: @pagination-active-color;
+      background-color: @pagination-active-bg;
+      border-color: @pagination-active-border;
+      cursor: default;
+      font-weight: bold;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: @pagination-disabled-color;
+      background-color: @pagination-disabled-bg;
+      border-color: @pagination-disabled-border;
+      cursor: @cursor-disabled;
     }
   }
 }
