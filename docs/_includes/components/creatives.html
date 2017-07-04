@@ -1,0 +1,28 @@
+<div class="bs-creatives-section">
+  <h1 id="creatives" class="page-header">Creatives</h1>
+
+  <p>A creative allows a 100% width "showpiece" in the header area where you can place a large image, video, hero, carousel etc. You can see an example of a creative in action at the <a href="#top">top of this page</a>.</p>
+  <p>The creative will only take up the full width of the page if placed outside of a <code>.container</code> element. If the creative is inside a <code>.container</code> it reverts to a hero element, as <a href="#creatives-expl">shown below</a>.</p>
+  <p>You can have an optional text overlay, seen above, or leave it out and just feature a decorative image.</p>
+
+  <h2 id="creatives-example">Example</h2>
+  <div class="bs-example" data-example-id="creatives-expl">
+    <div class="creative">
+      <img data-src="holder.js/100%x300" alt="">
+      <div class="caption">
+        <h1 class="caption-heading">Creative Example</h1>
+        <p>And this is an optional sentence of supporting text.</p>
+      </div>
+    </div>
+  </div>
+
+{% highlight html %}
+<div class="creative">
+  <img src="..." alt="">
+  <div class="caption">
+    <h1 class="caption-heading">Creative Example</h1>
+    <p>And this is an optional sentence of supporting text.</p>
+  </div>
+</div>
+{% endhighlight %}
+</div>

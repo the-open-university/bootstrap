@@ -1,0 +1,214 @@
+<div class="bs-blocks-section">
+  <h1 id="blocks" class="page-header">Blocks</h1>
+
+  <p class="lead">Blocks are a way to float same-sized blocks of content within the same container with no restrictions on how many you have.</p>
+
+  <p>You could do a similar thing using the <a href="#grid">grid</a> but that requires separate divs for each row of content, and that's not very useful if, for example, you have a long list of items you want to keep together in the same container.</p>
+  <p>The other advantage of Blocks is that you don't have to specify the size of each block - you simply add a class to the container to say 2, 3, 4 or 5 columns and then the blocks within automatically adjust their size accordingly.</p>
+
+  <div class="bs-callout bs-callout-warning" id="callout-blocks-responsive">
+    <h4>Note</h4>
+    <p>All block layouts become two columns for tablet/mobile screen sizes (unless you specify a one column layout for mobile - see final example).</p>
+  </div>
+
+  <h2 id="blocks-2-columns">2 columns</h2>
+  <div class="bs-example" data-example-id="blocks-2">
+    <div class="blocks cols-2 show-grid">
+      <div>
+        <p>1</p>
+      </div>
+      <div>
+        <p>2</p>
+      </div>
+      <div>
+        <p>3</p>
+      </div>
+      <div>
+        <p>4</p>
+      </div>
+      <div>
+        <p>5</p>
+      </div>
+      <div>
+        <p>6</p>
+      </div>
+    </div>
+  </div>
+{% highlight html %}
+<div class="blocks cols-2">
+  <div>
+    <p>1</p>
+  </div>
+  <div>
+    <p>2</p>
+  </div>
+  <div>
+    <p>3</p>
+  </div>
+  <div>
+    <p>4</p>
+  </div>
+  <div>
+    <p>5</p>
+  </div>
+  <div>
+    <p>6</p>
+  </div>
+</div>
+{% endhighlight %}
+
+  <h2 id="blocks-3-columns">3 columns</h2>
+  <div class="bs-example" data-example-id="blocks-3">
+    <div class="blocks cols-3 show-grid">
+      <div>
+        <p>1</p>
+      </div>
+      <div>
+        <p>2</p>
+      </div>
+      <div>
+        <p>3</p>
+      </div>
+      <div>
+        <p>4</p>
+      </div>
+      <div>
+        <p>5</p>
+      </div>
+      <div>
+        <p>6</p>
+      </div>
+    </div>
+  </div>
+{% highlight html %}
+<div class="blocks cols-3">
+  ...
+</div>
+{% endhighlight %}
+
+  <h2 id="blocks-4-columns">4 columns</h2>
+  <div class="bs-example" data-example-id="blocks-4">
+    <div class="blocks cols-4 show-grid">
+      <div>
+        <p>1</p>
+      </div>
+      <div>
+        <p>2</p>
+      </div>
+      <div>
+        <p>3</p>
+      </div>
+      <div>
+        <p>4</p>
+      </div>
+      <div>
+        <p>5</p>
+      </div>
+      <div>
+        <p>6</p>
+      </div>
+    </div>
+  </div>
+{% highlight html %}
+<div class="blocks cols-4">
+  ...
+</div>
+{% endhighlight %}
+
+  <h2 id="blocks-5-columns">5 columns</h2>
+  <div class="bs-example" data-example-id="blocks-5">
+    <div class="blocks cols-5 show-grid">
+      <div>
+        <p>1</p>
+      </div>
+      <div>
+        <p>2</p>
+      </div>
+      <div>
+        <p>3</p>
+      </div>
+      <div>
+        <p>4</p>
+      </div>
+      <div>
+        <p>5</p>
+      </div>
+      <div>
+        <p>6</p>
+      </div>
+    </div>
+  </div>
+{% highlight html %}
+<div class="blocks cols-5">
+  ...
+</div>
+{% endhighlight %}
+
+  <h2 id="blocks-list-items">List items</h2>
+  <div class="bs-example" data-example-id="blocks-list">
+    <ul class="blocks cols-3 show-grid">
+      <li><p>1</p></li>
+      <li><p>2</p></li>
+      <li><p>3</p></li>
+      <li><p>4</p></li>
+      <li><p>5</p></li>
+      <li><p>6</p></li>
+    </ul>
+  </div>
+{% highlight html %}
+<ul class="blocks cols-3">
+  <li><p>1</p></li>
+  <li><p>2</p></li>
+  <li><p>3</p></li>
+  <li><p>4</p></li>
+  <li><p>5</p></li>
+  <li><p>6</p></li>
+</ul>
+{% endhighlight %}
+
+  <h2 id="blocks-mobile">Mobile one column</h2>
+  <div class="bs-example" data-example-id="blocks-mob">
+    <div class="blocks cols-3 cols-xs-1 show-grid">
+      <div>
+        <p>1</p>
+      </div>
+      <div>
+        <p>2</p>
+      </div>
+      <div>
+        <p>3</p>
+      </div>
+      <div>
+        <p>4</p>
+      </div>
+      <div>
+        <p>5</p>
+      </div>
+      <div>
+        <p>6</p>
+      </div>
+    </div>
+  </div>
+{% highlight html %}
+<div class="blocks cols-3 cols-xs-1 show-grid">
+  <div>
+    <p>1</p>
+  </div>
+  <div>
+    <p>2</p>
+  </div>
+  <div>
+    <p>3</p>
+  </div>
+  <div>
+    <p>4</p>
+  </div>
+  <div>
+    <p>5</p>
+  </div>
+  <div>
+    <p>6</p>
+  </div>
+</div>
+{% endhighlight %}
+</div>

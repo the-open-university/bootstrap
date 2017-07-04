@@ -24,8 +24,8 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: 0;
-  margin-bottom: @grid-gutter-width;
+  margin-top: @line-height-computed;
+  margin-bottom: (@line-height-computed / 2);
 
   small,
   .small {
@@ -35,8 +35,8 @@ h3, .h3 {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 0;
-  margin-bottom: @grid-gutter-width;
+  margin-top: (@line-height-computed / 2);
+  margin-bottom: (@line-height-computed / 2);
 
   small,
   .small {
@@ -145,9 +145,19 @@ mark,
 // -------------------------
 
 .page-header {
-  padding-bottom: ((@line-height-computed / 2) - 1);
-  margin: (@line-height-computed * 2) 0 @line-height-computed;
-  border-bottom: 1px solid @page-header-border-color;
+  margin: @line-height-computed 0 0 0;
+
+  .heading {
+    font-size: 17px;
+    color: #000;
+    font-weight: normal;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    color: #777;
+  }
 }
 
 
@@ -282,7 +292,7 @@ blockquote {
   font-size: @blockquote-font-size;
   color: #fff;
   position: relative;
-  .retina('../images/icons/icon-quotemarks.png', 2, 51px 42px, 25px 32px no-repeat #333);
+  .retina('../img/icons/icon-quotemarks.png', 2, 51px 42px, 25px 32px no-repeat #333);
 
   &.bg-white,
   &.bg-grey,

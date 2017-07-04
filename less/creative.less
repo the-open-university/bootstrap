@@ -2,6 +2,7 @@
   background-color: #e7eff7;
 	color: #222;
 	position:relative;
+  min-height: 250px;
 
   img {
     width: 100%;
@@ -15,6 +16,11 @@
 
     .caption-heading {
       color: inherit;
+      margin: 0;
+    	font-size: 26px;
+    	background-color: transparent;
+      font-weight: bold;
+      line-height: 1.1;
     }
 
     @media (min-width: @screen-sm-min) {
@@ -23,23 +29,17 @@
       top: 50%;
       transform: translateY(-50%);
       width: (@container-sm * (6 / 12) - @grid-gutter-width);
-      margin-left: -(@container-sm * 0.5 - (@grid-gutter-width/2));
+      margin-left: (-(@container-sm * 0.5 - (@grid-gutter-width/2)));
     }
 
     @media (min-width: @screen-md-min) {
       width: (@container-md * (5 / 12) - @grid-gutter-width);
-      margin-left: -(@container-md * 0.5 - (@grid-gutter-width/2));
+      margin-left: (-(@container-md * 0.5 - (@grid-gutter-width/2)));
     }
 
     @media (min-width: @screen-lg-min) {
       width: (@container-lg * (4 / 12) - @grid-gutter-width);
-      margin-left: -(@container-lg * 0.5 - (@grid-gutter-width/2));
-    }
-
-    .creative-heading {
-    	margin: 0;
-    	font-size: 26px;
-    	background-color: transparent;
+      margin-left: (-(@container-lg * 0.5 - (@grid-gutter-width/2)));
     }
 
     p {

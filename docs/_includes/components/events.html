@@ -1,0 +1,155 @@
+<div class="bs-events-section">
+  <h1 id="events" class="page-header">Events</h1>
+
+  <p>If including the navigation bar (see advanced example) you can either use complete month names (December) or abbreviated (Dec). For the month displayed in red alongside each event it is important to only use the three letter abbreviated form otherwise the design will break.</p>
+
+  <h2 id="grid-simple">Simple</h2>
+  <div class="bs-example" data-example-id="grid-sim">
+    <div class="events">
+
+      <div class="event">
+        <div class="date">
+          <em>Jun</em>
+          <strong>2</strong>
+        </div>
+        <div class="details">
+          <h3 class="event-heading"><a href="#">Science team meet up</a></h3>
+          <time datetime="2017-06-02 16:00">16:00 - 18:00</time>
+          <p>One line of information</p>
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="date">
+          <em>Jun</em>
+          <strong>5</strong>
+        </div>
+        <div class="details">
+          <h3 class="event-heading"><a href="#">Residential school</a></h3>
+          <time datetime="2017-06-05 11:00">11:00 - 13:00</time>
+          <p>One line of information</p>
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="date">
+          <em>Jun</em>
+          <strong>12</strong>
+        </div>
+        <div class="details">
+          <h3 class="event-heading"><a href="#">Workshop: A European Dimension to BREXIT</a></h3>
+          <time datetime="2017-06-12 09:00">09:00 - 12:00</time>
+          <p>One line of information</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% highlight html %}
+<div class="events">
+
+  <div class="event">
+    <div class="date">
+      <em>Jun</em>
+      <strong>2</strong>
+    </div>
+    <div class="details">
+      <h3 class="event-heading"><a href="#">Science team meet up</a></h3>
+      <time datetime="2017-06-02 16:00">16:00 - 18:00</time>
+      <p>One line of information</p>
+    </div>
+  </div>
+
+  <div class="event">
+    <div class="date">
+      <em>Jun</em>
+      <strong>5</strong>
+    </div>
+    <div class="details">
+      <h3 class="event-heading"><a href="#">Residential school</a></h3>
+      <time datetime="2017-06-05 11:00">11:00 - 13:00</time>
+      <p>One line of information</p>
+    </div>
+  </div>
+
+  <div class="event">
+    <div class="date">
+      <em>Jun</em>
+      <strong>12</strong>
+    </div>
+    <div class="details">
+      <h3 class="event-heading"><a href="#">Workshop: A European Dimension to BREXIT</a></h3>
+      <time datetime="2017-06-12 09:00">09:00 - 12:00</time>
+      <p>One line of information</p>
+    </div>
+  </div>
+
+</div>
+{% endhighlight %}
+
+<h2 id="grid-advanced">Advanced</h2>
+<p>Example with navigation bar, location and contact information plus a multi-day event. All these are optional items that can be added or removed without affecting anything else.</p>
+<div class="bs-example" data-example-id="grid-adv">
+  <div class="events">
+    <ul class="pager">
+      <li class="previous"><a href="#">August</a></li>
+      <li>September 2016</li>
+      <li class="next"><a href="#">October</a></li>
+    </ul>
+
+    <div class="event">
+      <div class="date">
+        <em>Sep</em>
+        <strong>14</strong>
+      </div>
+      <div class="details">
+        <h3 class="event-heading"><a href="#">Science team meet up</a></h3>
+        <time datetime="2017-09-14 16:00">16:00 - 18:00</time>
+        <div class="location">Walton Hall, Milton Keynes</div>
+        <div class="contact">Contact: <a href="#">Anne Freeman</a></div>
+
+        <p>Like noiseless nautilus shells, their light prows sped through the sea; but only slowly they neared the foe. As they neared him, the ocean grew still more smooth; seemed drawing a carpet over its waves; seemed a noon-meadow, so serenely it spread.</p>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="date multiple">
+        <em>Sep</em>
+        <strong>21-22</strong>
+      </div>
+      <div class="details">
+        <h3 class="event-heading"><a href="#">Residential school</a></h3>
+        <time datetime="2017-09-21 16:00">Mon: 11:00 - 13:00. Tue: 12:00 - 15:00</time>
+        <div class="location">Radisson Blu Portman Hotel, London</div>
+        <div class="contact">Contact: <a href="#">Kapil Dev</a></div>
+        <p>At length the breathless hunter came so nigh his seemingly unsuspecting prey, that his entire dazzling hump was distinctly visible, sliding along the sea as if an isolated thing, and continually set in a revolving ring of finest, fleecy, greenish foam.</p>
+      </div>
+    </div>
+
+     <div class="event">
+       <div class="date">
+         <em>Sep</em>
+         <strong>29</strong>
+       </div>
+       <div class="details">
+         <h3 class="event-heading"><a href="#">Workshop: A European Dimension to BREXIT</a></h3>
+         <time datetime="2017-09-29 09:00">09:00 - 12:00</time>
+         <div class="location">The King’s Head, 10 Stafford Street, London, W1S 4RX</div>
+         <div class="contact">Contact: <a href="#">Carlton Palmer</a></div>
+         <p>He saw the vast, involved wrinkles of the slightly projecting head beyond. Before it, far out on the soft Turkish-rugged waters, went the glistening white shadow from his broad, milky forehead</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% highlight html %}
+<div class="events">
+  <ul class="pager">
+    <li class="previous"><a href="#">August</a></li>
+    <li>September 2016</li>
+    <li class="next"><a href="#">October</a></li>
+  </ul>
+
+  ...
+
+</div>
+{% endhighlight %}
+</div>

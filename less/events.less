@@ -42,72 +42,6 @@
     }
   }
 
-  .ou-events__nav {
-  	background-color: #eee;
-  	color: #000;
-  	text-align: center;
-  	margin: 0 0 20px 0;
-
-    span.ou-events__current {
-    	display: inline-block;
-    	padding: 8px 0;
-    	font-weight: bold;
-    }
-
-    .ou-events__prev,
-    .ou-events__next {
-    	display: inline-block;
-    	float: left;
-    	text-decoration: none;
-    	padding: 8px 10px;
-    	border-right: 1px solid #ddd;
-
-      &:before,
-      &:after {
-      	font-family: "Hiragino Mincho ProN";
-      	content: "\25c0";
-      	color: #999;
-      	background-color: transparent;
-      	font-size: 9px;
-      	display: block;
-      	float: left;
-      	margin: 5px 4px 0 0;
-      }
-
-      &:hover {
-        text-decoration: none;
-
-        &:before,
-        &:after {
-        	color:#e80074;
-        	background-color: transparent;
-        }
-      }
-    }
-
-    .ou-events__prev {
-      &:after {
-        display: none;
-      }
-    }
-
-    .ou-events__next {
-    	float: right;
-    	border-right: 0;
-    	border-left: 1px solid #ddd;
-
-      &:before {
-        display: none;
-      }
-
-      &:after {
-      	content: "\25b6 ";
-      	float: right;
-      	margin: 5px 0 0 4px;
-      }
-    }
-  }
-
   .event {
   	border-bottom: 1px solid #eee;
   	margin: 0 0 15px 0;
@@ -139,11 +73,10 @@
     strong {
     	text-align: center;
       color: #000;
-      background-color: transparent;
+      background-color: #eee;
       font-size: 25px;
       font-weight: normal;
       display: block;
-      background: #eee;
       padding: 5px 0;
     	border-radius: 0 0 4px 4px;
     }
