@@ -12,18 +12,6 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-  /**
- * Allows you to use retina images at various pixel densities.
- * Examples:
- *
- *   .retina(/images/mypic.jpg, 2);
- *   .retina(/images/mypic.jpg, 3, 100px 100px, left top no-repeat transparent);
- *
- * @param  {String} $path               The path to the file name minus extension.
- * @param  {Number} $cap:    2          The highest pixel density level images exist for.
- * @param  {Value}  $size:   auto auto  The intended width of the rendered image.
- * @param  {Value}  $extras: null       Any other `background` values to be added.
- */
   /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
   /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
   /*
@@ -1561,31 +1549,14 @@
   margin: 0 0 20px;
   font-size: 17.5px;
   color: #fff;
-  /*
-   * Set a base background for 1x environments.
-   */
-  background: url('../img/icons/icon-quotemarks.png') 25px 32px no-repeat #333;
   background-color: #333;
-  -webkit-background-size: 51px 42px;
-          background-size: 51px 42px;
-  /*
-   * Create an @2x-ish media query.
-   */
-  /*
-   * Create media queries for all environments that the user has
-   * provided images for.
-   */
+  background-image: url("../img/icons/icon-quotemarks.png");
+  background-repeat: no-repeat;
+  background-position: 25px 32px;
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .ouice blockquote {
-    background: url(../img/icons/icon-quotemarks@2x.png) 25px 32px no-repeat #333;
-    -webkit-background-size: 51px 42px;
-            background-size: 51px 42px;
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2 * 96dpi) {
-  .ouice blockquote {
-    background: url(../img/icons/icon-quotemarks@2x.png) 25px 32px no-repeat #333;
+    background-image: url("../img/icons/icon-quotemarks@2x.png");
     -webkit-background-size: 51px 42px;
             background-size: 51px 42px;
   }

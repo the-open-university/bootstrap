@@ -15,7 +15,7 @@
   <p>Here's how the affix plugin works:</p>
   <ol>
     <li>To start, the plugin adds <code>.affix-top</code> to indicate the element is in its top-most position. At this point no CSS positioning is required.</li>
-    <li>Scrolling past the element you want affixed should trigger the actual affixing. This is where <code>.affix</code> replaces <code>.affix-top</code> and sets <code>position: fixed;</code> (provided by Bootstrap's CSS).</li>
+    <li>Scrolling past the element you want affixed should trigger the actual affixing. This is where <code>.affix</code> replaces <code>.affix-top</code> and sets <code>position: fixed;</code> (provided by OU ICE's CSS).</li>
     <li>If a bottom offset is defined, scrolling past it should replace <code>.affix</code> with <code>.affix-bottom</code>. Since offsets are optional, setting one requires you to set the appropriate CSS. In this case, add <code>position: absolute;</code> when necessary. The plugin uses the data attribute or JavaScript option to determine where to position the element from there.</li>
   </ol>
   <p>Follow the above steps to set your CSS for either of the usage options below.</p>
@@ -89,7 +89,7 @@ $('#myAffix').affix({
   {% highlight js %}$('#myAffix').affix('checkPosition'){% endhighlight %}
 
   <h3 id="affix-events">Events</h3>
-  <p>Bootstrap's affix plugin exposes a few events for hooking into affix functionality.</p>
+  <p>OU ICE's affix plugin exposes a few events for hooking into affix functionality.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped bs-events-table">
       <thead>

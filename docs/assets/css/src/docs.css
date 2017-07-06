@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Docs (http://getbootstrap.com)
+ * OU ICE Docs (http://ouice.webhappens.co.uk)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under the Creative Commons Attribution 3.0 Unported License. For
  * details, see https://creativecommons.org/licenses/by/3.0/.
@@ -7,8 +7,8 @@
 
 
 /*
- * Bootstrap Documentation
- * Special styles for presenting Bootstrap's documentation and code examples.
+ * OU ICE Documentation
+ * Special styles for presenting OU ICE's documentation and code examples.
  */
 
 
@@ -62,37 +62,6 @@ body.ouice {
   text-shadow: none;
   background-color: #fff;
   border-color: #fff;
-}
-
-/* Bootstrap "B" icon */
-.ouice .bs-docs-booticon {
-  display: block;
-  font-weight: 500;
-  color: #fff;
-  text-align: center;
-  cursor: default;
-  background-color: #036;
-  border-radius: 15%;
-}
-.ouice .bs-docs-booticon-sm {
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  line-height: 28px;
-}
-.ouice .bs-docs-booticon-lg {
-  width: 144px;
-  height: 144px;
-  font-size: 108px;
-  line-height: 140px;
-}
-.ouice .bs-docs-booticon-inverse {
-  color: #036;
-  background-color: #fff;
-}
-.ouice .bs-docs-booticon-outline {
-  background-color: transparent;
-  border: 1px solid #cdbfe3;
 }
 
 
@@ -278,7 +247,7 @@ body.ouice {
 /*
  * Homepage featurettes
  *
- * Reasons to use Bootstrap, entries from the Expo, and more.
+ * Reasons to use OU ICE, entries from the Expo, and more.
  */
 
 .ouice .bs-docs-featurette {

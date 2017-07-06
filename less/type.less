@@ -292,7 +292,10 @@ blockquote {
   font-size: @blockquote-font-size;
   color: #fff;
   position: relative;
-  .retina('../img/icons/icon-quotemarks.png', 2, 51px 42px, 25px 32px no-repeat #333);
+  background-repeat: no-repeat;
+  background-color: #333;
+  background-position: 25px 32px;
+  .img-retina('../img/icons/icon-quotemarks.png', '../img/icons/icon-quotemarks@2x.png', 51px, 42px);
 
   &.bg-white,
   &.bg-grey,
