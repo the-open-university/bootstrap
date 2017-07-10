@@ -138,7 +138,7 @@ body.ouice {
 .ouice .bs-docs-header {
   position: relative;
   padding: 30px 0;
-  color: #cdbfe3;
+  color: #ddd;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0,0,0,.1);
   background-color: #6f5499;
@@ -160,19 +160,23 @@ body.ouice {
   color: #fff;
 }
 .ouice .bs-docs-masthead .lead {
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
   font-size: 20px;
   color: #fff;
 }
 .ouice .bs-docs-masthead .version {
   margin-top: -15px;
   margin-bottom: 30px;
-  color: #9783b9;
+  color: #999;
 }
 .ouice .bs-docs-masthead .btn {
   width: 100%;
   padding: 15px 30px;
   font-size: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  margin-top: 20px;
 }
 
 @media (min-width: 480px) {
@@ -279,6 +283,10 @@ body.ouice {
   margin-bottom: 5px;
   font-weight: normal;
   color: #333;
+}
+.ouice .bs-docs-featurette .btn {
+  border-width: 1px;
+  border-style: solid;
 }
 .ouice .bs-docs-featurette-img {
   display: block;
