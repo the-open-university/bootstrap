@@ -172,11 +172,11 @@ body.ouice {
 .ouice .bs-docs-masthead .btn {
   width: 100%;
   padding: 15px 30px;
-  font-size: 20px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #fff;
   margin-top: 20px;
+  font-size: 20px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 1px;
 }
 
 @media (min-width: 480px) {
@@ -285,8 +285,8 @@ body.ouice {
   color: #333;
 }
 .ouice .bs-docs-featurette .btn {
-  border-width: 1px;
   border-style: solid;
+  border-width: 1px;
 }
 .ouice .bs-docs-featurette-img {
   display: block;
