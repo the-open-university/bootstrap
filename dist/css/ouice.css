@@ -12,20 +12,13 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-  /**
- * Allows you to use retina images at various pixel densities.
- * Examples:
- *
- *   .retina(/images/mypic.jpg, 2);
- *   .retina(/images/mypic.jpg, 3, 100px 100px, left top no-repeat transparent);
- *
- * @param  {String} $path               The path to the file name minus extension.
- * @param  {Number} $cap:    2          The highest pixel density level images exist for.
- * @param  {Value}  $size:   auto auto  The intended width of the rendered image.
- * @param  {Value}  $extras: null       Any other `background` values to be added.
- */
   /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
   /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+  /*
+-------------------------------------------
+	Events
+-------------------------------------------
+*/
   /*! Core variables and mixins */
   /*!
 	Re-iterate out-of-scope styles on the root class - see:
@@ -1263,8 +1256,8 @@
 .ouice .h2,
 .ouice h3,
 .ouice .h3 {
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 .ouice h1 small,
 .ouice .h1 small,
@@ -1286,8 +1279,8 @@
 .ouice .h5,
 .ouice h6,
 .ouice .h6 {
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .ouice h4 small,
 .ouice .h4 small,
@@ -1305,15 +1298,15 @@
 }
 .ouice h1,
 .ouice .h1 {
-  font-size: 27px;
+  font-size: 36px;
 }
 .ouice h2,
 .ouice .h2 {
-  font-size: 23px;
+  font-size: 30px;
 }
 .ouice h3,
 .ouice .h3 {
-  font-size: 20px;
+  font-size: 24px;
 }
 .ouice h4,
 .ouice .h4 {
@@ -1321,11 +1314,11 @@
 }
 .ouice h5,
 .ouice .h5 {
-  font-size: 16px;
+  font-size: 14px;
 }
 .ouice h6,
 .ouice .h6 {
-  font-size: 14px;
+  font-size: 12px;
 }
 .ouice p {
   margin: 0 0 10px;
@@ -1444,9 +1437,17 @@
   background-color: #fda9a9;
 }
 .ouice .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
-  border-bottom: 1px solid #eee;
+  margin: 20px 0 0 0;
+}
+.ouice .page-header .heading {
+  font-size: 17px;
+  font-weight: normal;
+  color: #000;
+}
+.ouice .page-header p {
+  padding: 0;
+  margin: 0;
+  color: #777;
 }
 .ouice ul,
 .ouice ol {
@@ -1548,31 +1549,14 @@
   margin: 0 0 20px;
   font-size: 17.5px;
   color: #fff;
-  /*
-   * Set a base background for 1x environments.
-   */
-  background: url('../images/icons/icon-quotemarks.png') 25px 32px no-repeat #333;
   background-color: #333;
-  -webkit-background-size: 51px 42px;
-          background-size: 51px 42px;
-  /*
-   * Create an @2x-ish media query.
-   */
-  /*
-   * Create media queries for all environments that the user has
-   * provided images for.
-   */
+  background-image: url("../img/icons/icon-quotemarks.png");
+  background-repeat: no-repeat;
+  background-position: 25px 32px;
 }
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .ouice blockquote {
-    background: url(../images/icons/icon-quotemarks@2x.png) 25px 32px no-repeat #333;
-    -webkit-background-size: 51px 42px;
-            background-size: 51px 42px;
-  }
-}
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2 * 96dpi) {
-  .ouice blockquote {
-    background: url(../images/icons/icon-quotemarks@2x.png) 25px 32px no-repeat #333;
+    background-image: url("../img/icons/icon-quotemarks@2x.png");
     -webkit-background-size: 51px 42px;
             background-size: 51px 42px;
   }
@@ -4433,7 +4417,7 @@
 .ouice .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 @media (min-width: 768px) {
   .ouice .navbar {
@@ -4589,9 +4573,17 @@
 .ouice .navbar-nav {
   margin: 7.5px -10px;
 }
+.ouice .navbar-nav > li {
+  margin-right: 20px;
+}
+.ouice .navbar-nav > li:last-child {
+  margin-right: 0;
+}
 .ouice .navbar-nav > li > a {
   padding-top: 10px;
+  padding-right: 0;
   padding-bottom: 10px;
+  padding-left: 0;
   line-height: 20px;
 }
 @media (max-width: 767px) {
@@ -4757,6 +4749,13 @@
     float: right !important;
     margin-right: -10px;
   }
+  .ouice .navbar-right > li {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+  .ouice .navbar-right > li:first-child {
+    margin-left: 0;
+  }
   .ouice .navbar-right ~ .navbar-right {
     margin-right: 0;
   }
@@ -4777,24 +4776,13 @@
   color: #777;
 }
 .ouice .navbar-default .navbar-nav > li > a {
-  position: relative;
   color: #039;
-}
-.ouice .navbar-default .navbar-nav > li > a:before {
-  position: absolute;
-  right: 15px;
-  bottom: 0;
-  left: 15px;
-  content: " ";
   border-bottom: 2px solid transparent;
 }
 .ouice .navbar-default .navbar-nav > li > a:hover,
 .ouice .navbar-default .navbar-nav > li > a:focus {
   color: #333;
   background-color: transparent;
-}
-.ouice .navbar-default .navbar-nav > li > a:hover:before,
-.ouice .navbar-default .navbar-nav > li > a:focus:before {
   border-bottom-color: #ccc;
 }
 .ouice .navbar-default .navbar-nav > .active > a,
@@ -4803,10 +4791,6 @@
   font-weight: bold;
   color: #036;
   background-color: transparent;
-}
-.ouice .navbar-default .navbar-nav > .active > a:before,
-.ouice .navbar-default .navbar-nav > .active > a:hover:before,
-.ouice .navbar-default .navbar-nav > .active > a:focus:before {
   border-bottom-color: #036;
 }
 .ouice .navbar-default .navbar-nav > .disabled > a,
@@ -5000,22 +4984,16 @@
   color: #777;
 }
 .ouice .pagination {
+  display: inline-block;
+  padding-left: 0;
   margin: 20px 0;
   text-align: center;
 }
-.ouice .pagination .page {
-  margin-bottom: 20px;
-  color: #777;
-}
-.ouice .pagination ul {
-  display: inline-block;
-  padding-left: 0;
-}
-.ouice .pagination ul > li {
+.ouice .pagination > li {
   display: inline;
 }
-.ouice .pagination ul > li > a,
-.ouice .pagination ul > li > span {
+.ouice .pagination > li > a,
+.ouice .pagination > li > span {
   position: relative;
   float: left;
   padding: 10px 10px;
@@ -5025,14 +5003,14 @@
   text-decoration: none;
   background-color: #fff;
 }
-.ouice .pagination ul > li > a.prev:before,
-.ouice .pagination ul > li > span.prev:before,
-.ouice .pagination ul > li > a.next:before,
-.ouice .pagination ul > li > span.next:before,
-.ouice .pagination ul > li > a.prev:after,
-.ouice .pagination ul > li > span.prev:after,
-.ouice .pagination ul > li > a.next:after,
-.ouice .pagination ul > li > span.next:after {
+.ouice .pagination > li > a.prev:before,
+.ouice .pagination > li > span.prev:before,
+.ouice .pagination > li > a.next:before,
+.ouice .pagination > li > span.next:before,
+.ouice .pagination > li > a.prev:after,
+.ouice .pagination > li > span.prev:after,
+.ouice .pagination > li > a.next:after,
+.ouice .pagination > li > span.next:after {
   display: inline-block;
   margin: 0 6px 0 0;
   font-family: "Hiragino Mincho ProN";
@@ -5041,48 +5019,48 @@
   content: "\25c0";
   background-color: transparent;
 }
-.ouice .pagination ul > li > a.prev:hover:before,
-.ouice .pagination ul > li > span.prev:hover:before,
-.ouice .pagination ul > li > a.next:hover:before,
-.ouice .pagination ul > li > span.next:hover:before,
-.ouice .pagination ul > li > a.prev:hover:after,
-.ouice .pagination ul > li > span.prev:hover:after,
-.ouice .pagination ul > li > a.next:hover:after,
-.ouice .pagination ul > li > span.next:hover:after {
+.ouice .pagination > li > a.prev:hover:before,
+.ouice .pagination > li > span.prev:hover:before,
+.ouice .pagination > li > a.next:hover:before,
+.ouice .pagination > li > span.next:hover:before,
+.ouice .pagination > li > a.prev:hover:after,
+.ouice .pagination > li > span.prev:hover:after,
+.ouice .pagination > li > a.next:hover:after,
+.ouice .pagination > li > span.next:hover:after {
   color: #fff;
 }
-.ouice .pagination ul > li > a.prev:after,
-.ouice .pagination ul > li > span.prev:after {
+.ouice .pagination > li > a.prev:after,
+.ouice .pagination > li > span.prev:after {
   display: none;
 }
-.ouice .pagination ul > li > a.next:before,
-.ouice .pagination ul > li > span.next:before {
+.ouice .pagination > li > a.next:before,
+.ouice .pagination > li > span.next:before {
   display: none;
 }
-.ouice .pagination ul > li > a.next:after,
-.ouice .pagination ul > li > span.next:after {
+.ouice .pagination > li > a.next:after,
+.ouice .pagination > li > span.next:after {
   margin: 0 0 0 6px;
   content: "\25b6";
 }
-.ouice .pagination ul > li:first-child > a,
-.ouice .pagination ul > li:first-child > span {
+.ouice .pagination > li:first-child > a,
+.ouice .pagination > li:first-child > span {
   margin-left: 0;
 }
-.ouice .pagination ul > li > a:hover,
-.ouice .pagination ul > li > span:hover,
-.ouice .pagination ul > li > a:focus,
-.ouice .pagination ul > li > span:focus {
+.ouice .pagination > li > a:hover,
+.ouice .pagination > li > span:hover,
+.ouice .pagination > li > a:focus,
+.ouice .pagination > li > span:focus {
   z-index: 2;
   color: #fff;
   background-color: #e80074;
   border-color: #e80074;
 }
-.ouice .pagination ul > .active > a,
-.ouice .pagination ul > .active > span,
-.ouice .pagination ul > .active > a:hover,
-.ouice .pagination ul > .active > span:hover,
-.ouice .pagination ul > .active > a:focus,
-.ouice .pagination ul > .active > span:focus {
+.ouice .pagination > .active > a,
+.ouice .pagination > .active > span,
+.ouice .pagination > .active > a:hover,
+.ouice .pagination > .active > span:hover,
+.ouice .pagination > .active > a:focus,
+.ouice .pagination > .active > span:focus {
   z-index: 3;
   font-weight: bold;
   color: #fff;
@@ -5090,12 +5068,12 @@
   background-color: #036;
   border-color: #036;
 }
-.ouice .pagination ul > .disabled > span,
-.ouice .pagination ul > .disabled > span:hover,
-.ouice .pagination ul > .disabled > span:focus,
-.ouice .pagination ul > .disabled > a,
-.ouice .pagination ul > .disabled > a:hover,
-.ouice .pagination ul > .disabled > a:focus {
+.ouice .pagination > .disabled > span,
+.ouice .pagination > .disabled > span:hover,
+.ouice .pagination > .disabled > span:focus,
+.ouice .pagination > .disabled > a,
+.ouice .pagination > .disabled > a:hover,
+.ouice .pagination > .disabled > a:focus {
   color: #777;
   cursor: not-allowed;
   background-color: #fff;
@@ -6303,6 +6281,407 @@
   background: transparent;
   border: 0;
 }
+.ouice .blocks {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.ouice .blocks:before,
+.ouice .blocks:after {
+  display: table;
+  content: " ";
+}
+.ouice .blocks:after {
+  clear: both;
+}
+.ouice .blocks:before,
+.ouice .blocks:after {
+  display: table;
+  content: " ";
+}
+.ouice .blocks:after {
+  clear: both;
+}
+.ouice .blocks > div,
+.ouice .blocks > li {
+  float: left;
+  height: auto;
+  padding: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  margin-left: 0;
+}
+.ouice .blocks > li {
+  position: relative;
+  list-style: none;
+}
+.ouice .blocks > li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -2px;
+  content: "•";
+}
+.ouice .blocks.cols-2 > div,
+.ouice .blocks.cols-2 > li {
+  position: relative;
+  float: left;
+  width: 50%;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.ouice .blocks.cols-2 > div:nth-child(2n+1),
+.ouice .blocks.cols-2 > li:nth-child(2n+1) {
+  clear: left;
+}
+.ouice .blocks.cols-3 > div,
+.ouice .blocks.cols-3 > li {
+  position: relative;
+  float: left;
+  width: 33.33333333%;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.ouice .blocks.cols-3 > div:nth-child(3n+1),
+.ouice .blocks.cols-3 > li:nth-child(3n+1) {
+  clear: left;
+}
+.ouice .blocks.cols-4 > div,
+.ouice .blocks.cols-4 > li {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.ouice .blocks.cols-4 > div:nth-child(4n+1),
+.ouice .blocks.cols-4 > li:nth-child(4n+1) {
+  clear: left;
+}
+.ouice .blocks.cols-5 > div,
+.ouice .blocks.cols-5 > li {
+  position: relative;
+  float: left;
+  width: 100%;
+  width: 20%;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.ouice .blocks.cols-5 > div:nth-child(5n+1),
+.ouice .blocks.cols-5 > li:nth-child(5n+1) {
+  clear: left;
+}
+@media (max-width: 767px) {
+  .ouice .blocks.cols-2 > div,
+  .ouice .blocks.cols-3 > div,
+  .ouice .blocks.cols-4 > div,
+  .ouice .blocks.cols-5 > div,
+  .ouice .blocks.cols-2 > li,
+  .ouice .blocks.cols-3 > li,
+  .ouice .blocks.cols-4 > li,
+  .ouice .blocks.cols-5 > li {
+    width: 50%;
+  }
+  .ouice .blocks.cols-2 > div:nth-child(2n+1),
+  .ouice .blocks.cols-3 > div:nth-child(2n+1),
+  .ouice .blocks.cols-4 > div:nth-child(2n+1),
+  .ouice .blocks.cols-5 > div:nth-child(2n+1),
+  .ouice .blocks.cols-2 > li:nth-child(2n+1),
+  .ouice .blocks.cols-3 > li:nth-child(2n+1),
+  .ouice .blocks.cols-4 > li:nth-child(2n+1),
+  .ouice .blocks.cols-5 > li:nth-child(2n+1) {
+    clear: left;
+  }
+  .ouice .blocks.cols-2 > div:nth-child(3n+1),
+  .ouice .blocks.cols-3 > div:nth-child(3n+1),
+  .ouice .blocks.cols-4 > div:nth-child(3n+1),
+  .ouice .blocks.cols-5 > div:nth-child(3n+1),
+  .ouice .blocks.cols-2 > li:nth-child(3n+1),
+  .ouice .blocks.cols-3 > li:nth-child(3n+1),
+  .ouice .blocks.cols-4 > li:nth-child(3n+1),
+  .ouice .blocks.cols-5 > li:nth-child(3n+1),
+  .ouice .blocks.cols-2 > div:nth-child(4n+1),
+  .ouice .blocks.cols-3 > div:nth-child(4n+1),
+  .ouice .blocks.cols-4 > div:nth-child(4n+1),
+  .ouice .blocks.cols-5 > div:nth-child(4n+1),
+  .ouice .blocks.cols-2 > li:nth-child(4n+1),
+  .ouice .blocks.cols-3 > li:nth-child(4n+1),
+  .ouice .blocks.cols-4 > li:nth-child(4n+1),
+  .ouice .blocks.cols-5 > li:nth-child(4n+1),
+  .ouice .blocks.cols-2 > div:nth-child(5n+1),
+  .ouice .blocks.cols-3 > div:nth-child(5n+1),
+  .ouice .blocks.cols-4 > div:nth-child(5n+1),
+  .ouice .blocks.cols-5 > div:nth-child(5n+1),
+  .ouice .blocks.cols-2 > li:nth-child(5n+1),
+  .ouice .blocks.cols-3 > li:nth-child(5n+1),
+  .ouice .blocks.cols-4 > li:nth-child(5n+1),
+  .ouice .blocks.cols-5 > li:nth-child(5n+1) {
+    clear: none;
+  }
+  .ouice .blocks.cols-xs-1 > div,
+  .ouice .blocks.cols-xs-1 > li {
+    width: 100%;
+  }
+}
+.ouice .creative {
+  position: relative;
+  min-height: 250px;
+  color: #222;
+  background-color: #e7eff7;
+}
+.ouice .creative img {
+  display: block;
+  width: 100%;
+}
+.ouice .creative .caption {
+  padding: 20px 25px;
+  background: #fff;
+  background: rgba(255, 255, 255, .9);
+}
+.ouice .creative .caption .caption-heading {
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.1;
+  color: inherit;
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  .ouice .creative .caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    margin-left: -360px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+@media (min-width: 992px) {
+  .ouice .creative .caption {
+    width: 380px;
+    margin-left: -470px;
+  }
+}
+@media (min-width: 1200px) {
+  .ouice .creative .caption {
+    width: 366.66666667px;
+    margin-left: -570px;
+  }
+}
+.ouice .creative .caption p {
+  margin: 10px 0 0 0;
+  color: #666;
+}
+.ouice .container .creative {
+  margin: 0 auto 20px auto;
+}
+.ouice .container .creative .caption {
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  color: #000;
+  -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+       -o-transform: translate(0);
+          transform: translate(0);
+}
+.ouice .container .creative .caption p {
+  color: inherit;
+}
+.ouice .container .creative .caption.bg-black {
+  color: #fff;
+  background: #000 !important;
+  background: rgba(0, 0, 0, .8) !important;
+}
+.ouice .container .creative .caption.bg-dark-grey {
+  color: #fff;
+  background: #333 !important;
+  background: rgba(51, 51, 51, .8) !important;
+}
+.ouice .container .creative .caption.bg-red {
+  color: #fff;
+  background: #e3294a !important;
+  background: rgba(227, 41, 74, .8) !important;
+}
+.ouice .container .creative .caption.bg-pink {
+  color: #fff;
+  background: #e80074 !important;
+  background: rgba(232, 0, 116, .8) !important;
+}
+.ouice .container .creative .caption.bg-dark-blue {
+  color: #fff;
+  background: #036 !important;
+  background: rgba(0, 51, 102, .8) !important;
+}
+.ouice .container .creative .caption.bg-purple {
+  color: #fff;
+  background: #5f4997 !important;
+  background: rgba(95, 73, 151, .8) !important;
+}
+.ouice .container .creative .caption.bg-orange {
+  color: #fff;
+  background: #c5540a !important;
+  background: rgba(197, 84, 10, .8) !important;
+}
+.ouice .container .creative .caption.bg-burgundy {
+  color: #fff;
+  background: #7b003f !important;
+  background: rgba(123, 0, 63, .8) !important;
+}
+.ouice .container .creative .caption.bg-dark-green {
+  color: #fff;
+  background: #3f644a !important;
+  background: rgba(63, 100, 74, .8) !important;
+}
+.ouice .container .creative .caption.bg-green {
+  color: #fff;
+  background: #539d3c !important;
+  background: rgba(83, 157, 60, .8) !important;
+}
+.ouice .container .creative .caption.bg-blue {
+  color: #fff;
+  background: #0e56a7 !important;
+  background: rgba(14, 86, 167, .8) !important;
+}
+.ouice .container .creative .caption.bg-white {
+  background: #fff !important;
+  background: rgba(255, 255, 255, .8) !important;
+}
+.ouice .container .creative .caption.bg-grey {
+  background: #a7a9ac !important;
+  background: rgba(167, 169, 172, .8) !important;
+}
+.ouice .container .creative .caption.bg-light-green {
+  background: #a2b52d !important;
+  background: rgba(162, 181, 45, .8) !important;
+}
+.ouice .container .creative .caption.bg-turquoise {
+  background: #00b7b2 !important;
+  background: rgba(0, 183, 178, .8) !important;
+}
+.ouice .container .creative .caption.bg-light-blue {
+  background: #549dd0 !important;
+  background: rgba(84, 157, 208, .8) !important;
+}
+.ouice .container .creative .caption.bg-yellow {
+  background: #ffd400 !important;
+  background: rgba(255, 212, 0, .8) !important;
+}
+.ouice .container .creative .caption.bg-beige {
+  background: #cfc285 !important;
+  background: rgba(207, 194, 133, .8) !important;
+}
+.ouice .container .creative .caption.bg-light-grey {
+  background: #e7eff7 !important;
+  background: rgba(231, 239, 247, .8) !important;
+}
+.ouice .events .pager {
+  background-color: #eee;
+}
+.ouice .events .pager li {
+  background-color: transparent;
+}
+.ouice .events .pager li a {
+  background-color: transparent;
+  border: none;
+}
+.ouice .events .pager li a:hover {
+  background-color: #e80074;
+}
+.ouice .events .pager li:first-child a {
+  border-right: 1px solid #ddd;
+}
+.ouice .events .pager li:nth-child(2) {
+  display: inline-block;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+.ouice .events .pager li:last-child a {
+  border-left: 1px solid #ddd;
+}
+.ouice .events .event {
+  min-height: 90px;
+  padding-bottom: 15px;
+  margin: 0 0 15px 0;
+  border-bottom: 1px solid #eee;
+}
+.ouice .events .event:last-child {
+  border-bottom: 0;
+}
+.ouice .events .date {
+  float: left;
+  width: 55px;
+  height: auto;
+  margin: 3px 10px 0 0;
+}
+.ouice .events .date em {
+  display: block;
+  padding: 3px;
+  font-size: .9em;
+  font-style: normal;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #e3294a;
+}
+.ouice .events .date strong {
+  display: block;
+  padding: 5px 0;
+  font-size: 25px;
+  font-weight: normal;
+  color: #000;
+  text-align: center;
+  background-color: #eee;
+  border-radius: 0 0 4px 4px;
+}
+.ouice .events .date.multiple strong {
+  padding: 11px 0;
+  font-size: 16px;
+}
+.ouice .events .details {
+  margin-left: 75px;
+}
+.ouice .events .details .event-heading {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+}
+.ouice .events .details .event-heading a {
+  text-decoration: none;
+}
+.ouice .events .details time,
+.ouice .events .details .location,
+.ouice .events .details .contact {
+  display: block;
+  margin: 0 0 5px 0;
+  font-size: 13px;
+  line-height: 1.2;
+  color: #777;
+  background-color: transparent;
+}
+.ouice .events .details time a,
+.ouice .events .details .location a,
+.ouice .events .details .contact a {
+  color: inherit;
+  text-decoration: underline;
+}
+.ouice .events .details p {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+}
+.ouice .events .details p:last-child {
+  margin-bottom: 0;
+}
+.ouice .events.ou-events--single .ou-events__event-description {
+  margin-top: 20px;
+}
 .ouice .modal-open {
   overflow: hidden;
 }
@@ -6926,6 +7305,8 @@
 .ouice .pager:after,
 .ouice .panel-body:before,
 .ouice .panel-body:after,
+.ouice .blocks:before,
+.ouice .blocks:after,
 .ouice .modal-header:before,
 .ouice .modal-header:after,
 .ouice .modal-footer:before,
@@ -6947,6 +7328,7 @@
 .ouice .navbar-collapse:after,
 .ouice .pager:after,
 .ouice .panel-body:after,
+.ouice .blocks:after,
 .ouice .modal-header:after,
 .ouice .modal-footer:after {
   clear: both;

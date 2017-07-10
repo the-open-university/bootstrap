@@ -6,15 +6,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="OUICE, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
-<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 
 <title>
   
-    Getting started &middot; OUICE
+    Getting started &middot; OU ICE
   
 </title>
 
-<!-- Bootstrap core CSS -->
+<!-- OU ICE core CSS -->
 
 <link href="../dist/css/ouice.css" rel="stylesheet">
 
@@ -39,21 +38,18 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" href="/favicon.ico">
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-146052-10', 'getbootstrap.com');
-  ga('send', 'pageview');
-</script>
-
   </head>
   <body class="ouice">
     <a id="skippy" class="sr-only sr-only-focusable" href="#content"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
 
+    <div class="site-header">
+      <div class="container">
+        <a href="/"><img src="/assets/img/ou-logo-blue.png" alt="The Open University" class="img-responsive"></a>
+      </div>
+    </div>
+
     <!-- Docs master nav -->
-    <header class="navbar navbar-static-top bs-docs-nav" id="top">
+    <nav class="navbar navbar-default navbar-static-top bs-docs-nav" id="top">
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
@@ -62,7 +58,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="../" class="navbar-brand">OUICE</a>
     </div>
     <nav id="bs-navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
@@ -82,21 +77,17 @@
           <a href="../customize/">Customize</a>
         </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://themes.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes')">Themes</a></li>
-        <li><a href="http://expo.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">Expo</a></li>
-        <li><a href="http://blog.getbootstrap.com" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">Blog</a></li>
-      </ul>
     </nav>
   </div>
-</header>
+</nav>
 
 
     <!-- Docs page layout -->
-    <div class="bs-docs-header" id="content" tabindex="-1">
-      <div class="container">
-        <h1>Getting started</h1>
-        <p>An overview of Bootstrap, how to download and use, basic templates and examples, and more.</p>
+    <div class="creative">
+      <img data-src="holder.js/100%x300" alt="">
+      <div class="caption">
+        <div class="caption-heading">Getting started</div>
+        <p>An overview of OU ICE, how to download and use, basic templates and examples, and more.</p>
       </div>
     </div>
 
@@ -107,92 +98,74 @@
           <div class="bs-docs-section">
   <h1 id="download" class="page-header">Download</h1>
 
-  <p class="lead">Bootstrap (currently v3.3.7) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
+  <p class="lead">OU ICE (currently v3.3.7) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
 
   <div class="row bs-downloads">
-    <div class="col-sm-4">
-      <h3 id="download-bootstrap">Bootstrap</h3>
+    <div class="col-sm-6">
+      <h3 id="download-ouice">OU ICE</h3>
       <p>Compiled and minified CSS, JavaScript, and fonts. No docs or original source files are included.</p>
       <p>
-        <a href="https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip" class="btn btn-lg btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download compiled');">Download Bootstrap</a>
+        <a href="https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip" class="btn btn-lg btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download compiled');">Download OU ICE</a>
       </p>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-6">
       <h3 id="download-source">Source code</h3>
       <p>Source Less, JavaScript, and font files, along with our docs. <strong>Requires a Less compiler and <a href="#grunt">some setup.</a></strong></p>
       <p>
         <a href="https://github.com/twbs/bootstrap/archive/v3.3.7.zip" class="btn btn-lg btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download source');">Download source</a>
       </p>
     </div>
-    <div class="col-sm-4">
-      <h3 id="download-sass">Sass</h3>
-      <p><a href="https://github.com/twbs/bootstrap-sass">Bootstrap ported from Less to Sass</a> for easy inclusion in Rails, Compass, or Sass-only projects.</p>
-      <p>
-        <a href="https://github.com/twbs/bootstrap-sass/archive/v3.3.7.tar.gz" class="btn btn-lg btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download Sass');">Download Sass</a>
-      </p>
-    </div>
   </div>
 
-  <h2 id="download-cdn">Bootstrap CDN</h2>
-  <p>The folks over at <a href="https://www.maxcdn.com/">MaxCDN</a> graciously provide CDN support for Bootstrap's CSS and JavaScript. Just use these <a href="https://www.bootstrapcdn.com/">Bootstrap CDN</a> links.</p>
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Latest compiled and minified CSS --&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
-
-<span class="c">&lt;!-- Optional theme --&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
-
-<span class="c">&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
-
   <h2 id="download-bower">Install with Bower</h2>
-  <p>You can also install and manage Bootstrap's Less, CSS, JavaScript, and fonts using <a href="http://bower.io">Bower</a>:</p>
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>bower install bootstrap</code></pre></figure>
+  <p>You can also install and manage OU ICE's Less, CSS, JavaScript, and fonts using <a href="http://bower.io">Bower</a>:</p>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>bower install ouice</code></pre></figure>
 
   <h2 id="download-npm">Install with npm</h2>
-  <p>You can also install Bootstrap using <a href="https://www.npmjs.com">npm</a>:</p>
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>npm install bootstrap@3</code></pre></figure>
-  <p><code>require('bootstrap')</code> will load all of Bootstrap's jQuery plugins onto the jQuery object. The <code>bootstrap</code> module itself does not export anything. You can manually load Bootstrap's jQuery plugins individually by loading the <code>/js/*.js</code> files under the package's top-level directory.</p>
-  <p>Bootstrap's <code>package.json</code> contains some additional metadata under the following keys:</p>
+  <p>You can also install OU ICE using <a href="https://www.npmjs.com">npm</a>:</p>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>npm install ouice</code></pre></figure>
+  <p><code>require('ouice')</code> will load all of OU ICE's jQuery plugins onto the jQuery object. The <code>ouice</code> module itself does not export anything. You can manually load OU ICE's jQuery plugins individually by loading the <code>/js/*.js</code> files under the package's top-level directory.</p>
+  <p>OU ICE's <code>package.json</code> contains some additional metadata under the following keys:</p>
   <ul>
-    <li><code>less</code> - path to Bootstrap's main <a href="http://lesscss.org">Less</a> source file</li>
-    <li><code>style</code> - path to Bootstrap's non-minified CSS that's been precompiled using the default settings (no customization)</li>
+    <li><code>less</code> - path to OU ICE's main <a href="http://lesscss.org">Less</a> source file</li>
+    <li><code>style</code> - path to OU ICE's non-minified CSS that's been precompiled using the default settings (no customization)</li>
   </ul>
 
   <h2 id="download-composer">Install with Composer</h2>
-  <p>You can also install and manage Bootstrap's Less, CSS, JavaScript, and fonts using <a href="https://getcomposer.org">Composer</a>:</p>
-  <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>composer require twbs/bootstrap</code></pre></figure>
+  <p>You can also install and manage OU ICE's Less, CSS, JavaScript, and fonts using <a href="https://getcomposer.org">Composer</a>:</p>
+  <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>composer require the-open-university/ouice</code></pre></figure>
 
   <h2 id="download-autoprefixer">Autoprefixer required for Less/Sass</h2>
-  <p>Bootstrap uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to deal with <a href="http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm">CSS vendor prefixes</a>. If you're compiling Bootstrap from its Less/Sass source and not using our Gruntfile, you'll need to integrate Autoprefixer into your build process yourself. If you're using precompiled Bootstrap or using our Gruntfile, you don't need to worry about this because Autoprefixer is already integrated into our Gruntfile.</p>
+  <p>OU ICE uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to deal with <a href="http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm">CSS vendor prefixes</a>. If you're compiling OU ICE from its Less/Sass source and not using our Gruntfile, you'll need to integrate Autoprefixer into your build process yourself. If you're using precompiled OU ICE or using our Gruntfile, you don't need to worry about this because Autoprefixer is already integrated into our Gruntfile.</p>
 </div>
 
 <div class="bs-docs-section">
   <h1 id="whats-included" class="page-header">What's included</h1>
 
-  <p class="lead">Bootstrap is downloadable in two forms, within which you'll find the following directories and files, logically grouping common resources and providing both compiled and minified variations.</p>
+  <p class="lead">OU ICE is downloadable in two forms, within which you'll find the following directories and files, logically grouping common resources and providing both compiled and minified variations.</p>
 
   <div class="bs-callout bs-callout-warning" id="jquery-required">
     <h4>jQuery required</h4>
     <p>Please note that <strong>all JavaScript plugins require jQuery</strong> to be included, as shown in the <a href="#template">starter template</a>. <a href="https://github.com/twbs/bootstrap/blob/v3.3.7/bower.json">Consult our <code>bower.json</code></a> to see which versions of jQuery are supported.</p>
   </div>
 
-  <h2 id="whats-included-precompiled">Precompiled Bootstrap</h2>
-  <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Bootstrap. You'll see something like this:</p>
+  <h2 id="whats-included-precompiled">Precompiled OU ICE</h2>
+  <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) OU ICE. You'll see something like this:</p>
 <!-- NOTE: This info is intentionally duplicated in the README.
 Copy any changes made here over to the README too. -->
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bootstrap/
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ouice/
 ├── css/
-│   ├── bootstrap.css
-│   ├── bootstrap.css.map
-│   ├── bootstrap.min.css
-│   ├── bootstrap.min.css.map
-│   ├── bootstrap-theme.css
-│   ├── bootstrap-theme.css.map
-│   ├── bootstrap-theme.min.css
-│   └── bootstrap-theme.min.css.map
+│   ├── ouice.css
+│   ├── ouice.css.map
+│   ├── ouice.min.css
+│   ├── ouice.min.css.map
+│   ├── ouice-theme.css
+│   ├── ouice-theme.css.map
+│   ├── ouice-theme.min.css
+│   └── ouice-theme.min.css.map
 ├── js/
-│   ├── bootstrap.js
-│   └── bootstrap.min.js
+│   ├── ouice.js
+│   └── ouice.min.js
 └── fonts/
     ├── glyphicons-halflings-regular.eot
     ├── glyphicons-halflings-regular.svg
@@ -201,11 +174,11 @@ Copy any changes made here over to the README too. -->
     └── glyphicons-halflings-regular.woff2</code></pre></figure>
 <!-- NOTE: This info is intentionally duplicated in the README.
 Copy any changes made here over to the README too. -->
-  <p>This is the most basic form of Bootstrap: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (<code>bootstrap.*</code>), as well as compiled and minified CSS and JS (<code>bootstrap.min.*</code>). CSS <a href="https://developer.chrome.com/devtools/docs/css-preprocessors">source maps</a> (<code>bootstrap.*.map</code>) are available for use with certain browsers' developer tools. Fonts from Glyphicons are included, as is the optional Bootstrap theme.</p>
+  <p>This is the most basic form of OU ICE: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (<code>ouice.*</code>), as well as compiled and minified CSS and JS (<code>ouice.min.*</code>). CSS <a href="https://developer.chrome.com/devtools/docs/css-preprocessors">source maps</a> (<code>ouice.*.map</code>) are available for use with certain browsers' developer tools. Fonts from Glyphicons are included, as is the optional OU ICE theme.</p>
 
-  <h2 id="whats-included-source">Bootstrap source code</h2>
-  <p>The Bootstrap source code download includes the precompiled CSS, JavaScript, and font assets, along with source Less, JavaScript, and documentation. More specifically, it includes the following and more:</p>
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">bootstrap/
+  <h2 id="whats-included-source">OU ICE source code</h2>
+  <p>The OU ICE source code download includes the precompiled CSS, JavaScript, and font assets, along with source Less, JavaScript, and documentation. More specifically, it includes the following and more:</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ouice/
 ├── less/
 ├── js/
 ├── fonts/
@@ -215,13 +188,13 @@ Copy any changes made here over to the README too. -->
 │   └── fonts/
 └── docs/
     └── examples/</code></pre></figure>
-  <p>The <code>less/</code>, <code>js/</code>, and <code>fonts/</code> are the source code for our CSS, JS, and icon fonts (respectively). The <code>dist/</code> folder includes everything listed in the precompiled download section above. The <code>docs/</code> folder includes the source code for our documentation, and <code>examples/</code> of Bootstrap usage. Beyond that, any other included file provides support for packages, license information, and development.</p>
+  <p>The <code>less/</code>, <code>js/</code>, and <code>fonts/</code> are the source code for our CSS, JS, and icon fonts (respectively). The <code>dist/</code> folder includes everything listed in the precompiled download section above. The <code>docs/</code> folder includes the source code for our documentation, and <code>examples/</code> of OU ICE usage. Beyond that, any other included file provides support for packages, license information, and development.</p>
 </div>
 
 <div class="bs-docs-section">
   <h1 id="grunt" class="page-header">Compiling CSS and JavaScript</h1>
 
-  <p class="lead">Bootstrap uses <a href="http://gruntjs.com">Grunt</a> for its build system, with convenient methods for working with the framework. It's how we compile our code, run tests, and more.</p>
+  <p class="lead">OU ICE uses <a href="http://gruntjs.com">Grunt</a> for its build system, with convenient methods for working with the framework. It's how we compile our code, run tests, and more.</p>
 
   <h2 id="grunt-installing">Installing Grunt</h2>
   <p>To install Grunt, you must <strong>first <a href="https://nodejs.org/download/">download and install node.js</a></strong> (which includes npm). npm stands for <a href="https://www.npmjs.com/">node packaged modules</a> and is a way to manage development dependencies through node.js.</p>
@@ -229,14 +202,14 @@ Copy any changes made here over to the README too. -->
   Then, from the command line:
   <ol>
     <li>Install <code>grunt-cli</code> globally with <code>npm install -g grunt-cli</code>.</li>
-    <li>Navigate to the root <code>/bootstrap/</code> directory, then run <code>npm install</code>. npm will look at the <a href="https://github.com/twbs/bootstrap/blob/master/package.json"><code>package.json</code></a> file and automatically install the necessary local dependencies listed there.</li>
+    <li>Navigate to the root <code>/ouice/</code> directory, then run <code>npm install</code>. npm will look at the <a href="https://github.com/the-open-university/ouice-bootstrap/blob/master/package.json"><code>package.json</code></a> file and automatically install the necessary local dependencies listed there.</li>
   </ol>
 
   <p>When completed, you'll be able to run the various Grunt commands provided from the command line.</p>
 
   <h2 id="grunt-commands">Available Grunt commands</h2>
   <h3><code>grunt dist</code> (Just compile CSS and JavaScript)</h3>
-  <p>Regenerates the <code>/dist/</code> directory with compiled and minified CSS and JavaScript files. As a Bootstrap user, this is normally the command you want.</p>
+  <p>Regenerates the <code>/dist/</code> directory with compiled and minified CSS and JavaScript files. As a OU ICE user, this is normally the command you want.</p>
 
   <h3><code>grunt watch</code> (Watch)</h3>
   <p>Watches the Less source files and automatically recompiles them to CSS whenever you save a change.</p>
@@ -248,7 +221,7 @@ Copy any changes made here over to the README too. -->
   <p>Builds and tests CSS, JavaScript, and other assets which are used when running the documentation locally via <code>bundle exec jekyll serve</code>.</p>
 
   <h3><code>grunt</code> (Build absolutely everything and run tests)</h3>
-  <p>Compiles and minifies CSS and JavaScript, builds the documentation website, runs the HTML5 validator against the docs, regenerates the Customizer assets, and more. Requires <a href="http://jekyllrb.com/docs/installation/">Jekyll</a>. Usually only necessary if you're hacking on Bootstrap itself.</p>
+  <p>Compiles and minifies CSS and JavaScript, builds the documentation website, runs the HTML5 validator against the docs, regenerates the Customizer assets, and more. Requires <a href="http://jekyllrb.com/docs/installation/">Jekyll</a>. Usually only necessary if you're hacking on OU ICE itself.</p>
 
   <h2 id="grunt-troubleshooting">Troubleshooting</h2>
   <p>Should you encounter problems with installing dependencies or running Grunt commands, first delete the <code>/node_modules/</code> directory generated by npm. Then, rerun <code>npm install</code>.</p>
@@ -259,7 +232,7 @@ Copy any changes made here over to the README too. -->
 
   <p class="lead">Start with this basic HTML template, or modify <a href="#examples">these examples</a>. We hope you'll customize our templates and examples, adapting them to suit your needs.</p>
 
-  <p>Copy the HTML below to begin working with a minimal Bootstrap document.</p>
+  <p>Copy the HTML below to begin working with a minimal OU ICE document.</p>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;head&gt;</span>
@@ -267,10 +240,10 @@ Copy any changes made here over to the README too. -->
     <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
     <span class="c">&lt;!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Bootstrap 101 Template<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;title&gt;</span>OU ICE 101 Template<span class="nt">&lt;/title&gt;</span>
 
-    <span class="c">&lt;!-- Bootstrap --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"css/bootstrap.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- ouice --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"css/ouice.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 
     <span class="c">&lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;</span>
     <span class="c">&lt;!-- WARNING: Respond.js doesn't work if you view the page via file:// --&gt;</span>
@@ -282,10 +255,10 @@ Copy any changes made here over to the README too. -->
   <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
 
-    <span class="c">&lt;!-- jQuery (necessary for Bootstrap's JavaScript plugins) --&gt;</span>
+    <span class="c">&lt;!-- jQuery (necessary for OU ICE's JavaScript plugins) --&gt;</span>
     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
     <span class="c">&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"js/ouice.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span></code></pre></figure>
 </div>
@@ -293,9 +266,9 @@ Copy any changes made here over to the README too. -->
 <div class="bs-docs-section">
   <h1 id="examples" class="page-header">Examples</h1>
 
-  <p class="lead">Build on the basic template above with Bootstrap's many components. We encourage you to customize and adapt Bootstrap to suit your individual project's needs.</p>
+  <p class="lead">Build on the basic template above with OU ICE's many components. We encourage you to customize and adapt OU ICE to suit your individual project's needs.</p>
 
-  <p>Get the source code for every example below by <a href="https://github.com/twbs/bootstrap/archive/v3.3.7.zip">downloading the Bootstrap repository</a>. Examples can be found in the <code>docs/examples/</code> directory.</p>
+  <p>Get the source code for every example below by <a href="https://github.com/twbs/bootstrap/archive/v3.3.7.zip">downloading the OU ICE repository</a>. Examples can be found in the <code>docs/examples/</code> directory.</p>
 
   <h2 id="examples-framework">Using the framework</h2>
   <div class="row bs-examples">
@@ -308,10 +281,10 @@ Copy any changes made here over to the README too. -->
     </div>
     <div class="col-xs-6 col-md-4">
       <a class="thumbnail" href="../examples/theme/">
-        <img src="../examples/screenshots/theme.jpg" alt="Bootstrap theme example">
+        <img src="../examples/screenshots/theme.jpg" alt="OU ICE theme example">
       </a>
-      <h3>Bootstrap theme</h3>
-      <p>Load the optional Bootstrap theme for a visually enhanced experience.</p>
+      <h3>OU ICE theme</h3>
+      <p>Load the optional OU ICE theme for a visually enhanced experience.</p>
     </div>
     <div class="clearfix visible-xs"></div>
 
@@ -439,15 +412,15 @@ Copy any changes made here over to the README too. -->
       <a class="thumbnail" href="../examples/non-responsive/">
         <img src="../examples/screenshots/non-responsive.jpg" alt="Non-responsive example">
       </a>
-      <h3>Non-responsive Bootstrap</h3>
-      <p>Easily disable the responsiveness of Bootstrap <a href="#disable-responsive">per our docs</a>.</p>
+      <h3>Non-responsive OU ICE</h3>
+      <p>Easily disable the responsiveness of OU ICE <a href="#disable-responsive">per our docs</a>.</p>
     </div>
     <div class="col-xs-6 col-md-4">
       <a class="thumbnail" href="../examples/offcanvas/">
         <img src="../examples/screenshots/offcanvas.jpg" alt="Off-canvas navigation example">
       </a>
       <h3>Off-canvas</h3>
-      <p>Build a toggleable off-canvas navigation menu for use with Bootstrap.</p>
+      <p>Build a toggleable off-canvas navigation menu for use with OU ICE.</p>
     </div>
   </div>
 </div>
@@ -456,40 +429,26 @@ Copy any changes made here over to the README too. -->
   <h1 id="tools" class="page-header">Tools</h1>
 
   <h2 id="tools-bootlint">Bootlint</h2>
-  <p><strong><a href="https://github.com/twbs/bootlint">Bootlint</a></strong> is the official Bootstrap HTML <a href="http://en.wikipedia.org/wiki/Lint_(software)">linter</a> tool. It automatically checks for several common HTML mistakes in webpages that are using Bootstrap in a fairly "vanilla" way. Vanilla Bootstrap's components/widgets require their parts of the DOM to conform to certain structures. Bootlint checks that instances of Bootstrap components have correctly-structured HTML. Consider adding Bootlint to your Bootstrap web development toolchain so that none of the common mistakes slow down your project's development.</p>
-</div>
-
-<div class="bs-docs-section">
-  <h1 id="community" class="page-header">Community</h1>
-
-  <p class="lead">Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.</p>
-  <ul>
-    <li>Read and subscribe to <a href="http://blog.getbootstrap.com/">The Official Bootstrap Blog</a>.</li>
-    <li>Chat with fellow Bootstrappers using IRC in the <code>irc.freenode.net</code> server, in the <a href="irc://irc.freenode.net/%23bootstrap">##bootstrap channel</a>.</li>
-    <li>For help using Bootstrap, ask on <a href="https://stackoverflow.com/questions/tagged/twitter-bootstrap-3">StackOverflow using the tag <code>twitter-bootstrap-3</code></a>.</li>
-    <li>Developers should use the keyword <code>bootstrap</code> on packages which modify or add to the functionality of Bootstrap when distributing through <a href="https://www.npmjs.com/browse/keyword/bootstrap">npm</a> or similar delivery mechanisms for maximum discoverability.</li>
-    <li>Find inspiring examples of people building with Bootstrap at the <a href="http://expo.getbootstrap.com">Bootstrap Expo</a>.</li>
-  </ul>
-  <p>You can also follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a> for the latest gossip and awesome music videos.</p>
+  <p><strong><a href="https://github.com/twbs/bootlint">Bootlint</a></strong> is the official OU ICE HTML <a href="http://en.wikipedia.org/wiki/Lint_(software)">linter</a> tool. It automatically checks for several common HTML mistakes in webpages that are using OU ICE in a fairly "vanilla" way. Vanilla OU ICE's components/widgets require their parts of the DOM to conform to certain structures. Bootlint checks that instances of OU ICE components have correctly-structured HTML. Consider adding Bootlint to your OU ICE web development toolchain so that none of the common mistakes slow down your project's development.</p>
 </div>
 
 <div class="bs-docs-section">
   <h1 id="disable-responsive" class="page-header">Disabling responsiveness</h1>
 
-  <p class="lead">Bootstrap automatically adapts your pages for various screen sizes.
+  <p class="lead">OU ICE automatically adapts your pages for various screen sizes.
     Here's how to disable this feature so your page works like <a href="../examples/non-responsive/">this non-responsive example</a>.</p>
 
   <h2>Steps to disable page responsiveness</h2>
   <ol>
     <li>Omit the viewport <code>&lt;meta&gt;</code> mentioned in <a href="../css/#overview-mobile">the CSS docs</a></li>
-    <li>Override the <code>width</code> on the <code>.container</code> for each grid tier with a single width, for example <code>width: 970px !important;</code> Be sure that this comes after the default Bootstrap CSS. You can optionally avoid the <code>!important</code> with media queries or some selector-fu.</li>
+    <li>Override the <code>width</code> on the <code>.container</code> for each grid tier with a single width, for example <code>width: 970px !important;</code> Be sure that this comes after the default OU ICE CSS. You can optionally avoid the <code>!important</code> with media queries or some selector-fu.</li>
     <li>If using navbars, remove all navbar collapsing and expanding behavior.</li>
     <li>For grid layouts, use <code>.col-xs-*</code> classes in addition to, or in place of, the medium/large ones. Don't worry, the extra-small device grid scales to all resolutions.</li>
   </ol>
   <p>You'll still need Respond.js for IE8 (since our media queries are still there and need to be processed).
-    This disables the "mobile site" aspects of Bootstrap.</p>
+    This disables the "mobile site" aspects of OU ICE.</p>
 
-  <h2>Bootstrap template with responsiveness disabled</h2>
+  <h2>OU ICE template with responsiveness disabled</h2>
   <p>We've applied these steps to an example. Read its source code to see the specific changes implemented.</p>
   <p>
     <a href="../examples/non-responsive/" class="btn btn-primary">View non-responsive example</a>
@@ -500,20 +459,20 @@ Copy any changes made here over to the README too. -->
 <!-- Cross link to new migration page -->
 <div class="bs-callout bs-callout-info" id="migration">
   <h4>Migrating from v2.x to v3.x</h4>
-  <p>Looking to migrate from an older version of Bootstrap to v3.x? Check out <a href="../migration">our migration guide</a>.</p>
+  <p>Looking to migrate from an older version of OU ICE to v3.x? Check out <a href="../migration">our migration guide</a>.</p>
 </div>
 
 <div class="bs-docs-section">
   <h1 id="support" class="page-header">Browser and device support</h1>
-  <p class="lead">Bootstrap is built to work best in the latest desktop and mobile browsers, meaning older browsers might display differently styled, though fully functional, renderings of certain components.</p>
+  <p class="lead">OU ICE is built to work best in the latest desktop and mobile browsers, meaning older browsers might display differently styled, though fully functional, renderings of certain components.</p>
 
   <h2 id="support-browsers">Supported browsers</h2>
   <p>Specifically, we support the <strong>latest versions</strong> of the following browsers and platforms.</p>
 
-  <p>Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, Bootstrap should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.</p>
+  <p>Alternative browsers which use the latest version of WebKit, Blink, or Gecko, whether directly or via the platform's web view API, are not explicitly supported. However, OU ICE should (in most cases) display and function correctly in these browsers as well. More specific support information is provided below.</p>
 
   <h3 id="mobile-devices">Mobile devices</h3>
-  <p>Generally speaking, Bootstrap supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported.</p>
+  <p>Generally speaking, OU ICE supports the latest versions of each major platform's default browsers. Note that proxy browsers (such as Opera Mini, Opera Mobile's Turbo mode, UC Browser Mini, Amazon Silk) are not supported.</p>
 
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
@@ -579,11 +538,11 @@ Copy any changes made here over to the README too. -->
   </div>
 
   <p>On Windows, <strong>we support Internet Explorer 8-11</strong>.</p>
-  
+
   <p>For Firefox, in addition to the latest normal stable release, we also support the latest <a href="https://www.mozilla.org/en-US/firefox/organizations/faq/">Extended Support Release (ESR)</a> version of Firefox.</p>
 
-  <p>Unofficially, Bootstrap should look and behave well enough in Chromium and Chrome for Linux, Firefox for Linux, and Internet Explorer 7, as well as Microsoft Edge, though they are not officially supported.</p>
-  <p>For a list of some of the browser bugs that Bootstrap has to grapple with, see our <a href="../browser-bugs/">Wall of browser bugs</a>.</p>
+  <p>Unofficially, OU ICE should look and behave well enough in Chromium and Chrome for Linux, Firefox for Linux, and Internet Explorer 7, as well as Microsoft Edge, though they are not officially supported.</p>
+  <p>For a list of some of the browser bugs that OU ICE has to grapple with, see our <a href="../browser-bugs/">Wall of browser bugs</a>.</p>
 
   <h2 id="support-ie8-ie9">Internet Explorer 8 and 9</h2>
   <p>Internet Explorer 8 and 9 are also supported, however, please be aware that some CSS3 properties and HTML5 elements are not fully supported by these browsers. In addition, <strong>Internet Explorer 8 requires the use of <a href="https://github.com/scottjehl/Respond">Respond.js</a> to enable media query support.</strong></p>
@@ -639,17 +598,17 @@ Copy any changes made here over to the README too. -->
   <p>IE8 does not fully support <code>box-sizing: border-box;</code> when combined with <code>min-width</code>, <code>max-width</code>, <code>min-height</code>, or <code>max-height</code>. For that reason, as of v3.0.1, we no longer use <code>max-width</code> on <code>.container</code>s.</p>
 
   <h2 id="support-ie8-font-face">Internet Explorer 8 and @font-face</h2>
-  <p>IE8 has some issues with <code>@font-face</code> when combined with <code>:before</code>. Bootstrap uses that combination with its Glyphicons. If a page is cached, and loaded without the mouse over the window (i.e. hit the refresh button or load something in an iframe) then the page gets rendered before the font loads. Hovering over the page (body) will show some of the icons and hovering over the remaining icons will show those as well. <a href="https://github.com/twbs/bootstrap/issues/13863">See issue #13863</a> for details.</p>
+  <p>IE8 has some issues with <code>@font-face</code> when combined with <code>:before</code>. OU ICE uses that combination with its Glyphicons. If a page is cached, and loaded without the mouse over the window (i.e. hit the refresh button or load something in an iframe) then the page gets rendered before the font loads. Hovering over the page (body) will show some of the icons and hovering over the remaining icons will show those as well. <a href="https://github.com/twbs/bootstrap/issues/13863">See issue #13863</a> for details.</p>
 
   <h2 id="support-ie-compatibility-modes">IE Compatibility modes</h2>
-  <p>Bootstrap is not supported in the old Internet Explorer compatibility modes. To be sure you're using the latest rendering mode for IE, consider including the appropriate <code>&lt;meta&gt;</code> tag in your pages:</p>
+  <p>OU ICE is not supported in the old Internet Explorer compatibility modes. To be sure you're using the latest rendering mode for IE, consider including the appropriate <code>&lt;meta&gt;</code> tag in your pages:</p>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content=</span><span class="s">"IE=edge"</span><span class="nt">&gt;</span></code></pre></figure>
   <p>Confirm the document mode by opening the debugging tools: press <kbd>F12</kbd> and check the "Document Mode".</p>
-  <p>This tag is included in all of Bootstrap's documentation and examples to ensure the best rendering possible in each supported version of Internet Explorer.</p>
+  <p>This tag is included in all of OU ICE's documentation and examples to ensure the best rendering possible in each supported version of Internet Explorer.</p>
   <p>See <a href="https://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge">this StackOverflow question</a> for more information.</p>
 
   <h2 id="support-ie10-width">Internet Explorer 10 in Windows 8 and Windows Phone 8</h2>
-  <p>Internet Explorer 10 doesn't differentiate <strong>device width</strong> from <strong>viewport width</strong>, and thus doesn't properly apply the media queries in Bootstrap's CSS. Normally you'd just add a quick snippet of CSS to fix this:</p>
+  <p>Internet Explorer 10 doesn't differentiate <strong>device width</strong> from <strong>viewport width</strong>, and thus doesn't properly apply the media queries in OU ICE's CSS. Normally you'd just add a quick snippet of CSS to fix this:</p>
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@-ms-viewport</span>       <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
   <p>However, this doesn't work for devices running Windows Phone 8 versions older than <a href="http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/10/14/introducing-windows-phone-preview-for-developers.aspx">Update 3 (a.k.a. GDR3)</a>, as it causes such devices to show a mostly desktop view instead of narrow "phone" view. To address this, you'll need to <strong>include the following CSS and JavaScript to work around the bug</strong>.</p>
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@-ms-viewport</span>       <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span>
@@ -657,7 +616,7 @@ Copy any changes made here over to the README too. -->
 <span class="k">@viewport</span>           <span class="p">{</span> <span class="nl">width</span><span class="p">:</span> <span class="n">device-width</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
 
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Copyright 2014-2015 Twitter, Inc.</span>
-<span class="c1">// Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)</span>
+<span class="c1">// Licensed under MIT (https://github.com/the-open-university/ouice-bootstrap/blob/master/LICENSE)</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="sr">/IEMobile</span><span class="se">\/</span><span class="sr">10</span><span class="se">\.</span><span class="sr">0/</span><span class="p">))</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">msViewportStyle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'style'</span><span class="p">)</span>
   <span class="nx">msViewportStyle</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span>
@@ -668,7 +627,7 @@ Copy any changes made here over to the README too. -->
   <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'head'</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">msViewportStyle</span><span class="p">)</span>
 <span class="p">}</span></code></pre></figure>
   <p>For more information and usage guidelines, read <a href="http://timkadlec.com/2013/01/windows-phone-8-and-device-width/">Windows Phone 8 and Device-Width</a>.</p>
-  <p>As a heads up, we include this in all of Bootstrap's documentation and examples as a demonstration.</p>
+  <p>As a heads up, we include this in all of OU ICE's documentation and examples as a demonstration.</p>
 
   <h2 id="support-safari-percentages">Safari percent rounding</h2>
   <p>The rendering engine of versions of Safari prior to v7.1 for OS X and Safari for iOS v8.0 had some trouble with the number of decimal places used in our <code>.col-*-1</code> grid classes. So if you had 12 individual grid columns, you'd notice that they came up short compared to other rows of columns. Besides upgrading Safari/iOS, you have some options for workarounds:</p>
@@ -683,19 +642,19 @@ Copy any changes made here over to the README too. -->
   <h3>iOS text fields and scrolling</h3>
   <p>As of iOS 9.3, while a modal is open, if the initial touch of a scroll gesture is within the boundary of a textual <code>&lt;input&gt;</code> or a <code>&lt;textarea&gt;</code>, the <code>&lt;body&gt;</code> content underneath the modal will be scrolled instead of the modal itself. See <a href="https://bugs.webkit.org/show_bug.cgi?id=153856">WebKit bug #153856</a>.</p>
   <h3>Virtual keyboards</h3>
-  <p>Also, note that if you're using a fixed navbar or using inputs within a modal, iOS has a rendering bug that doesn't update the position of fixed elements when the virtual keyboard is triggered. A few workarounds for this include transforming your elements to <code>position: absolute</code> or invoking a timer on focus to try to correct the positioning manually. This is not handled by Bootstrap, so it is up to you to decide which solution is best for your application.</p>
+  <p>Also, note that if you're using a fixed navbar or using inputs within a modal, iOS has a rendering bug that doesn't update the position of fixed elements when the virtual keyboard is triggered. A few workarounds for this include transforming your elements to <code>position: absolute</code> or invoking a timer on focus to try to correct the positioning manually. This is not handled by OU ICE, so it is up to you to decide which solution is best for your application.</p>
   <h3>Navbar Dropdowns</h3>
   <p>The <code>.dropdown-backdrop</code> element isn't used on iOS in the nav because of the complexity of z-indexing. Thus, to close dropdowns in navbars, you must directly click the dropdown element (or <a href="https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile">any other element which will fire a click event in iOS</a>).</p>
 
   <h2 id="support-browser-zooming">Browser zooming</h2>
-  <p>Page zooming inevitably presents rendering artifacts in some components, both in Bootstrap and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.</p>
+  <p>Page zooming inevitably presents rendering artifacts in some components, both in OU ICE and the rest of the web. Depending on the issue, we may be able to fix it (search first and then open an issue if need be). However, we tend to ignore these as they often have no direct solution other than hacky workarounds.</p>
 
   <h2 id="support-sticky-hover-mobile">Sticky <code>:hover</code>/<code>:focus</code> on mobile</h2>
-  <p>Even though real hovering isn't possible on most touchscreens, most mobile browsers emulate hovering support and make <code>:hover</code> "sticky". In other words, <code>:hover</code> styles start applying after tapping an element and only stop applying after the user taps some other element. This can cause Bootstrap's <code>:hover</code> states to become undesirably "stuck" on such browsers. Some mobile browsers also make <code>:focus</code> similarly sticky. There is currently no simple workaround for these issues other than removing such styles entirely.</p>
+  <p>Even though real hovering isn't possible on most touchscreens, most mobile browsers emulate hovering support and make <code>:hover</code> "sticky". In other words, <code>:hover</code> styles start applying after tapping an element and only stop applying after the user taps some other element. This can cause OU ICE's <code>:hover</code> states to become undesirably "stuck" on such browsers. Some mobile browsers also make <code>:focus</code> similarly sticky. There is currently no simple workaround for these issues other than removing such styles entirely.</p>
 
   <h2 id="support-printing">Printing</h2>
   <p>Even in some modern browsers, printing can be quirky.</p>
-  <p>In particular, as of Chrome v32 and regardless of margin settings, Chrome uses a viewport width significantly narrower than the physical paper size when resolving media queries while printing a webpage. This can result in Bootstrap's extra-small grid being unexpectedly activated when printing. <a href="https://github.com/twbs/bootstrap/issues/12078">See issue #12078</a> and <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=273306">Chrome bug #273306</a> for some details. Suggested workarounds:</p>
+  <p>In particular, as of Chrome v32 and regardless of margin settings, Chrome uses a viewport width significantly narrower than the physical paper size when resolving media queries while printing a webpage. This can result in OU ICE's extra-small grid being unexpectedly activated when printing. <a href="https://github.com/twbs/bootstrap/issues/12078">See issue #12078</a> and <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=273306">Chrome bug #273306</a> for some details. Suggested workarounds:</p>
   <ul>
     <li>Embrace the extra-small grid and make sure your page looks acceptable under it.</li>
     <li>Customize the values of the <code>@screen-*</code> Less variables so that your printer paper is considered larger than extra-small.</li>
@@ -724,7 +683,7 @@ Copy any changes made here over to the README too. -->
   <p>Want to see an example? <a href="http://jsbin.com/kuvoz/1">Check out this JS Bin demo.</a></p>
 
   <h2 id="support-validators">Validators</h2>
-  <p>In order to provide the best possible experience to old and buggy browsers, Bootstrap uses <a href="http://browserhacks.com">CSS browser hacks</a> in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.</p>
+  <p>In order to provide the best possible experience to old and buggy browsers, OU ICE uses <a href="http://browserhacks.com">CSS browser hacks</a> in several places to target special CSS to certain browser versions in order to work around bugs in the browsers themselves. These hacks understandably cause CSS validators to complain that they are invalid. In a couple places, we also use bleeding-edge CSS features that aren't yet fully standardized, but these are used purely for progressive enhancement.</p>
   <p>These validation warnings don't matter in practice since the non-hacky portion of our CSS does fully validate and the hacky portions don't interfere with the proper functioning of the non-hacky portion, hence why we deliberately ignore these particular warnings.</p>
   <p>Our HTML docs likewise have some trivial and inconsequential HTML validation warnings due to our inclusion of a workaround for <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">a certain Firefox bug</a>.</p>
 </div>
@@ -734,12 +693,12 @@ Copy any changes made here over to the README too. -->
   <p class="lead">While we don't officially support any third party plugins or add-ons, we do offer some useful advice to help avoid potential issues in your projects.</p>
 
   <h2 id="third-box-sizing">Box-sizing</h2>
-  <p>Some third party software, including Google Maps and Google Custom Search Engine, conflict with Bootstrap due to <code>* { box-sizing: border-box; }</code>, a rule which makes it so <code>padding</code> does not affect the final computed width of an element. Learn more about <a href="https://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
+  <p>Some third party software, including Google Maps and Google Custom Search Engine, conflict with OU ICE due to <code>* { box-sizing: border-box; }</code>, a rule which makes it so <code>padding</code> does not affect the final computed width of an element. Learn more about <a href="https://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
   <p>Depending on the context, you may override as-needed (Option 1) or reset the box-sizing for entire regions (Option 2).</p>
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="cm">/* Box-sizing resets
  *
  * Reset individual elements or override regions to avoid conflicts due to
- * global box model settings of Bootstrap. Two options, individual overrides and
+ * global box model settings of OU ICE. Two options, individual overrides and
  * region resets, are available as plain CSS and uncompiled Less formats.
  */</span>
 
@@ -750,7 +709,7 @@ Copy any changes made here over to the README too. -->
           <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">content-box</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="cm">/* Option 1B: Override a single element's box model by using a Bootstrap Less mixin */</span>
+<span class="cm">/* Option 1B: Override a single element's box model by using a OU ICE Less mixin */</span>
 <span class="nc">.element</span> <span class="p">{</span>
   <span class="nc">.box-sizing</span><span class="o">(</span><span class="nt">content-box</span><span class="o">)</span><span class="p">;</span>
 <span class="p">}</span>
@@ -781,7 +740,7 @@ Copy any changes made here over to the README too. -->
 
 <div class="bs-docs-section">
   <h1 id="accessibility" class="page-header">Accessibility</h1>
-  <p class="lead">Bootstrap follows common web standards and&mdash;with minimal extra effort&mdash;can be used to create sites that are accessible to those using <abbr title="Assistive Technology" class="initialism">AT</abbr>.</p>
+  <p class="lead">OU ICE follows common web standards and&mdash;with minimal extra effort&mdash;can be used to create sites that are accessible to those using <abbr title="Assistive Technology" class="initialism">AT</abbr>.</p>
 
   <h2>Skip navigation</h2>
   <p>If your navigation contains many links and comes before the main content in the DOM, add a <code>Skip to main content</code> link before the navigation (for a simple explanation, see this <a href="http://a11yproject.com/posts/skip-nav-links">A11Y Project article on skip navigation links</a>). Using the <code>.sr-only</code> class will visually hide the skip link, and the <code>.sr-only-focusable</code> class will ensure that the link becomes visible once focused (for sighted keyboard users).</p>
@@ -803,7 +762,7 @@ Copy any changes made here over to the README too. -->
   <p>Learn more at <a href="http://squizlabs.github.io/HTML_CodeSniffer/Standards/Section508/">HTML CodeSniffer</a> and <a href="http://accessibility.psu.edu/headings">Penn State's AccessAbility</a>.</p>
 
   <h2>Color contrast</h2>
-  <p>Currently, some of the default color combinations available in Bootstrap (such as the various <a href="../css/#buttons">styled button</a> classes, some of the code highlighting colors used for <a href="../css/#code-block">basic code blocks</a>, the <code>.bg-primary</code> <a href="../css/#helper-classes-backgrounds">contextual background</a> helper class, and the default link color when used on a white background) have a low contrast ratio (below the <a href="http://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast">recommended ratio of 4.5:1</a>). This can cause problems to users with low vision or who are color blind. These default colors may need to be modified to increase their contrast and legibility.</p>
+  <p>Currently, some of the default color combinations available in OU ICE (such as the various <a href="../css/#buttons">styled button</a> classes, some of the code highlighting colors used for <a href="../css/#code-block">basic code blocks</a>, the <code>.bg-primary</code> <a href="../css/#helper-classes-backgrounds">contextual background</a> helper class, and the default link color when used on a white background) have a low contrast ratio (below the <a href="http://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast">recommended ratio of 4.5:1</a>). This can cause problems to users with low vision or who are color blind. These default colors may need to be modified to increase their contrast and legibility.</p>
 
   <h2>Additional resources</h2>
   <ul>
@@ -848,43 +807,6 @@ Copy any changes made here over to the README too. -->
   </ul>
 
   <p>The full Bootstrap license is located <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE">in the project repository</a> for more information.</p>
-</div>
-
-<div class="bs-docs-section">
-  <h1 id="translations" class="page-header">Translations</h1>
-
-  <p class="lead">Community members have translated Bootstrap's documentation into various languages. None are officially supported and they may not always be up to date.</p>
-  <ul>
-    
-      <li><a href="http://v3.bootcss.com/" hreflang="zh">Bootstrap 中文文档 (Chinese)</a></li>
-    
-      <li><a href="https://kkbruce.tw/bs3/" hreflang="zh-TW">Bootstrap 3 中文手冊 (Chinese (Traditional))</a></li>
-    
-      <li><a href="http://getbootstrap.dk/" hreflang="da">Bootstrap på Dansk (Danish)</a></li>
-    
-      <li><a href="http://www.oneskyapp.com/fr/docs/bootstrap/getting-started/" hreflang="fr">Bootstrap en Français (French)</a></li>
-    
-      <li><a href="http://holdirbootstrap.de/" hreflang="de">Bootstrap auf Deutsch (German)</a></li>
-    
-      <li><a href="http://www.hackerstribe.com/guide/IT-bootstrap-3.1.1/" hreflang="it">Bootstrap in Italiano (Italian)</a></li>
-    
-      <li><a href="http://bootstrapk.com/" hreflang="ko">Bootstrap 한국어 (Korean)</a></li>
-    
-      <li><a href="http://bootstrapbrasil.github.io/" hreflang="pt-BR">Bootstrap em Português do Brasil (Brazilian Portuguese)</a></li>
-    
-      <li><a href="http://www.oneskyapp.com/ru/docs/bootstrap/" hreflang="ru">Bootstrap по-русски (Russian)</a></li>
-    
-      <li><a href="http://www.oneskyapp.com/es/docs/bootstrap/" hreflang="es">Bootstrap en Español (Spanish)</a></li>
-    
-      <li><a href="http://www.trbootstrap.com" hreflang="tr">Türkçe Bootstrap (Turkish)</a></li>
-    
-      <li><a href="http://twbs.docs.org.ua" hreflang="uk">Bootstrap українською (Ukrainian)</a></li>
-    
-      <li><a href="http://getbootstrap.com.vn" hreflang="vi">Bootstrap bằng tiếng Việt (Vietnamese)</a></li>
-    
-  </ul>
-  <p><strong class="text-danger">We don't help organize or host translations, we just link to them.</strong></p>
-  <p>Finished a new or better translation? Open a pull request to add it to our list.</p>
 </div>
 
 
@@ -990,19 +912,15 @@ Copy any changes made here over to the README too. -->
 
     <ul class="bs-docs-footer-links">
       <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
-      <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>
       <li><a href="../getting-started/#examples">Examples</a></li>
-      <li><a href="../about/">About</a></li>
     </ul>
 
-    <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
-
-    <p>Code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+    <p>Code licensed <a rel="license" href="https://github.com/the-open-university/ouice-bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
 
   </div>
 </footer>
 
-<!-- Bootstrap core JavaScript
+<!-- OU ICE core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -1028,21 +946,7 @@ Copy any changes made here over to the README too. -->
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
-
-<!-- Analytics
-================================================== -->
-<script>
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
+<script src="../assets/js/retina.min.js"></script>
 
   </body>
 </html>
