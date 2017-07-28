@@ -1504,6 +1504,7 @@ abbr[data-original-title] {
 }
 blockquote {
   position: relative;
+  min-height: 100px;
   padding: 30px 30px 35px 90px;
   margin: 0 0 20px;
   font-size: 17.5px;
@@ -1518,6 +1519,22 @@ blockquote {
     background-image: url("../img/icons/icon-quotemarks@2x.png");
     background-size: 51px 42px;
   }
+}
+blockquote:before,
+blockquote:after {
+  display: table;
+  content: " ";
+}
+blockquote:after {
+  clear: both;
+}
+blockquote:before,
+blockquote:after {
+  display: table;
+  content: " ";
+}
+blockquote:after {
+  clear: both;
 }
 blockquote.bg-white,
 blockquote.bg-grey,
@@ -1609,10 +1626,29 @@ blockquote.pull-right small:after,
 blockquote.pull-right .small:after {
   content: '\00A0 \2014';
 }
+.blockquote-sm {
+  min-height: 0;
+  padding: 15px 15px 20px 60px;
+  background-image: url("../img/icons/icon-quotemarks.png");
+  background-position: 20px 22px;
+  background-size: 26px 21px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .blockquote-sm {
+    background-image: url("../img/icons/icon-quotemarks@2x.png");
+    background-size: 26px 21px;
+  }
+}
 address {
   margin-bottom: 20px;
   font-style: normal;
   line-height: 1.42857143;
+}
+time {
+  margin: 10px 0 0 0;
+  font-size: 13px;
+  color: #777;
+  background-color: transparent;
 }
 code,
 kbd,
@@ -4303,6 +4339,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-collapse {
     width: auto;
+    padding-right: 0;
+    padding-left: 0;
     border-top: 0;
     box-shadow: none;
   }
@@ -4821,6 +4859,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .breadcrumb {
   padding: 0 0;
+  margin-top: 10px;
   margin-bottom: 20px;
   list-style: none;
   background-color: transparent;
@@ -5395,6 +5434,16 @@ a.thumbnail.active {
 }
 .media-body {
   width: 10000px;
+}
+.media-body > .media {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 0;
+}
+.media-body > .media:first-child {
+  margin-top: 20px;
 }
 .media-object {
   display: block;
@@ -6278,6 +6327,7 @@ button.close {
 .creative {
   position: relative;
   min-height: 250px;
+  margin-bottom: 20px;
   color: #222;
   background-color: #e7eff7;
 }
@@ -7422,4 +7472,180 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+/*
+--------------------------------------------------------------------------------------
+
+	Colours
+
+--------------------------------------------------------------------------------------
+*/
+/*
+-------------------------------------------
+    Palette
+-------------------------------------------
+
+	NEUTRALS
+
+		Black				#000000
+		White				#FFFFFF
+		Dark grey			#333333
+		Grey				#A7A9AC
+		Light grey*			#E7EFF7
+
+	COLOURS
+
+		Red                 #E3294A
+		Pink				#E80074
+		Yellow              #FFD400
+		Purple				#5F4997
+		Dark blue           #003366
+		Blue            	#0E56A7
+		Light blue          #549DD0
+		Purple              #880088
+		Orange              #C5540A
+		Burgundy			#7B003F
+		Dark green			#3F644A
+		Turquoise			#00B7B2
+		Beige				#CFC285
+		Green*				#539d3c
+		Light green			#A2B52D
+
+		*not in official palette but useful for web, review
+
+*/
+/*
+-------------------------------------------
+    Text colour
+-------------------------------------------
+*/
+/* darker text */
+.text-black {
+  color: #000 !important;
+}
+.text-red {
+  color: #e3294a !important;
+}
+.text-pink {
+  color: #e80074 !important;
+}
+.text-dark-blue {
+  color: #036 !important;
+}
+.text-dark-grey {
+  color: #333 !important;
+}
+.text-purple {
+  color: #5f4997 !important;
+}
+.text-orange {
+  color: #c5540a !important;
+}
+.text-burgundy {
+  color: #7b003f !important;
+}
+.text-dark-green {
+  color: #3f644a !important;
+}
+.text-blue {
+  color: #0e56a7 !important;
+}
+/* not in official palette - review */
+.text-green {
+  color: #539d3c !important;
+}
+/* lighter text */
+.text-white {
+  color: #fff !important;
+}
+.text-grey {
+  color: #a7a9ac !important;
+}
+.text-yellow {
+  color: #ffd400 !important;
+}
+.text-turquoise {
+  color: #00b7b2 !important;
+}
+.text-light-blue {
+  color: #549dd0 !important;
+}
+.text-beige {
+  color: #cfc285 !important;
+}
+.text-light-green {
+  color: #a2b52d !important;
+}
+/* not in official palette - review */
+.text-light-grey {
+  color: #e7eff7 !important;
+}
+/*
+-------------------------------------------
+    Background colour
+-------------------------------------------
+*/
+/* darker colours */
+.bg-black {
+  background-color: #000 !important;
+}
+.bg-dark-grey {
+  background-color: #333 !important;
+}
+.bg-red {
+  background-color: #e3294a !important;
+}
+.bg-pink {
+  background-color: #e80074 !important;
+}
+.bg-dark-blue {
+  background-color: #036 !important;
+}
+.bg-purple {
+  background-color: #5f4997 !important;
+}
+.bg-orange {
+  background-color: #c5540a !important;
+}
+.bg-burgundy {
+  background-color: #7b003f !important;
+}
+.bg-dark-green {
+  background-color: #3f644a !important;
+}
+.bg-blue {
+  background-color: #0e56a7 !important;
+}
+/* not in official palette - review */
+.bg-green {
+  background-color: #539d3c !important;
+}
+.bg-teal {
+  background-color: #398090 !important;
+}
+/* lighter colours */
+.bg-white {
+  background-color: #fff !important;
+}
+.bg-grey {
+  background-color: #a7a9ac !important;
+}
+.bg-light-green {
+  background-color: #a2b52d !important;
+}
+.bg-turquoise {
+  background-color: #00b7b2 !important;
+}
+.bg-light-blue {
+  background-color: #549dd0 !important;
+}
+.bg-yellow {
+  background-color: #ffd400 !important;
+}
+.bg-beige {
+  background-color: #cfc285 !important;
+}
+/* not in official palette - review */
+.bg-light-grey {
+  background-color: #e7eff7 !important;
 }

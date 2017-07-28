@@ -600,7 +600,7 @@ body.ouice {
   float: left;
   width: 60px;
   height: 60px;
-  margin: 0 5px;
+  margin: 5px;
   border-radius: 3px;
 }
 
@@ -759,6 +759,10 @@ body.ouice {
   text-transform: uppercase;
   letter-spacing: 1px;
   content: "Example";
+}
+
+.ouice .bs-example.bs-example-dark {
+  background-color: #333;
 }
 
 .ouice .bs-example-padded-bottom {
