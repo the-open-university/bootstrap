@@ -232,17 +232,12 @@
   margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
 
   > li {
-    margin-right: @grid-gutter-width;
-
-    &:last-child {
-      margin-right: 0;
-    }
 
     > a {
       padding-top:    10px;
       padding-bottom: 10px;
-      padding-left:   0;
-      padding-right:  0;
+      padding-left:   (@grid-gutter-width/2);
+      padding-right:  (@grid-gutter-width/2);
       line-height: @line-height-computed;
     }
   }
@@ -278,9 +273,17 @@
 
     > li {
       float: left;
+      margin-right: @grid-gutter-width;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
       > a {
         padding-top:    @navbar-padding-vertical;
         padding-bottom: @navbar-padding-vertical;
+        padding-left:   0;
+        padding-right:  0;
       }
     }
   }

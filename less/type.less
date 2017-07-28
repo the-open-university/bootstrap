@@ -291,11 +291,13 @@ blockquote {
   margin: 0 0 @line-height-computed;
   font-size: @blockquote-font-size;
   color: #fff;
+  min-height: 100px;
   position: relative;
   background-repeat: no-repeat;
   background-color: #333;
   background-position: 25px 32px;
   .img-retina('../img/icons/icon-quotemarks.png', '../img/icons/icon-quotemarks@2x.png', 51px, 42px);
+  .clearfix();
 
   &.bg-white,
   &.bg-grey,
@@ -393,9 +395,26 @@ blockquote.pull-right {
   }
 }
 
+// Smaller version of blockquote icon
+.blockquote-sm {
+  .img-retina('../img/icons/icon-quotemarks.png', '../img/icons/icon-quotemarks@2x.png', 26px, 21px);
+  background-size: 26px 21px;
+  background-position: 20px 22px;
+  padding: 15px 15px 20px 60px;
+  min-height: 0px;
+}
+
 // Addresses
 address {
   margin-bottom: @line-height-computed;
   font-style: normal;
   line-height: @line-height-base;
+}
+
+// Times
+time {
+  color: #777;
+  background-color: transparent;
+  margin: 10px 0 0 0;
+  font-size: 13px;
 }

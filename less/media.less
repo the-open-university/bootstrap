@@ -19,6 +19,19 @@
 
 .media-body {
   width: 10000px;
+
+  // Nested media object
+  > .media {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 0;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
 }
 
 .media-object {
@@ -90,9 +103,14 @@
   }
 
   &.media-sm {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    
     .media-left {
+      padding-right: (@grid-gutter-width/2);
+
       img {
-        width: 100px;
+        width: 90px;
       }
     }
 
