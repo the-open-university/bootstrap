@@ -45,12 +45,12 @@
 
 .media-right,
 .media > .pull-right {
-  padding-left: @grid-gutter-width;
+  padding-left: @margin-base;
 }
 
 .media-left,
 .media > .pull-left {
-  padding-right: @grid-gutter-width;
+  padding-right: @margin-base;
 }
 
 .media-left,
@@ -105,9 +105,9 @@
   &.media-sm {
     padding-bottom: 10px;
     margin-bottom: 10px;
-    
+
     .media-left {
-      padding-right: (@grid-gutter-width/2);
+      padding-right: (@margin-base/2);
 
       img {
         width: 90px;
@@ -125,7 +125,7 @@
 // Striped
 .media-striped {
   .media {
-    padding: @grid-gutter-width;
+    padding: @margin-base;
     margin: 0;
     border: 0;
 
@@ -144,7 +144,7 @@
     .media-left {
       display: block;
       padding: 0;
-      margin-bottom: (@grid-gutter-width/2);
+      margin-bottom: (@margin-base/2);
 
       img {
         .img-responsive();
