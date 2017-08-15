@@ -9,18 +9,18 @@
 
 <title>
   
-    JavaScript &middot; OU ICE
+    JavaScript &middot; OU Web UI
   
 </title>
 
-<!-- OU ICE core CSS -->
+<!-- OU Web UI core CSS -->
 
-<link href="../dist/css/ouice.css" rel="stylesheet">
+<link href="../dist/css/ou-web-ui.css" rel="stylesheet">
 
 
-  <!-- Optional OU ICE Theme -->
+  <!-- Optional OU Web UI Theme -->
 
-  <link href="data:text/css;charset=utf-8," data-href="../dist/css/ouice-theme.css" rel="stylesheet" id="bs-theme-stylesheet">
+  <link href="data:text/css;charset=utf-8," data-href="../dist/css/ou-web-ui-theme.css" rel="stylesheet" id="bs-theme-stylesheet">
 
 
 
@@ -44,7 +44,7 @@
 <link rel="icon" href="/favicon.ico">
 
   </head>
-  <body class="ouice">
+  <body class="ou-web-ui">
     <a id="skippy" class="sr-only sr-only-focusable" href="#content"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
 
     <div class="site-header">
@@ -89,10 +89,10 @@
 
     <!-- Docs page layout -->
     <div class="creative">
-      <img data-src="holder.js/100%x300" alt="">
+      <img src="http://via.placeholder.com/1920x580" alt="">
       <div class="caption">
         <div class="caption-heading">JavaScript</div>
-        <p>Bring OU ICE's components to life with over a dozen custom jQuery plugins. Easily include them all, or one by one.</p>
+        <p>Bring OU Web UI's components to life with over a dozen custom jQuery plugins. Easily include them all, or one by one.</p>
       </div>
     </div>
 
@@ -104,11 +104,11 @@
   <h1 id="js-overview" class="page-header">Overview</h1>
 
   <h2 id="js-individual-compiled">Individual or compiled</h2>
-  <p>Plugins can be included individually (using OU ICE's individual <code>*.js</code> files), or all at once (using <code>ouice.js</code> or the minified <code>ouice.min.js</code>).</p>
+  <p>Plugins can be included individually (using OU Web UI's individual <code>*.js</code> files), or all at once (using <code>ou-web-ui.js</code> or the minified <code>ou-web-ui.min.js</code>).</p>
 
   <div class="bs-callout bs-callout-danger" id="callout-overview-not-both">
     <h4>Using the compiled JavaScript</h4>
-    <p>Both <code>ouice.js</code> and <code>ouice.min.js</code> contain all plugins in a single file. Include only one.</p>
+    <p>Both <code>ou-web-ui.js</code> and <code>ou-web-ui.min.js</code> contain all plugins in a single file. Include only one.</p>
   </div>
 
   <div class="bs-callout bs-callout-danger" id="callout-overview-dependencies">
@@ -117,7 +117,7 @@
   </div>
 
   <h2 id="js-data-attrs">Data attributes</h2>
-  <p>You can use all OU ICE plugins purely through the markup API without writing a single line of JavaScript. This is OU ICE's first-class API and should be your first consideration when using a plugin.</p>
+  <p>You can use all OU Web UI plugins purely through the markup API without writing a single line of JavaScript. This is OU Web UI's first-class API and should be your first consideration when using a plugin.</p>
 
   <p>That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the document namespaced with <code>data-api</code>. This looks like this:</p>
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">off</span><span class="p">(</span><span class="s1">'.data-api'</span><span class="p">)</span></code></pre></figure>
@@ -131,7 +131,7 @@
   </div>
 
   <h2 id="js-programmatic-api">Programmatic API</h2>
-  <p>We also believe you should be able to use all OU ICE plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
+  <p>We also believe you should be able to use all OU Web UI plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'.btn.danger'</span><span class="p">).</span><span class="nx">button</span><span class="p">(</span><span class="s1">'toggle'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'fat'</span><span class="p">)</span></code></pre></figure>
 
   <p>All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):</p>
@@ -146,27 +146,27 @@
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">modal</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">DEFAULTS</span><span class="p">.</span><span class="nx">keyboard</span> <span class="o">=</span> <span class="kc">false</span> <span class="c1">// changes default for the modal plugin's `keyboard` option to false</span></code></pre></figure>
 
   <h2 id="js-noconflict">No conflict</h2>
-  <p>Sometimes it is necessary to use OU ICE plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code>.noConflict</code> on the plugin you wish to revert the value of.</p>
-<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">ouiceButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value</span>
-<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">ouiceBtn</span> <span class="o">=</span> <span class="nx">ouiceButton</span>            <span class="c1">// give $().ouiceBtn the OU ICE functionality</span></code></pre></figure>
+  <p>Sometimes it is necessary to use OU Web UI plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code>.noConflict</code> on the plugin you wish to revert the value of.</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">ou</span><span class="o">-</span><span class="nx">web</span><span class="o">-</span><span class="nx">uiButton</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">button</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">()</span> <span class="c1">// return $.fn.button to previously assigned value</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">ou</span><span class="o">-</span><span class="nx">web</span><span class="o">-</span><span class="nx">uiBtn</span> <span class="o">=</span> <span class="nx">ou</span><span class="o">-</span><span class="nx">web</span><span class="o">-</span><span class="nx">uiButton</span>            <span class="c1">// give $().ou-web-uiBtn the OU Web UI functionality</span></code></pre></figure>
 
   <h2 id="js-events">Events</h2>
-  <p>OU ICE provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is triggered on the completion of an action.</p>
+  <p>OU Web UI provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is triggered on the completion of an action.</p>
   <p>All infinitive events provide <code>preventDefault</code> functionality. This provides the ability to stop the execution of an action before it starts.</p>
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'show.bs.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="k">return</span> <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span> <span class="c1">// stops modal from being shown</span>
 <span class="p">})</span></code></pre></figure>
 
   <h2 id="js-version-nums">Version numbers</h2>
-  <p>The version of each of OU ICE's jQuery plugins can be accessed via the <code>VERSION</code> property of the plugin's constructor. For example, for the tooltip plugin:</p>
+  <p>The version of each of OU Web UI's jQuery plugins can be accessed via the <code>VERSION</code> property of the plugin's constructor. For example, for the tooltip plugin:</p>
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">tooltip</span><span class="p">.</span><span class="nx">Constructor</span><span class="p">.</span><span class="nx">VERSION</span> <span class="c1">// =&gt; "3.3.7"</span></code></pre></figure>
 
   <h2 id="js-disabled">No special fallbacks when JavaScript is disabled</h2>
-  <p>OU ICE's plugins don't fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a> to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.</p>
+  <p>OU Web UI's plugins don't fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a> to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-third-party-libs">
     <h4>Third-party libraries</h4>
-    <p><strong>OU ICE does not officially support third-party JavaScript libraries</strong> like Prototype or jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own.</p>
+    <p><strong>OU Web UI does not officially support third-party JavaScript libraries</strong> like Prototype or jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own.</p>
   </div>
 </div>
 
@@ -174,13 +174,13 @@
   <h1 id="transitions" class="page-header">Transitions <small>transition.js</small></h1>
 
   <h2>About transitions</h2>
-  <p>For simple transition effects, include <code>transition.js</code> once alongside the other JS files. If you're using the compiled (or minified) <code>ouice.js</code>, there is no need to include this&mdash;it's already there.</p>
+  <p>For simple transition effects, include <code>transition.js</code> once alongside the other JS files. If you're using the compiled (or minified) <code>ou-web-ui.js</code>, there is no need to include this&mdash;it's already there.</p>
 
   <h2>What's inside</h2>
   <p>Transition.js is a basic helper for <code>transitionEnd</code> events as well as a CSS transition emulator. It's used by the other plugins to check for CSS transition support and to catch hanging transitions.</p>
 
   <h2>Disabling transitions</h2>
-  <p>Transitions can be globally disabled using the following JavaScript snippet, which must come after <code>transition.js</code> (or <code>ouice.js</code> or <code>ouice.min.js</code>, as the case may be) has loaded:</p>
+  <p>Transitions can be globally disabled using the following JavaScript snippet, which must come after <code>transition.js</code> (or <code>ou-web-ui.js</code> or <code>ou-web-ui.min.js</code>, as the case may be) has loaded:</p>
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">.</span><span class="nx">support</span><span class="p">.</span><span class="nx">transition</span> <span class="o">=</span> <span class="kc">false</span></code></pre></figure>
 </div>
 
@@ -201,7 +201,7 @@
     <p>There are some caveats regarding using modals on mobile devices. <a href="../getting-started/#support-fixed-position-keyboards">See our browser support docs</a> for details.</p>
   </div>
 
-  <p><strong class="text-danger">Due to how HTML5 defines its semantics, the <code>autofocus</code> HTML attribute has no effect in OU ICE modals.</strong> To achieve the same effect, use some custom JavaScript:</p>
+  <p><strong class="text-danger">Due to how HTML5 defines its semantics, the <code>autofocus</code> HTML attribute has no effect in OU Web UI modals.</strong> To achieve the same effect, use some custom JavaScript:</p>
 <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'shown.bs.modal'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
   <span class="nx">$</span><span class="p">(</span><span class="s1">'#myInput'</span><span class="p">).</span><span class="nx">focus</span><span class="p">()</span>
 <span class="p">})</span></code></pre></figure>
@@ -327,7 +327,7 @@
 
   <div class="bs-callout bs-callout-info" id="callout-modal-youtube">
     <h4>Embedding YouTube videos</h4>
-    <p>Embedding YouTube videos in modals requires additional JavaScript not in OU ICE to automatically stop playback and more. <a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">See this helpful Stack Overflow post</a> for more information.</p>
+    <p>Embedding YouTube videos in modals requires additional JavaScript not in OU Web UI to automatically stop playback and more. <a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">See this helpful Stack Overflow post</a> for more information.</p>
   </div>
 
   <h2 id="modals-sizes">Optional sizes</h2>
@@ -395,7 +395,7 @@
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
   <h2 id="modals-grid-system">Using the grid system</h2>
-  <p>To take advantage of the OU ICE grid system within a modal, just nest <code>.row</code>s within the <code>.modal-body</code> and then use the normal grid system classes.</p>
+  <p>To take advantage of the OU Web UI grid system within a modal, just nest <code>.row</code>s within the <code>.modal-body</code> and then use the normal grid system classes.</p>
 <!-- sample modal content -->
   <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
     <div class="modal-dialog" role="document">
@@ -641,7 +641,7 @@
   <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myModal'</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="s1">'handleUpdate'</span><span class="p">)</span></code></pre></figure>
 
   <h3 id="modals-events">Events</h3>
-  <p>OU ICE's modal class exposes a few events for hooking into modal functionality.</p>
+  <p>OU Web UI's modal class exposes a few events for hooking into modal functionality.</p>
   <p>All modal events are fired at the modal itself (i.e. at the <code>&lt;div class="modal"&gt;</code>).</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped bs-events-table">
@@ -928,8 +928,8 @@
   <h2 id="scrollspy-usage">Usage</h2>
 
   <div class="bs-callout bs-callout-warning" id="callout-scrollspy-needs-nav">
-    <h4>Requires OU ICE nav</h4>
-    <p>Scrollspy currently requires the use of a <a href="../components/#nav">OU ICE nav component</a> for proper highlighting of active links.</p>
+    <h4>Requires OU Web UI nav</h4>
+    <p>Scrollspy currently requires the use of a <a href="../components/#nav">OU Web UI nav component</a> for proper highlighting of active links.</p>
   </div>
   <div class="bs-callout bs-callout-danger" id="callout-scrollspy-target-ids">
     <h4>Resolvable ID targets required</h4>
@@ -944,7 +944,7 @@
   <p>No matter the implementation method, scrollspy requires the use of <code>position: relative;</code> on the element you're spying on. In most cases this is the <code>&lt;body&gt;</code>. When scrollspying on elements other than the <code>&lt;body&gt;</code>, be sure to have a <code>height</code> set and <code>overflow-y: scroll;</code> applied.</p>
 
   <h3>Via data attributes</h3>
-  <p>To easily add scrollspy behavior to your topbar navigation, add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the <code>&lt;body&gt;</code>). Then add the <code>data-target</code> attribute with the ID or class of the parent element of any OU ICE <code>.nav</code> component.</p>
+  <p>To easily add scrollspy behavior to your topbar navigation, add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the <code>&lt;body&gt;</code>). Then add the <code>data-target</code> attribute with the ID or class of the parent element of any OU Web UI <code>.nav</code> component.</p>
 <figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">body</span> <span class="p">{</span>
   <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
@@ -1071,7 +1071,7 @@
 <span class="nx">$</span><span class="p">(</span><span class="s1">'#myTabs li:eq(2) a'</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span> <span class="c1">// Select third tab (0-indexed)</span></code></pre></figure>
 
   <h3>Markup</h3>
-  <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the OU ICE <a href="../components/#nav-tabs">tab styling</a>, while adding the <code>nav</code> and <code>nav-pills</code> classes will apply <a href="../components/#nav-pills">pill styling</a>.</p>
+  <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the OU Web UI <a href="../components/#nav-tabs">tab styling</a>, while adding the <code>nav</code> and <code>nav-pills</code> classes will apply <a href="../components/#nav-pills">pill styling</a>.</p>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div&gt;</span>
 
   <span class="c">&lt;!-- Nav tabs --&gt;</span>
@@ -1429,7 +1429,7 @@
 
   <div class="bs-callout bs-callout-danger" id="callout-popover-needs-tooltip">
     <h4>Plugin dependency</h4>
-    <p>Popovers require the <a href="#tooltips">tooltip plugin</a> to be included in your version of OU ICE.</p>
+    <p>Popovers require the <a href="#tooltips">tooltip plugin</a> to be included in your version of OU Web UI.</p>
   </div>
   <div class="bs-callout bs-callout-danger" id="callout-popover-opt-in">
     <h4>Opt-in functionality</h4>
@@ -1765,7 +1765,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
 
 
   <h3 id="alerts-events">Events</h3>
-  <p>OU ICE's alert plugin exposes a few events for hooking into alert functionality.</p>
+  <p>OU Web UI's alert plugin exposes a few events for hooking into alert functionality.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped bs-events-table">
       <thead>
@@ -1928,7 +1928,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
 
   <div class="bs-callout bs-callout-danger" id="callout-collapse-dependency">
     <h4>Plugin dependency</h4>
-    <p>Collapse requires the <a href="#transitions">transitions plugin</a> to be included in your version of OU ICE.</p>
+    <p>Collapse requires the <a href="#transitions">transitions plugin</a> to be included in your version of OU Web UI.</p>
   </div>
 
   <h2 id="collapse-example">Example</h2>
@@ -2153,7 +2153,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
   <p>Hides a collapsible element. <strong>Returns to the caller before the collapsible element has actually been hidden</strong> (i.e. before the <code>hidden.bs.collapse</code> event occurs).</p>
 
   <h3 id="collapse-events">Events</h3>
-  <p>OU ICE's collapse class exposes a few events for hooking into collapse functionality.</p>
+  <p>OU Web UI's collapse class exposes a few events for hooking into collapse functionality.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped bs-events-table">
       <thead>
@@ -2266,7 +2266,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
 
   <div class="bs-callout bs-callout-warning" id="callout-carousel-transitions">
     <h4>Transition animations not supported in Internet Explorer 8 &amp; 9</h4>
-    <p>OU ICE exclusively uses CSS3 for its animations, but Internet Explorer 8 &amp; 9 don't support the necessary CSS properties. Thus, there are no slide transition animations when using these browsers. We have intentionally decided not to include jQuery-based fallbacks for the transitions.</p>
+    <p>OU Web UI exclusively uses CSS3 for its animations, but Internet Explorer 8 &amp; 9 don't support the necessary CSS properties. Thus, there are no slide transition animations when using these browsers. We have intentionally decided not to include jQuery-based fallbacks for the transitions.</p>
   </div>
 
   <div class="bs-callout bs-callout-warning" id="callout-carousel-active">
@@ -2276,7 +2276,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
 
   <div class="bs-callout bs-callout-info" id="callout-carousel-without-glyphicons">
     <h4>Glyphicon icons not necessary</h4>
-    <p>The <code>.glyphicon .glyphicon-chevron-left</code> and <code>.glyphicon .glyphicon-chevron-right</code> classes are not necessarily needed for the controls. OU ICE provides <code>.icon-prev</code> and <code>.icon-next</code> as plain unicode alternatives.</p>
+    <p>The <code>.glyphicon .glyphicon-chevron-left</code> and <code>.glyphicon .glyphicon-chevron-right</code> classes are not necessarily needed for the controls. OU Web UI provides <code>.icon-prev</code> and <code>.icon-next</code> as plain unicode alternatives.</p>
   </div>
 
   <h3>Optional captions</h3>
@@ -2408,7 +2408,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
   <p>Cycles to the next item.</p>
 
   <h3 id="carousel-events">Events</h3>
-  <p>OU ICE's carousel class exposes two events for hooking into carousel functionality.</p>
+  <p>OU Web UI's carousel class exposes two events for hooking into carousel functionality.</p>
   <p>Both events have the following additional properties:</p>
   <ul>
     <li><code>direction</code>: The direction in which the carousel is sliding (either <code>"left"</code> or <code>"right"</code>).</li>
@@ -2457,7 +2457,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
   <p>Here's how the affix plugin works:</p>
   <ol>
     <li>To start, the plugin adds <code>.affix-top</code> to indicate the element is in its top-most position. At this point no CSS positioning is required.</li>
-    <li>Scrolling past the element you want affixed should trigger the actual affixing. This is where <code>.affix</code> replaces <code>.affix-top</code> and sets <code>position: fixed;</code> (provided by OU ICE's CSS).</li>
+    <li>Scrolling past the element you want affixed should trigger the actual affixing. This is where <code>.affix</code> replaces <code>.affix-top</code> and sets <code>position: fixed;</code> (provided by OU Web UI's CSS).</li>
     <li>If a bottom offset is defined, scrolling past it should replace <code>.affix</code> with <code>.affix-bottom</code>. Since offsets are optional, setting one requires you to set the appropriate CSS. In this case, add <code>position: absolute;</code> when necessary. The plugin uses the data attribute or JavaScript option to determine where to position the element from there.</li>
   </ol>
   <p>Follow the above steps to set your CSS for either of the usage options below.</p>
@@ -2525,7 +2525,7 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
   <figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">$</span><span class="p">(</span><span class="s1">'#myAffix'</span><span class="p">).</span><span class="nx">affix</span><span class="p">(</span><span class="s1">'checkPosition'</span><span class="p">)</span></code></pre></figure>
 
   <h3 id="affix-events">Events</h3>
-  <p>OU ICE's affix plugin exposes a few events for hooking into affix functionality.</p>
+  <p>OU Web UI's affix plugin exposes a few events for hooking into affix functionality.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped bs-events-table">
       <thead>
@@ -2722,19 +2722,19 @@ sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="nt">&gt;</
       <li><a href="../getting-started/#examples">Examples</a></li>
     </ul>
 
-    <p>Code licensed <a rel="license" href="https://github.com/the-open-university/ouice-bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+    <p>Code licensed <a rel="license" href="https://github.com/the-open-university/ou-web-ui/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
 
   </div>
 </footer>
 
-<!-- OU ICE core JavaScript
+<!-- OU Web UI core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
 
 
-  <script src="../dist/js/ouice.js"></script>
+  <script src="../dist/js/ou-web-ui.js"></script>
 
 
 

@@ -9,13 +9,13 @@
 
 <title>
   
-    Customize and download &middot; OU ICE
+    Customize and download &middot; OU Web UI
   
 </title>
 
-<!-- OU ICE core CSS -->
+<!-- OU Web UI core CSS -->
 
-<link href="../dist/css/ouice.css" rel="stylesheet">
+<link href="../dist/css/ou-web-ui.css" rel="stylesheet">
 
 
 
@@ -39,7 +39,7 @@
 <link rel="icon" href="/favicon.ico">
 
   </head>
-  <body class="ouice">
+  <body class="ou-web-ui">
     <a id="skippy" class="sr-only sr-only-focusable" href="#content"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
 
     <div class="site-header">
@@ -84,10 +84,10 @@
 
     <!-- Docs page layout -->
     <div class="creative">
-      <img data-src="holder.js/100%x300" alt="">
+      <img src="http://via.placeholder.com/1920x580" alt="">
       <div class="caption">
         <div class="caption-heading">Customize and download</div>
-        <p>Customize OU ICE's components, Less variables, and jQuery plugins to get your very own version.</p>
+        <p>Customize OU Web UI's components, Less variables, and jQuery plugins to get your very own version.</p>
       </div>
     </div>
 
@@ -107,7 +107,7 @@
     }
   </style>
   <div class="alert alert-danger">
-    <strong>The OU ICE Customizer does not support IE9 and below.</strong><br>
+    <strong>The OU Web UI Customizer does not support IE9 and below.</strong><br>
     Please take a second to <a href="http://browsehappy.com/">upgrade to a more modern browser</a>.
   </div>
 <![endif]-->
@@ -136,7 +136,7 @@
     <button class="btn btn-default toggle" type="button">Toggle all</button>
     <h1 id="less" class="page-header">Less files</h1>
 
-    <p class="lead">Choose which Less files to compile into your custom build of OU ICE. Not sure which files to use? Read through the <a href="../css/">CSS</a> and <a href="../components/">Components</a> pages in the docs.</p>
+    <p class="lead">Choose which Less files to compile into your custom build of OU Web UI. Not sure which files to use? Read through the <a href="../css/">CSS</a> and <a href="../components/">Components</a> pages in the docs.</p>
 
     <div class="row">
       <div class="col-xs-6 col-sm-4">
@@ -446,7 +446,7 @@
 
     <div class="bs-callout bs-callout-info">
       <h4>Produces two files</h4>
-      <p>All checked plugins will be compiled into a readable <code>ouice.js</code> and a minified <code>ouice.min.js</code>. We recommend you use the minified version in production.</p>
+      <p>All checked plugins will be compiled into a readable <code>ou-web-ui.js</code> and a minified <code>ou-web-ui.min.js</code>. We recommend you use the minified version in production.</p>
     </div>
 
     <div class="bs-callout bs-callout-danger">
@@ -579,33 +579,33 @@
   </div>
   <div class="col-xs-4">
     <label for="input-@font-size-h1">@font-size-h1</label>
-    <input class="form-control" id="input-@font-size-h1" type="text" value="floor((@font-size-base * 2.6))" data-var="@font-size-h1"/>
+    <input class="form-control" id="input-@font-size-h1" type="text" value="27px" data-var="@font-size-h1"/>
   </div>
   <div class="col-xs-4">
     <label for="input-@font-size-h2">@font-size-h2</label>
-    <input class="form-control" id="input-@font-size-h2" type="text" value="floor((@font-size-base * 2.15))" data-var="@font-size-h2"/>
+    <input class="form-control" id="input-@font-size-h2" type="text" value="23px" data-var="@font-size-h2"/>
   </div>
   <div class="clearfix"></div>
   <div class="col-xs-4">
     <label for="input-@font-size-h3">@font-size-h3</label>
-    <input class="form-control" id="input-@font-size-h3" type="text" value="ceil((@font-size-base * 1.7))" data-var="@font-size-h3"/>
+    <input class="form-control" id="input-@font-size-h3" type="text" value="20px" data-var="@font-size-h3"/>
   </div>
   <div class="col-xs-4">
     <label for="input-@font-size-h4">@font-size-h4</label>
-    <input class="form-control" id="input-@font-size-h4" type="text" value="ceil((@font-size-base * 1.25))" data-var="@font-size-h4"/>
+    <input class="form-control" id="input-@font-size-h4" type="text" value="18px" data-var="@font-size-h4"/>
   </div>
   <div class="col-xs-4">
     <label for="input-@font-size-h5">@font-size-h5</label>
-    <input class="form-control" id="input-@font-size-h5" type="text" value="@font-size-base" data-var="@font-size-h5"/>
+    <input class="form-control" id="input-@font-size-h5" type="text" value="16px" data-var="@font-size-h5"/>
   </div>
   <div class="clearfix"></div>
   <div class="col-xs-4">
     <label for="input-@font-size-h6">@font-size-h6</label>
-    <input class="form-control" id="input-@font-size-h6" type="text" value="ceil((@font-size-base * 0.85))" data-var="@font-size-h6"/>
+    <input class="form-control" id="input-@font-size-h6" type="text" value="@font-size-base" data-var="@font-size-h6"/>
   </div>
   <div class="col-xs-4">
     <label for="input-@line-height-base">@line-height-base</label>
-    <input class="form-control" id="input-@line-height-base" type="text" aria-describedby="help-block-@line-height-base" value="1.428571429" data-var="@line-height-base"/>
+    <input class="form-control" id="input-@line-height-base" type="text" aria-describedby="help-block-@line-height-base" value="1.6" data-var="@line-height-base"/>
     <p class="help-block" id="help-block-@line-height-base">Unit-less <code>line-height</code> for use in components like buttons.</p>
   </div>
   <div class="col-xs-4">
@@ -625,12 +625,12 @@
   </div>
   <div class="col-xs-4">
     <label for="input-@headings-line-height">@headings-line-height</label>
-    <input class="form-control" id="input-@headings-line-height" type="text" value="1.1" data-var="@headings-line-height"/>
+    <input class="form-control" id="input-@headings-line-height" type="text" value="1.3" data-var="@headings-line-height"/>
   </div>
   <div class="clearfix"></div>
   <div class="col-xs-4">
     <label for="input-@headings-color">@headings-color</label>
-    <input class="form-control" id="input-@headings-color" type="text" value="inherit" data-var="@headings-color"/>
+    <input class="form-control" id="input-@headings-color" type="text" value="#000000" data-var="@headings-color"/>
   </div>
 </div>
 <h2 id="iconography">Iconography</h2>
@@ -1165,7 +1165,7 @@
   </div>
   <div class="col-xs-4">
     <label for="input-@container-large-desktop">@container-large-desktop</label>
-    <input class="form-control" id="input-@container-large-desktop" type="text" value="(1140px + @grid-gutter-width)" data-var="@container-large-desktop"/>
+    <input class="form-control" id="input-@container-large-desktop" type="text" value="(1180px + @grid-gutter-width)" data-var="@container-large-desktop"/>
   </div>
   <div class="col-xs-4">
     <label for="input-@container-lg">@container-lg</label>
@@ -1211,7 +1211,7 @@
   </div>
   <div class="col-xs-4">
     <label for="input-@navbar-default-border">@navbar-default-border</label>
-    <input class="form-control" id="input-@navbar-default-border" type="text" value="darken(@navbar-default-bg, 6.5%)" data-var="@navbar-default-border"/>
+    <input class="form-control" id="input-@navbar-default-border" type="text" value="#ddd" data-var="@navbar-default-border"/>
   </div>
   <div class="clearfix"></div>
   <div class="col-xs-4">
@@ -2320,7 +2320,7 @@
   </div>
   <div class="col-xs-4">
     <label for="input-@blockquote-font-size">@blockquote-font-size</label>
-    <input class="form-control" id="input-@blockquote-font-size" type="text" aria-describedby="help-block-@blockquote-font-size" value="(@font-size-base * 1.25)" data-var="@blockquote-font-size"/>
+    <input class="form-control" id="input-@blockquote-font-size" type="text" aria-describedby="help-block-@blockquote-font-size" value="17px" data-var="@blockquote-font-size"/>
     <p class="help-block" id="help-block-@blockquote-font-size">Blockquote font size</p>
   </div>
   <div class="clearfix"></div>
@@ -2351,13 +2351,20 @@
     <p class="help-block" id="help-block-@hr-border">Horizontal line color.</p>
   </div>
 </div>
+<h2 id="base-margin-(diversion-from-@grid-gutter-width)">Base margin (diversion from @grid-gutter-width)</h2>
+<div class="row">
+  <div class="col-xs-4">
+    <label for="input-@margin-base">@margin-base</label>
+    <input class="form-control" id="input-@margin-base" type="text" value="30px" data-var="@margin-base"/>
+  </div>
+</div>
 <!-- NOTE: DO NOT EDIT THE PRECEDING SECTION DIRECTLY! It is autogenerated via the `build-customizer-html` Grunt task using the customizer-variables.pug template.-->
   </div>
 
   <div class="bs-docs-section">
     <h1 id="download" class="page-header">Download</h1>
 
-    <p class="lead">Hooray! Your custom version of OU ICE is now ready to be compiled. Just click the button below to finish the process.</p>
+    <p class="lead">Hooray! Your custom version of OU Web UI is now ready to be compiled. Just click the button below to finish the process.</p>
     <div class="bs-customize-download">
       <button type="submit" id="btn-compile" disabled class="btn btn-block btn-lg btn-outline" onclick="ga('send', 'event', 'Customize', 'Download', 'Customize and Download');">Compile and Download</button>
     </div>
@@ -2413,6 +2420,7 @@
     <li><a href="#close">Close</a></li>
     <li><a href="#code">Code</a></li>
     <li><a href="#type">Type</a></li>
+    <li><a href="#base-margin-(diversion-from-@grid-gutter-width)">Base margin (diversion from @grid-gutter-width)</a></li>
   </ul>
 </li>
 <li><a href="#download">Download</a></li>
@@ -2439,19 +2447,19 @@
       <li><a href="../getting-started/#examples">Examples</a></li>
     </ul>
 
-    <p>Code licensed <a rel="license" href="https://github.com/the-open-university/ouice-bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+    <p>Code licensed <a rel="license" href="https://github.com/the-open-university/ou-web-ui/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
 
   </div>
 </footer>
 
-<!-- OU ICE core JavaScript
+<!-- OU Web UI core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
 
 
-  <script src="../dist/js/ouice.js"></script>
+  <script src="../dist/js/ou-web-ui.js"></script>
 
 
 

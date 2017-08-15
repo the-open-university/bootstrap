@@ -9,18 +9,18 @@
 
 <title>
   
-    Components &middot; OU ICE
+    Components &middot; OU Web UI
   
 </title>
 
-<!-- OU ICE core CSS -->
+<!-- OU Web UI core CSS -->
 
-<link href="../dist/css/ouice.css" rel="stylesheet">
+<link href="../dist/css/ou-web-ui.css" rel="stylesheet">
 
 
-  <!-- Optional OU ICE Theme -->
+  <!-- Optional OU Web UI Theme -->
 
-  <link href="data:text/css;charset=utf-8," data-href="../dist/css/ouice-theme.css" rel="stylesheet" id="bs-theme-stylesheet">
+  <link href="data:text/css;charset=utf-8," data-href="../dist/css/ou-web-ui-theme.css" rel="stylesheet" id="bs-theme-stylesheet">
 
 
 
@@ -44,7 +44,7 @@
 <link rel="icon" href="/favicon.ico">
 
   </head>
-  <body class="ouice">
+  <body class="ou-web-ui">
     <a id="skippy" class="sr-only sr-only-focusable" href="#content"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
 
     <div class="site-header">
@@ -89,7 +89,7 @@
 
     <!-- Docs page layout -->
     <div class="creative">
-      <img data-src="holder.js/100%x300" alt="">
+      <img src="http://via.placeholder.com/1920x580" alt="">
       <div class="caption">
         <div class="caption-heading">Components</div>
         <p>Over a dozen reusable components built to provide iconography, dropdowns, input groups, navigation, alerts, and much more.</p>
@@ -1825,7 +1825,7 @@
 
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-justified-dbl-border">
     <h4>Handling borders</h4>
-    <p>Due to the specific HTML and CSS used to justify buttons (namely <code>display: table-cell</code>), the borders between them are doubled. In regular button groups, <code>margin-left: -1px</code> is used to stack the borders instead of removing them. However, <code>margin</code> doesn't work with <code>display: table-cell</code>. As a result, depending on your customizations to OU ICE, you may wish to remove or re-color the borders.</p>
+    <p>Due to the specific HTML and CSS used to justify buttons (namely <code>display: table-cell</code>), the borders between them are doubled. In regular button groups, <code>margin-left: -1px</code> is used to stack the borders instead of removing them. However, <code>margin</code> doesn't work with <code>display: table-cell</code>. As a result, depending on your customizations to OU Web UI, you may wish to remove or re-color the borders.</p>
   </div>
   <div class="bs-callout bs-callout-warning" id="callout-btn-group-ie8-border">
     <h4>IE8 and borders</h4>
@@ -1903,7 +1903,7 @@
 
   <div class="bs-callout bs-callout-danger" id="callout-btndropdown-dependency">
     <h4>Plugin dependency</h4>
-    <p>Button dropdowns require the <a href="../javascript/#dropdowns">dropdown plugin</a> to be included in your version of OU ICE.</p>
+    <p>Button dropdowns require the <a href="../javascript/#dropdowns">dropdown plugin</a> to be included in your version of OU Web UI.</p>
   </div>
 
   <h2 id="btn-dropdowns-single">Single button dropdowns</h2>
@@ -2565,7 +2565,7 @@
 <div class="bs-docs-section">
   <h1 id="nav" class="page-header">Navs</h1>
 
-  <p class="lead">Navs available in OU ICE have shared markup, starting with the base <code>.nav</code> class, as well as shared states. Swap modifier classes to switch between each style.</p>
+  <p class="lead">Navs available in OU Web UI have shared markup, starting with the base <code>.nav</code> class, as well as shared states. Swap modifier classes to switch between each style.</p>
 
   <div class="bs-callout bs-callout-info" id="callout-navs-tabs-plugin">
     <h4>Using navs for tab panels requires JavaScript tabs plugin</h4>
@@ -2747,7 +2747,7 @@
 
   <div class="bs-callout bs-callout-warning" id="callout-navbar-overflow">
     <h4>Overflowing content</h4>
-    <p>Since OU ICE doesn't know how much space the content in your navbar needs, you might run into issues with content wrapping into a second row. To resolve this, you can:</p>
+    <p>Since OU Web UI doesn't know how much space the content in your navbar needs, you might run into issues with content wrapping into a second row. To resolve this, you can:</p>
     <ol type="a">
       <li>Reduce the amount or width of navbar items.</li>
       <li>Hide certain navbar items at certain screen sizes using <a href="../css/#responsive-utilities">responsive utility classes</a>.</li>
@@ -2757,7 +2757,7 @@
   <div class="bs-callout bs-callout-danger" id="callout-navbar-js">
     <h4>Requires JavaScript plugin</h4>
     <p>If JavaScript is disabled and the viewport is narrow enough that the navbar collapses, it will be impossible to expand the navbar and view the content within the <code>.navbar-collapse</code>.</p>
-    <p>The responsive navbar requires the <a href="../javascript/#collapse">collapse plugin</a> to be included in your version of OU ICE.</p>
+    <p>The responsive navbar requires the <a href="../javascript/#collapse">collapse plugin</a> to be included in your version of OU Web UI.</p>
   </div>
   <div class="bs-callout bs-callout-info" id="callout-navbar-breakpoint">
     <h4>Changing the collapsed mobile navbar breakpoint</h4>
@@ -3065,7 +3065,7 @@
     <h4>Body padding required</h4>
     <p>The fixed navbar will overlay your other content, unless you add <code>padding</code> to the top of the <code>&lt;body&gt;</code>. Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.</p>
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nt">body</span> <span class="p">{</span> <span class="nl">padding-top</span><span class="p">:</span> <span class="m">70px</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
-    <p>Make sure to include this <strong>after</strong> the core OU ICE CSS.</p>
+    <p>Make sure to include this <strong>after</strong> the core OU Web UI CSS.</p>
   </div>
 
 
@@ -3105,7 +3105,7 @@
     <h4>Body padding required</h4>
     <p>The fixed navbar will overlay your other content, unless you add <code>padding</code> to the bottom of the <code>&lt;body&gt;</code>. Try out your own values or use our snippet below. Tip: By default, the navbar is 50px high.</p>
 <figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nt">body</span> <span class="p">{</span> <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">70px</span><span class="p">;</span> <span class="p">}</span></code></pre></figure>
-    <p>Make sure to include this <strong>after</strong> the core OU ICE CSS.</p>
+    <p>Make sure to include this <strong>after</strong> the core OU Web UI CSS.</p>
   </div>
 
 
@@ -3538,11 +3538,11 @@
 <div class="bs-docs-section">
   <h1 id="thumbnails" class="page-header">Thumbnails</h1>
 
-  <p class="lead">Extend OU ICE's <a href="../css/#grid">grid system</a> with the thumbnail component to easily display grids of images, videos, text, and more.</p>
+  <p class="lead">Extend OU Web UI's <a href="../css/#grid">grid system</a> with the thumbnail component to easily display grids of images, videos, text, and more.</p>
   <p>If you're looking for Pinterest-like presentation of thumbnails of varying heights and/or widths, you'll need to use a third-party plugin such as <a href="http://masonry.desandro.com">Masonry</a>, <a href="http://isotope.metafizzy.co">Isotope</a>, or <a href="http://salvattore.com">Salvattore</a>.</p>
 
   <h2 id="thumbnails-default">Default example</h2>
-  <p>By default, OU ICE's thumbnails are designed to showcase linked images with minimal required markup.</p>
+  <p>By default, OU Web UI's thumbnails are designed to showcase linked images with minimal required markup.</p>
   <div class="bs-example" data-example-id="simple-thumbnails">
     <div class="row">
       <div class="col-xs-6 col-md-3">
@@ -4372,6 +4372,31 @@
   <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></figure>
 
+  <h2 id="list-group-nested">Nested example</h2>
+  <p>List groups support nested lists with active menu tree support.</p>
+  <div class="bs-example" data-example-id="nested-list-group">
+    <div class="list-group">
+      <a href="#" class="list-group-item in">
+        Cras justo odio
+      </a>
+      <div class="list-group">
+        <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+        <a href="#" class="list-group-item active">Vestibulum at eros</a>
+      </div>
+      <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+      <a href="#" class="list-group-item">Morbi leo risus</a>
+    </div>
+  </div>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"list-group-item in"</span><span class="nt">&gt;</span>Cras justo odio<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"list-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Porta ac consectetur ac<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"list-group-item active"</span><span class="nt">&gt;</span>Vestibulum at eros<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Dapibus ac facilisis in<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"list-group-item"</span><span class="nt">&gt;</span>Morbi leo risus<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
   <h2 id="list-group-buttons">Button items</h2>
   <p>List group items may be buttons instead of list items (that also means a parent <code>&lt;div&gt;</code> instead of an <code>&lt;ul&gt;</code>). No need for individual parents around each element. <strong class="text-danger">Don't use the standard <code>.btn</code> classes here.</strong></p>
   <div class="bs-example" data-example-id="list-group-btns">
@@ -4942,6 +4967,7 @@
     <li><a href="#list-group-basic">Basic example</a></li>
     <li><a href="#list-group-badges">Badges</a></li>
     <li><a href="#list-group-linked">Linked items</a></li>
+    <li><a href="#list-group-nested">Nested items</a></li>
     <li><a href="#list-group-buttons">Button items</a></li>
     <li><a href="#list-group-disabled">Disabled items</a></li>
     <li><a href="#list-group-contextual-classes">Contextual classes</a></li>
@@ -4988,19 +5014,19 @@
       <li><a href="../getting-started/#examples">Examples</a></li>
     </ul>
 
-    <p>Code licensed <a rel="license" href="https://github.com/the-open-university/ouice-bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+    <p>Code licensed <a rel="license" href="https://github.com/the-open-university/ou-web-ui/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
 
   </div>
 </footer>
 
-<!-- OU ICE core JavaScript
+<!-- OU Web UI core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
 
 
-  <script src="../dist/js/ouice.js"></script>
+  <script src="../dist/js/ou-web-ui.js"></script>
 
 
 

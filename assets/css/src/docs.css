@@ -1,5 +1,5 @@
 /*!
- * OU ICE Docs (http://ouice.webhappens.co.uk)
+ * OU Web UI Docs (http://ou-web-ui.webhappens.co.uk)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under the Creative Commons Attribution 3.0 Unported License. For
  * details, see https://creativecommons.org/licenses/by/3.0/.
@@ -7,8 +7,8 @@
 
 
 /*
- * OU ICE Documentation
- * Special styles for presenting OU ICE's documentation and code examples.
+ * OU Web UI Documentation
+ * Special styles for presenting OU Web UI's documentation and code examples.
  */
 
 
@@ -18,46 +18,46 @@
  * Update the basics of our documents to prep for docs content.
  */
 
-body.ouice {
+body.ou-web-ui {
   position: relative; /* For scrollspy */
 }
 
 /* Keep code small in tables on account of limited space */
-.ouice .table code {
+.ou-web-ui .table code {
   font-size: 13px;
   font-weight: normal;
 }
 
 /* Inline code within headings retain the heading's background-color */
-.ouice h2 code,
-.ouice h3 code,
-.ouice h4 code {
+.ou-web-ui h2 code,
+.ou-web-ui h3 code,
+.ou-web-ui h4 code {
   background-color: inherit;
 }
 
 /* Outline button for use within the docs */
-.ouice .btn-outline {
+.ou-web-ui .btn-outline {
   color: #036;
   background-color: transparent;
   border-color: #036;
 }
-.ouice .btn-outline:hover,
-.ouice .btn-outline:focus,
-.ouice .btn-outline:active {
+.ou-web-ui .btn-outline:hover,
+.ou-web-ui .btn-outline:focus,
+.ou-web-ui .btn-outline:active {
   color: #fff;
   background-color: #036;
   border-color: #036;
 }
 
 /* Inverted outline button (white on dark) */
-.ouice .btn-outline-inverse {
+.ou-web-ui .btn-outline-inverse {
   color: #fff;
   background-color: transparent;
   border-color: #cdbfe3;
 }
-.ouice .btn-outline-inverse:hover,
-.ouice .btn-outline-inverse:focus,
-.ouice .btn-outline-inverse:active {
+.ou-web-ui .btn-outline-inverse:hover,
+.ou-web-ui .btn-outline-inverse:focus,
+.ou-web-ui .btn-outline-inverse:active {
   color: #036;
   text-shadow: none;
   background-color: #fff;
@@ -95,7 +95,7 @@ body.ouice {
  * Separated section of content at the bottom of all pages, save the homepage.
  */
 
-.ouice .bs-docs-footer {
+.ou-web-ui .bs-docs-footer {
   padding-top: 50px;
   padding-bottom: 50px;
   margin-top: 100px;
@@ -103,25 +103,25 @@ body.ouice {
   text-align: center;
   background-color: #2a2730;
 }
-.ouice .bs-docs-footer a {
+.ou-web-ui .bs-docs-footer a {
   color: #fff;
 }
-.ouice .bs-docs-footer-links {
+.ou-web-ui .bs-docs-footer-links {
   padding-left: 0;
   margin-bottom: 20px;
 }
-.ouice .bs-docs-footer-links li {
+.ou-web-ui .bs-docs-footer-links li {
   display: inline-block;
 }
-.ouice .bs-docs-footer-links li + li {
+.ou-web-ui .bs-docs-footer-links li + li {
   margin-left: 15px;
 }
 
 @media (min-width: 768px) {
-  .ouice .bs-docs-footer {
+  .ou-web-ui .bs-docs-footer {
     text-align: left;
   }
-  .ouice .bs-docs-footer p {
+  .ou-web-ui .bs-docs-footer p {
     margin-bottom: 0;
   }
 }
@@ -134,8 +134,8 @@ body.ouice {
  */
 
 /* Share masthead with page headers */
-.ouice .bs-docs-masthead,
-.ouice .bs-docs-header {
+.ou-web-ui .bs-docs-masthead,
+.ou-web-ui .bs-docs-header {
   position: relative;
   padding: 30px 0;
   color: #ddd;
@@ -151,25 +151,25 @@ body.ouice {
 }
 
 /* Masthead (headings and download button) */
-.ouice .bs-docs-masthead .bs-docs-booticon {
+.ou-web-ui .bs-docs-masthead .bs-docs-booticon {
   margin: 0 auto 30px;
 }
-.ouice .bs-docs-masthead h1 {
+.ou-web-ui .bs-docs-masthead h1 {
   font-weight: 300;
   line-height: 1;
   color: #fff;
 }
-.ouice .bs-docs-masthead .lead {
+.ou-web-ui .bs-docs-masthead .lead {
   margin: 0 auto 20px;
   font-size: 20px;
   color: #fff;
 }
-.ouice .bs-docs-masthead .version {
+.ou-web-ui .bs-docs-masthead .version {
   margin-top: -15px;
   margin-bottom: 30px;
   color: #999;
 }
-.ouice .bs-docs-masthead .btn {
+.ou-web-ui .bs-docs-masthead .btn {
   width: 100%;
   padding: 15px 30px;
   margin-top: 20px;
@@ -180,25 +180,25 @@ body.ouice {
 }
 
 @media (min-width: 480px) {
-  .ouice .bs-docs-masthead .btn {
+  .ou-web-ui .bs-docs-masthead .btn {
     width: auto;
   }
 }
 
 @media (min-width: 768px) {
-  .ouice .bs-docs-masthead {
+  .ou-web-ui .bs-docs-masthead {
     padding: 80px 0;
   }
-  .ouice .bs-docs-masthead h1 {
+  .ou-web-ui .bs-docs-masthead h1 {
     font-size: 60px;
   }
-  .ouice .bs-docs-masthead .lead {
+  .ou-web-ui .bs-docs-masthead .lead {
     font-size: 24px;
   }
 }
 
 @media (min-width: 992px) {
-  .ouice .bs-docs-masthead .lead {
+  .ou-web-ui .bs-docs-masthead .lead {
     width: 80%;
     font-size: 30px;
   }
@@ -213,36 +213,36 @@ body.ouice {
 
 /* Page headers */
 
-.ouice .site-header img {
+.ou-web-ui .site-header img {
   margin: 20px 0;
 }
 
-.ouice .bs-docs-header h1 {
+.ou-web-ui .bs-docs-header h1 {
   margin-top: 0;
   color: #fff;
 }
-.ouice .bs-docs-header p {
+.ou-web-ui .bs-docs-header p {
   margin-bottom: 0;
   font-weight: 300;
   line-height: 1.4;
 }
-.ouice .bs-docs-header .container {
+.ou-web-ui .bs-docs-header .container {
   position: relative;
 }
 
 @media (min-width: 768px) {
-  .ouice .bs-docs-header {
+  .ou-web-ui .bs-docs-header {
     text-align: left;
   }
-  .ouice .bs-docs-header h1 {
+  .ou-web-ui .bs-docs-header h1 {
     font-size: 60px;
     line-height: 1;
   }
 }
 
 @media (min-width: 992px) {
-  .ouice .bs-docs-header h1,
-  .ouice .bs-docs-header p {
+  .ou-web-ui .bs-docs-header h1,
+  .ou-web-ui .bs-docs-header p {
     margin-right: 380px;
   }
 }
@@ -251,10 +251,10 @@ body.ouice {
 /*
  * Homepage featurettes
  *
- * Reasons to use OU ICE, entries from the Expo, and more.
+ * Reasons to use OU Web UI, entries from the Expo, and more.
  */
 
-.ouice .bs-docs-featurette {
+.ou-web-ui .bs-docs-featurette {
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 16px;
@@ -264,63 +264,63 @@ body.ouice {
   background-color: #fff;
   border-bottom: 1px solid #e5e5e5;
 }
-.ouice .bs-docs-featurette + .ouice .bs-docs-footer {
+.ou-web-ui .bs-docs-featurette + .ou-web-ui .bs-docs-footer {
   margin-top: 0;
   border-top: 0;
 }
 
-.ouice .bs-docs-featurette-title {
+.ou-web-ui .bs-docs-featurette-title {
   margin-bottom: 5px;
   font-size: 30px;
   font-weight: normal;
   color: #333;
 }
-.ouice .half-rule {
+.ou-web-ui .half-rule {
   width: 100px;
   margin: 40px auto;
 }
-.ouice .bs-docs-featurette h3 {
+.ou-web-ui .bs-docs-featurette h3 {
   margin-bottom: 5px;
   font-weight: normal;
   color: #333;
 }
-.ouice .bs-docs-featurette .btn {
+.ou-web-ui .bs-docs-featurette .btn {
   border-style: solid;
   border-width: 1px;
 }
-.ouice .bs-docs-featurette-img {
+.ou-web-ui .bs-docs-featurette-img {
   display: block;
   margin-bottom: 20px;
   color: #333;
 }
-.ouice .bs-docs-featurette-img:hover {
+.ou-web-ui .bs-docs-featurette-img:hover {
   color: #337ab7;
   text-decoration: none;
 }
-.ouice .bs-docs-featurette-img img {
+.ou-web-ui .bs-docs-featurette-img img {
   display: block;
   margin-bottom: 15px;
 }
 
 @media (min-width: 480px) {
-  .ouice .bs-docs-featurette .img-responsive {
+  .ou-web-ui .bs-docs-featurette .img-responsive {
     margin-top: 30px;
   }
 }
 @media (min-width: 768px) {
-  .ouice .bs-docs-featurette {
+  .ou-web-ui .bs-docs-featurette {
     padding-top: 100px;
     padding-bottom: 100px;
   }
-  .ouice .bs-docs-featurette-title {
+  .ou-web-ui .bs-docs-featurette-title {
     font-size: 40px;
   }
-  .ouice .bs-docs-featurette .lead {
+  .ou-web-ui .bs-docs-featurette .lead {
     max-width: 80%;
     margin-right: auto;
     margin-left: auto;
   }
-  .ouice .bs-docs-featurette .img-responsive {
+  .ou-web-ui .bs-docs-featurette .img-responsive {
     margin-top: 0;
   }
 }
@@ -332,23 +332,23 @@ body.ouice {
  * Homepage thumbnails from the Expo.
  */
 
-.ouice .bs-docs-featured-sites {
+.ou-web-ui .bs-docs-featured-sites {
   margin-right: -1px;
   margin-left: -1px;
 }
-.ouice .bs-docs-featured-sites .col-xs-6 {
+.ou-web-ui .bs-docs-featured-sites .col-xs-6 {
   padding: 1px;
 }
-.ouice .bs-docs-featured-sites .img-responsive {
+.ou-web-ui .bs-docs-featured-sites .img-responsive {
   margin-top: 0;
 }
 
 @media (min-width: 768px) {
-  .ouice .bs-docs-featured-sites .col-sm-3:first-child img {
+  .ou-web-ui .bs-docs-featured-sites .col-sm-3:first-child img {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
   }
-  .ouice .bs-docs-featured-sites .col-sm-3:last-child img {
+  .ou-web-ui .bs-docs-featured-sites .col-sm-3:last-child img {
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
   }
@@ -361,22 +361,22 @@ body.ouice {
  * Linked docs examples.
  */
 
-.ouice .bs-examples .thumbnail {
+.ou-web-ui .bs-examples .thumbnail {
   margin-bottom: 10px;
 }
-.ouice .bs-examples h4 {
+.ou-web-ui .bs-examples h4 {
   margin-bottom: 5px;
 }
-.ouice .bs-examples p {
+.ou-web-ui .bs-examples p {
   margin-bottom: 20px;
 }
 
 @media (max-width: 480px) {
-  .ouice .bs-examples {
+  .ou-web-ui .bs-examples {
     margin-right: -10px;
     margin-left: -10px;
   }
-  .ouice .bs-examples > [class^="col-"] {
+  .ou-web-ui .bs-examples > [class^="col-"] {
     padding-right: 10px;
     padding-left: 10px;
   }
@@ -391,40 +391,40 @@ body.ouice {
  */
 
 /* By default it's not affixed in mobile views, so undo that */
-.ouice .bs-docs-sidebar.affix {
+.ou-web-ui .bs-docs-sidebar.affix {
   position: static;
 }
 @media (min-width: 768px) {
-  .ouice .bs-docs-sidebar {
+  .ou-web-ui .bs-docs-sidebar {
     padding-left: 20px;
   }
 }
 
 /* First level of nav */
-.ouice .bs-docs-sidenav {
+.ou-web-ui .bs-docs-sidenav {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 /* All levels of nav */
-.ouice .bs-docs-sidebar .nav > li > a {
+.ou-web-ui .bs-docs-sidebar .nav > li > a {
   display: block;
   padding: 4px 20px;
   font-size: 13px;
   font-weight: 500;
   color: #767676;
 }
-.ouice .bs-docs-sidebar .nav > li > a:hover,
-.ouice .bs-docs-sidebar .nav > li > a:focus {
+.ou-web-ui .bs-docs-sidebar .nav > li > a:hover,
+.ou-web-ui .bs-docs-sidebar .nav > li > a:focus {
   padding-left: 19px;
   color: #036;
   text-decoration: none;
   background-color: transparent;
   border-left: 1px solid #036;
 }
-.ouice .bs-docs-sidebar .nav > .active > a,
-.ouice .bs-docs-sidebar .nav > .active:hover > a,
-.ouice .bs-docs-sidebar .nav > .active:focus > a {
+.ou-web-ui .bs-docs-sidebar .nav > .active > a,
+.ou-web-ui .bs-docs-sidebar .nav > .active:hover > a,
+.ou-web-ui .bs-docs-sidebar .nav > .active:focus > a {
   padding-left: 18px;
   font-weight: bold;
   color: #036;
@@ -433,31 +433,31 @@ body.ouice {
 }
 
 /* Nav: second level (shown on .active) */
-.ouice .bs-docs-sidebar .nav .nav {
+.ou-web-ui .bs-docs-sidebar .nav .nav {
   display: none; /* Hide by default, but at >768px, show it */
   padding-bottom: 10px;
 }
-.ouice .bs-docs-sidebar .nav .nav > li > a {
+.ou-web-ui .bs-docs-sidebar .nav .nav > li > a {
   padding-top: 1px;
   padding-bottom: 1px;
   padding-left: 30px;
   font-size: 12px;
   font-weight: normal;
 }
-.ouice .bs-docs-sidebar .nav .nav > li > a:hover,
-.ouice .bs-docs-sidebar .nav .nav > li > a:focus {
+.ou-web-ui .bs-docs-sidebar .nav .nav > li > a:hover,
+.ou-web-ui .bs-docs-sidebar .nav .nav > li > a:focus {
   padding-left: 29px;
 }
-.ouice .bs-docs-sidebar .nav .nav > .active > a,
-.ouice .bs-docs-sidebar .nav .nav > .active:hover > a,
-.ouice .bs-docs-sidebar .nav .nav > .active:focus > a {
+.ou-web-ui .bs-docs-sidebar .nav .nav > .active > a,
+.ou-web-ui .bs-docs-sidebar .nav .nav > .active:hover > a,
+.ou-web-ui .bs-docs-sidebar .nav .nav > .active:focus > a {
   padding-left: 28px;
   font-weight: 500;
 }
 
 /* Back to top (hidden on mobile) */
-.ouice .back-to-top,
-.ouice .bs-docs-theme-toggle {
+.ou-web-ui .back-to-top,
+.ou-web-ui .bs-docs-theme-toggle {
   display: none;
   padding: 4px 10px;
   margin-top: 10px;
@@ -466,49 +466,49 @@ body.ouice {
   font-weight: 500;
   color: #999;
 }
-.ouice .back-to-top:hover,
-.ouice .bs-docs-theme-toggle:hover {
+.ou-web-ui .back-to-top:hover,
+.ou-web-ui .bs-docs-theme-toggle:hover {
   color: #036;
   text-decoration: none;
 }
-.ouice .bs-docs-theme-toggle {
+.ou-web-ui .bs-docs-theme-toggle {
   margin-top: 0;
 }
 
 @media (min-width: 768px) {
-  .ouice .back-to-top,
-  .ouice .bs-docs-theme-toggle {
+  .ou-web-ui .back-to-top,
+  .ou-web-ui .bs-docs-theme-toggle {
     display: block;
   }
 }
 
 /* Show and affix the side nav when space allows it */
 @media (min-width: 992px) {
-  .ouice .bs-docs-sidebar .nav > .active > ul {
+  .ou-web-ui .bs-docs-sidebar .nav > .active > ul {
     display: block;
   }
   /* Widen the fixed sidebar */
-  .ouice .bs-docs-sidebar.affix,
-  .ouice .bs-docs-sidebar.affix-bottom {
+  .ou-web-ui .bs-docs-sidebar.affix,
+  .ou-web-ui .bs-docs-sidebar.affix-bottom {
     width: 213px;
   }
-  .ouice .bs-docs-sidebar.affix {
+  .ou-web-ui .bs-docs-sidebar.affix {
     position: fixed; /* Undo the static from mobile first approach */
     top: 20px;
   }
-  .ouice .bs-docs-sidebar.affix-bottom {
+  .ou-web-ui .bs-docs-sidebar.affix-bottom {
     position: absolute; /* Undo the static from mobile first approach */
   }
-  .ouice .bs-docs-sidebar.affix-bottom .bs-docs-sidenav,
-  .ouice .bs-docs-sidebar.affix .bs-docs-sidenav {
+  .ou-web-ui .bs-docs-sidebar.affix-bottom .bs-docs-sidenav,
+  .ou-web-ui .bs-docs-sidebar.affix .bs-docs-sidenav {
     margin-top: 0;
     margin-bottom: 0;
   }
 }
 @media (min-width: 1200px) {
   /* Widen the fixed sidebar again */
-  .ouice .bs-docs-sidebar.affix-bottom,
-  .ouice .bs-docs-sidebar.affix {
+  .ou-web-ui .bs-docs-sidebar.affix-bottom,
+  .ou-web-ui .bs-docs-sidebar.affix {
     width: 263px;
   }
 }
@@ -521,14 +521,14 @@ body.ouice {
  */
 
 /* Space things out */
-.ouice .bs-docs-section {
+.ou-web-ui .bs-docs-section {
   margin-bottom: 60px;
 }
-.ouice .bs-docs-section:last-child {
+.ou-web-ui .bs-docs-section:last-child {
   margin-bottom: 0;
 }
 
-.ouice h1[id] {
+.ou-web-ui h1[id] {
   padding-top: 20px;
   margin-top: 0;
 }
@@ -542,46 +542,46 @@ body.ouice {
  */
 
 /* Common styles for all types */
-.ouice .bs-callout {
+.ou-web-ui .bs-callout {
   padding: 20px;
   margin: 20px 0;
   border: 1px solid #eee;
   border-left-width: 5px;
   border-radius: 3px;
 }
-.ouice .bs-callout h4 {
+.ou-web-ui .bs-callout h4 {
   margin-top: 0;
   margin-bottom: 5px;
 }
-.ouice .bs-callout p:last-child {
+.ou-web-ui .bs-callout p:last-child {
   margin-bottom: 0;
 }
-.ouice .bs-callout code {
+.ou-web-ui .bs-callout code {
   border-radius: 3px;
 }
 
 /* Tighten up space between multiple callouts */
-.ouice .bs-callout + .ouice .bs-callout {
+.ou-web-ui .bs-callout + .ou-web-ui .bs-callout {
   margin-top: -5px;
 }
 
 /* Variations */
-.ouice .bs-callout-danger {
+.ou-web-ui .bs-callout-danger {
   border-left-color: #ce4844;
 }
-.ouice .bs-callout-danger h4 {
+.ou-web-ui .bs-callout-danger h4 {
   color: #ce4844;
 }
-.ouice .bs-callout-warning {
+.ou-web-ui .bs-callout-warning {
   border-left-color: #aa6708;
 }
-.ouice .bs-callout-warning h4 {
+.ou-web-ui .bs-callout-warning h4 {
   color: #aa6708;
 }
-.ouice .bs-callout-info {
+.ou-web-ui .bs-callout-info {
   border-left-color: #1b809e;
 }
-.ouice .bs-callout-info h4 {
+.ou-web-ui .bs-callout-info h4 {
   color: #1b809e;
 }
 
@@ -592,11 +592,11 @@ body.ouice {
  * Color swatches and associated values for our grayscale and brand colors.
  */
 
-.ouice .color-swatches {
+.ou-web-ui .color-swatches {
   margin: 0 -5px;
   overflow: hidden; /* clearfix */
 }
-.ouice .color-swatch {
+.ou-web-ui .color-swatch {
   float: left;
   width: 60px;
   height: 60px;
@@ -605,55 +605,55 @@ body.ouice {
 }
 
 @media (min-width: 768px) {
-  .ouice .color-swatch {
+  .ou-web-ui .color-swatch {
     width: 100px;
     height: 100px;
   }
 }
 
 /* Framework colors */
-.ouice .color-swatches .gray-darker {
+.ou-web-ui .color-swatches .gray-darker {
   background-color: #222;
 }
-.ouice .color-swatches .gray-dark {
+.ou-web-ui .color-swatches .gray-dark {
   background-color: #333;
 }
-.ouice .color-swatches .gray {
+.ou-web-ui .color-swatches .gray {
   background-color: #555;
 }
-.ouice .color-swatches .gray-light {
+.ou-web-ui .color-swatches .gray-light {
   background-color: #999;
 }
-.ouice .color-swatches .gray-lighter {
+.ou-web-ui .color-swatches .gray-lighter {
   background-color: #eee;
 }
-.ouice .color-swatches .brand-primary {
+.ou-web-ui .color-swatches .brand-primary {
   background-color: #337ab7;
 }
-.ouice .color-swatches .brand-success {
+.ou-web-ui .color-swatches .brand-success {
   background-color: #5cb85c;
 }
-.ouice .color-swatches .brand-warning {
+.ou-web-ui .color-swatches .brand-warning {
   background-color: #f0ad4e;
 }
-.ouice .color-swatches .brand-danger {
+.ou-web-ui .color-swatches .brand-danger {
   background-color: #d9534f;
 }
-.ouice .color-swatches .brand-info {
+.ou-web-ui .color-swatches .brand-info {
   background-color: #5bc0de;
 }
 
 /* Docs colors */
-.ouice .color-swatches .bs-purple {
+.ou-web-ui .color-swatches .bs-purple {
   background-color: #036;
 }
-.ouice .color-swatches .bs-purple-light {
+.ou-web-ui .color-swatches .bs-purple-light {
   background-color: #c7bfd3;
 }
-.ouice .color-swatches .bs-purple-lighter {
+.ou-web-ui .color-swatches .bs-purple-lighter {
   background-color: #e5e1ea;
 }
-.ouice .color-swatches .bs-gray {
+.ou-web-ui .color-swatches .bs-gray {
   background-color: #f9f9f9;
 }
 
@@ -664,22 +664,22 @@ body.ouice {
  * Avatars, names, and usernames for core team.
  */
 
-.ouice .bs-team .team-member {
+.ou-web-ui .bs-team .team-member {
   line-height: 32px;
   color: #555;
 }
-.ouice .bs-team .team-member:hover {
+.ou-web-ui .bs-team .team-member:hover {
   color: #333;
   text-decoration: none;
 }
-.ouice .bs-team .github-btn {
+.ou-web-ui .bs-team .github-btn {
   float: right;
   width: 180px;
   height: 20px;
   margin-top: 6px;
   border: none;
 }
-.ouice .bs-team img {
+.ou-web-ui .bs-team img {
   float: left;
   width: 32px;
   margin-right: 10px;
@@ -693,11 +693,11 @@ body.ouice {
  * Better display for the responsive table on the Wall of Browser Bugs.
  */
 
-.ouice .bs-docs-browser-bugs td p {
+.ou-web-ui .bs-docs-browser-bugs td p {
   margin-bottom: 0;
 }
 
-.ouice .bs-docs-browser-bugs th:first-child {
+.ou-web-ui .bs-docs-browser-bugs th:first-child {
   width: 18%;
 }
 
@@ -709,12 +709,12 @@ body.ouice {
  * alignment, sizing, etc.
  */
 
-.ouice .show-grid {
+.ou-web-ui .show-grid {
   margin-bottom: 15px;
 }
-.ouice .show-grid [class^="col-"],
-.ouice .show-grid > div > p,
-.ouice .show-grid > li > p {
+.ou-web-ui .show-grid [class^="col-"],
+.ou-web-ui .show-grid > div > p,
+.ou-web-ui .show-grid > li > p {
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #eee;
@@ -723,8 +723,8 @@ body.ouice {
   border: 1px solid rgba(86,61,124,.2);
 }
 
-.ouice .show-grid > div > p,
-.ouice .show-grid > li > p {
+.ou-web-ui .show-grid > div > p,
+.ou-web-ui .show-grid > li > p {
   padding-top: 0;
   padding-bottom: 0;
   text-align: center;
@@ -738,7 +738,7 @@ body.ouice {
  * followed by a code snippet.
  */
 
-.ouice .bs-example {
+.ou-web-ui .bs-example {
   position: relative;
   padding: 45px 15px 15px;
   margin: 0 -15px 15px;
@@ -749,7 +749,7 @@ body.ouice {
           box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
 }
 /* Echo out a label for the example */
-.ouice .bs-example:after {
+.ou-web-ui .bs-example:after {
   position: absolute;
   top: 15px;
   left: 15px;
@@ -761,17 +761,17 @@ body.ouice {
   content: "Example";
 }
 
-.ouice .bs-example.bs-example-dark {
+.ou-web-ui .bs-example.bs-example-dark {
   background-color: #333;
 }
 
-.ouice .bs-example-padded-bottom {
+.ou-web-ui .bs-example-padded-bottom {
   padding-bottom: 24px;
 }
 
 /* Tweak display of the code snippets when following an example */
-.ouice .bs-example + .ouice .highlight,
-.ouice .bs-example + .ouice .zero-clipboard + .ouice .highlight {
+.ou-web-ui .bs-example + .ou-web-ui .highlight,
+.ou-web-ui .bs-example + .ou-web-ui .zero-clipboard + .ou-web-ui .highlight {
   margin: -15px -15px 15px;
   border-width: 0 0 1px;
   border-radius: 0;
@@ -779,7 +779,7 @@ body.ouice {
 
 /* Make the examples and snippets not full-width */
 @media (min-width: 768px) {
-  .ouice .bs-example {
+  .ou-web-ui .bs-example {
     margin-right: 0;
     margin-left: 0;
     background-color: #fff;
@@ -789,8 +789,8 @@ body.ouice {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .ouice .bs-example + .ouice .highlight,
-  .ouice .bs-example + .ouice .zero-clipboard + .ouice .highlight {
+  .ou-web-ui .bs-example + .ou-web-ui .highlight,
+  .ou-web-ui .bs-example + .ou-web-ui .zero-clipboard + .ou-web-ui .highlight {
     margin-top: -16px;
     margin-right: 0;
     margin-left: 0;
@@ -798,164 +798,164 @@ body.ouice {
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
   }
-  .ouice .bs-example-standalone {
+  .ou-web-ui .bs-example-standalone {
     border-radius: 4px;
   }
 }
 
 /* Undo width of container */
-.ouice .bs-example .container {
+.ou-web-ui .bs-example .container {
   width: auto;
 }
 
 /* Tweak content of examples for optimum awesome */
-.ouice .bs-example > p:last-child,
-.ouice .bs-example > ul:last-child,
-.ouice .bs-example > ol:last-child,
-.ouice .bs-example > blockquote:last-child,
-.ouice .bs-example > .form-control:last-child,
-.ouice .bs-example > .table:last-child,
-.ouice .bs-example > .navbar:last-child,
-.ouice .bs-example > .jumbotron:last-child,
-.ouice .bs-example > .alert:last-child,
-.ouice .bs-example > .panel:last-child,
-.ouice .bs-example > .list-group:last-child,
-.ouice .bs-example > .well:last-child,
-.ouice .bs-example > .progress:last-child,
-.ouice .bs-example > .table-responsive:last-child > .table {
+.ou-web-ui .bs-example > p:last-child,
+.ou-web-ui .bs-example > ul:last-child,
+.ou-web-ui .bs-example > ol:last-child,
+.ou-web-ui .bs-example > blockquote:last-child,
+.ou-web-ui .bs-example > .form-control:last-child,
+.ou-web-ui .bs-example > .table:last-child,
+.ou-web-ui .bs-example > .navbar:last-child,
+.ou-web-ui .bs-example > .jumbotron:last-child,
+.ou-web-ui .bs-example > .alert:last-child,
+.ou-web-ui .bs-example > .panel:last-child,
+.ou-web-ui .bs-example > .list-group:last-child,
+.ou-web-ui .bs-example > .well:last-child,
+.ou-web-ui .bs-example > .progress:last-child,
+.ou-web-ui .bs-example > .table-responsive:last-child > .table {
   margin-bottom: 0;
 }
-.ouice .bs-example > p > .close {
+.ou-web-ui .bs-example > p > .close {
   float: none;
 }
 
 /* Typography */
-.ouice .bs-example-type .table .type-info {
+.ou-web-ui .bs-example-type .table .type-info {
   color: #767676;
   vertical-align: middle;
 }
-.ouice .bs-example-type .table td {
+.ou-web-ui .bs-example-type .table td {
   padding: 15px 0;
   border-color: #eee;
 }
-.ouice .bs-example-type .table tr:first-child td {
+.ou-web-ui .bs-example-type .table tr:first-child td {
   border-top: 0;
 }
-.ouice .bs-example-type h1,
-.ouice .bs-example-type h2,
-.ouice .bs-example-type h3,
-.ouice .bs-example-type h4,
-.ouice .bs-example-type h5,
-.ouice .bs-example-type h6 {
+.ou-web-ui .bs-example-type h1,
+.ou-web-ui .bs-example-type h2,
+.ou-web-ui .bs-example-type h3,
+.ou-web-ui .bs-example-type h4,
+.ou-web-ui .bs-example-type h5,
+.ou-web-ui .bs-example-type h6 {
   margin: 0;
 }
 
 /* Contextual background colors */
-.ouice .bs-example-bg-classes p {
+.ou-web-ui .bs-example-bg-classes p {
   padding: 15px;
 }
 
 /* Images */
-.ouice .bs-example > .img-circle,
-.ouice .bs-example > .img-rounded,
-.ouice .bs-example > .img-thumbnail {
+.ou-web-ui .bs-example > .img-circle,
+.ou-web-ui .bs-example > .img-rounded,
+.ou-web-ui .bs-example > .img-thumbnail {
   margin: 5px;
 }
 
 /* Tables */
-.ouice .bs-example > .table-responsive > .table {
+.ou-web-ui .bs-example > .table-responsive > .table {
   background-color: #fff;
 }
 
 /* Buttons */
-.ouice .bs-example > .btn,
-.ouice .bs-example > .btn-group {
+.ou-web-ui .bs-example > .btn,
+.ou-web-ui .bs-example > .btn-group {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.ouice .bs-example > .btn-toolbar + .btn-toolbar {
+.ou-web-ui .bs-example > .btn-toolbar + .btn-toolbar {
   margin-top: 10px;
 }
 
 /* Forms */
-.ouice .bs-example-control-sizing select,
-.ouice .bs-example-control-sizing input[type="text"] + input[type="text"] {
+.ou-web-ui .bs-example-control-sizing select,
+.ou-web-ui .bs-example-control-sizing input[type="text"] + input[type="text"] {
   margin-top: 10px;
 }
-.ouice .bs-example-form .input-group {
+.ou-web-ui .bs-example-form .input-group {
   margin-bottom: 10px;
 }
-.ouice .bs-example > textarea.form-control {
+.ou-web-ui .bs-example > textarea.form-control {
   resize: vertical;
 }
 
 /* List groups */
-.ouice .bs-example > .list-group {
+.ou-web-ui .bs-example > .list-group {
   max-width: 400px;
 }
 
 /* Navbars */
-.ouice .bs-example .navbar:last-child {
+.ou-web-ui .bs-example .navbar:last-child {
   margin-bottom: 0;
 }
-.ouice .bs-navbar-top-example,
-.ouice .bs-navbar-bottom-example {
+.ou-web-ui .bs-navbar-top-example,
+.ou-web-ui .bs-navbar-bottom-example {
   z-index: 1;
   padding: 0;
   overflow: hidden; /* cut the drop shadows off */
 }
-.ouice .bs-navbar-top-example .navbar-header,
-.ouice .bs-navbar-bottom-example .navbar-header {
+.ou-web-ui .bs-navbar-top-example .navbar-header,
+.ou-web-ui .bs-navbar-bottom-example .navbar-header {
   margin-left: 0;
 }
-.ouice .bs-navbar-top-example .navbar-fixed-top,
-.ouice .bs-navbar-bottom-example .navbar-fixed-bottom {
+.ou-web-ui .bs-navbar-top-example .navbar-fixed-top,
+.ou-web-ui .bs-navbar-bottom-example .navbar-fixed-bottom {
   position: relative;
   margin-right: 0;
   margin-left: 0;
 }
-.ouice .bs-navbar-top-example {
+.ou-web-ui .bs-navbar-top-example {
   padding-bottom: 45px;
 }
-.ouice .bs-navbar-top-example:after {
+.ou-web-ui .bs-navbar-top-example:after {
   top: auto;
   bottom: 15px;
 }
-.ouice .bs-navbar-top-example .navbar-fixed-top {
+.ou-web-ui .bs-navbar-top-example .navbar-fixed-top {
   top: -1px;
 }
-.ouice .bs-navbar-bottom-example {
+.ou-web-ui .bs-navbar-bottom-example {
   padding-top: 45px;
 }
-.ouice .bs-navbar-bottom-example .navbar-fixed-bottom {
+.ou-web-ui .bs-navbar-bottom-example .navbar-fixed-bottom {
   bottom: -1px;
 }
-.ouice .bs-navbar-bottom-example .navbar {
+.ou-web-ui .bs-navbar-bottom-example .navbar {
   margin-bottom: 0;
 }
 @media (min-width: 768px) {
-  .ouice .bs-navbar-top-example .navbar-fixed-top,
-  .ouice .bs-navbar-bottom-example .navbar-fixed-bottom {
+  .ou-web-ui .bs-navbar-top-example .navbar-fixed-top,
+  .ou-web-ui .bs-navbar-bottom-example .navbar-fixed-bottom {
     position: absolute;
   }
 }
 
 /* Pagination */
-.ouice .bs-example .pagination {
+.ou-web-ui .bs-example .pagination {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 /* Pager */
-.ouice .bs-example > .pager {
+.ou-web-ui .bs-example > .pager {
   margin-top: 0;
 }
 
 /* Example modals */
-.ouice .bs-example-modal {
+.ou-web-ui .bs-example-modal {
   background-color: #f5f5f5;
 }
-.ouice .bs-example-modal .modal {
+.ou-web-ui .bs-example-modal .modal {
   position: relative;
   top: auto;
   right: auto;
@@ -964,17 +964,17 @@ body.ouice {
   z-index: 1;
   display: block;
 }
-.ouice .bs-example-modal .modal-dialog {
+.ou-web-ui .bs-example-modal .modal-dialog {
   left: auto;
   margin-right: auto;
   margin-left: auto;
 }
 
 /* Example dropdowns */
-.ouice .bs-example > .dropdown > .dropdown-toggle {
+.ou-web-ui .bs-example > .dropdown > .dropdown-toggle {
   float: left;
 }
-.ouice .bs-example > .dropdown > .dropdown-menu {
+.ou-web-ui .bs-example > .dropdown > .dropdown-menu {
   position: static;
   display: block;
   margin-bottom: 5px;
@@ -982,19 +982,19 @@ body.ouice {
 }
 
 /* Example tabbable tabs */
-.ouice .bs-example-tabs .nav-tabs {
+.ou-web-ui .bs-example-tabs .nav-tabs {
   margin-bottom: 15px;
 }
 
 /* Tooltips */
-.ouice .bs-example-tooltips {
+.ou-web-ui .bs-example-tooltips {
   text-align: center;
 }
-.ouice .bs-example-tooltips > .btn {
+.ou-web-ui .bs-example-tooltips > .btn {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-.ouice .bs-example-tooltip .tooltip {
+.ou-web-ui .bs-example-tooltip .tooltip {
   position: relative;
   display: inline-block;
   margin: 10px 20px;
@@ -1002,11 +1002,11 @@ body.ouice {
 }
 
 /* Popovers */
-.ouice .bs-example-popover {
+.ou-web-ui .bs-example-popover {
   padding-bottom: 24px;
   background-color: #f9f9f9;
 }
-.ouice .bs-example-popover .popover {
+.ou-web-ui .bs-example-popover .popover {
   position: relative;
   display: block;
   float: left;
@@ -1015,14 +1015,14 @@ body.ouice {
 }
 
 /* Scrollspy demo on fixed height div */
-.ouice .scrollspy-example {
+.ou-web-ui .scrollspy-example {
   position: relative;
   height: 200px;
   margin-top: 10px;
   overflow: auto;
 }
 
-.ouice .bs-example > .nav-pills-stacked-example {
+.ou-web-ui .bs-example > .nav-pills-stacked-example {
   max-width: 300px;
 }
 
@@ -1032,21 +1032,21 @@ body.ouice {
 }
 
 /* Don't wrap event names in Events tables in JS plugin docs */
-.ouice .bs-events-table > thead > tr > th:first-child,
-.ouice .bs-events-table > tbody > tr > td:first-child {
+.ou-web-ui .bs-events-table > thead > tr > th:first-child,
+.ou-web-ui .bs-events-table > tbody > tr > td:first-child {
   white-space: nowrap;
 }
 
-.ouice .bs-events-table > thead > tr > th:first-child {
+.ou-web-ui .bs-events-table > thead > tr > th:first-child {
   width: 150px;
 }
 
-.ouice .js-options-table > thead > tr > th:nth-child(1),
-.ouice .js-options-table > thead > tr > th:nth-child(2) {
+.ou-web-ui .js-options-table > thead > tr > th:nth-child(1),
+.ou-web-ui .js-options-table > thead > tr > th:nth-child(2) {
   width: 100px;
 }
 
-.ouice .js-options-table > thead > tr > th:nth-child(3) {
+.ou-web-ui .js-options-table > thead > tr > th:nth-child(3) {
   width: 50px;
 }
 
@@ -1056,14 +1056,14 @@ body.ouice {
  * Generated via Pygments and Jekyll, these are snippets of HTML, CSS, and JS.
  */
 
-.ouice .highlight {
+.ou-web-ui .highlight {
   padding: 9px 14px;
   margin-bottom: 14px;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
 }
-.ouice .highlight pre {
+.ou-web-ui .highlight pre {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -1072,11 +1072,11 @@ body.ouice {
   background-color: transparent;
   border: 0;
 }
-.ouice .highlight pre code {
+.ou-web-ui .highlight pre code {
   font-size: inherit;
   color: #333; /* Effectively the base text color */
 }
-.ouice .highlight pre code:first-child {
+.ou-web-ui .highlight pre code:first-child {
   display: inline-block;
   padding-right: 45px;
 }
@@ -1089,40 +1089,40 @@ body.ouice {
  */
 
 /* Responsive (scrollable) doc tables */
-.ouice .table-responsive .highlight pre {
+.ou-web-ui .table-responsive .highlight pre {
   white-space: normal;
 }
 
 /* Utility classes table  */
-.ouice .bs-table th small,
-.ouice .responsive-utilities th small {
+.ou-web-ui .bs-table th small,
+.ou-web-ui .responsive-utilities th small {
   display: block;
   font-weight: normal;
   color: #999;
 }
-.ouice .responsive-utilities tbody th {
+.ou-web-ui .responsive-utilities tbody th {
   font-weight: normal;
 }
-.ouice .responsive-utilities td {
+.ou-web-ui .responsive-utilities td {
   text-align: center;
 }
-.ouice .responsive-utilities td.is-visible {
+.ou-web-ui .responsive-utilities td.is-visible {
   color: #468847;
   background-color: #dff0d8 !important;
 }
-.ouice .responsive-utilities td.is-hidden {
+.ou-web-ui .responsive-utilities td.is-hidden {
   color: #ccc;
   background-color: #f9f9f9 !important;
 }
 
 /* Responsive tests */
-.ouice .responsive-utilities-test {
+.ou-web-ui .responsive-utilities-test {
   margin-top: 5px;
 }
-.ouice .responsive-utilities-test .col-xs-6 {
+.ou-web-ui .responsive-utilities-test .col-xs-6 {
   margin-bottom: 10px;
 }
-.ouice .responsive-utilities-test span {
+.ou-web-ui .responsive-utilities-test span {
   display: block;
   padding: 15px 10px;
   font-size: 14px;
@@ -1131,25 +1131,25 @@ body.ouice {
   text-align: center;
   border-radius: 4px;
 }
-.ouice .visible-on .col-xs-6 .hidden-xs,
-.ouice .visible-on .col-xs-6 .hidden-sm,
-.ouice .visible-on .col-xs-6 .hidden-md,
-.ouice .visible-on .col-xs-6 .hidden-lg,
-.ouice .hidden-on .col-xs-6 .hidden-xs,
-.ouice .hidden-on .col-xs-6 .hidden-sm,
-.ouice .hidden-on .col-xs-6 .hidden-md,
-.ouice .hidden-on .col-xs-6 .hidden-lg {
+.ou-web-ui .visible-on .col-xs-6 .hidden-xs,
+.ou-web-ui .visible-on .col-xs-6 .hidden-sm,
+.ou-web-ui .visible-on .col-xs-6 .hidden-md,
+.ou-web-ui .visible-on .col-xs-6 .hidden-lg,
+.ou-web-ui .hidden-on .col-xs-6 .hidden-xs,
+.ou-web-ui .hidden-on .col-xs-6 .hidden-sm,
+.ou-web-ui .hidden-on .col-xs-6 .hidden-md,
+.ou-web-ui .hidden-on .col-xs-6 .hidden-lg {
   color: #999;
   border: 1px solid #ddd;
 }
-.ouice .visible-on .col-xs-6 .visible-xs-block,
-.ouice .visible-on .col-xs-6 .visible-sm-block,
-.ouice .visible-on .col-xs-6 .visible-md-block,
-.ouice .visible-on .col-xs-6 .visible-lg-block,
-.ouice .hidden-on .col-xs-6 .visible-xs-block,
-.ouice .hidden-on .col-xs-6 .visible-sm-block,
-.ouice .hidden-on .col-xs-6 .visible-md-block,
-.ouice .hidden-on .col-xs-6 .visible-lg-block {
+.ou-web-ui .visible-on .col-xs-6 .visible-xs-block,
+.ou-web-ui .visible-on .col-xs-6 .visible-sm-block,
+.ou-web-ui .visible-on .col-xs-6 .visible-md-block,
+.ou-web-ui .visible-on .col-xs-6 .visible-lg-block,
+.ou-web-ui .hidden-on .col-xs-6 .visible-xs-block,
+.ou-web-ui .hidden-on .col-xs-6 .visible-sm-block,
+.ou-web-ui .hidden-on .col-xs-6 .visible-md-block,
+.ou-web-ui .hidden-on .col-xs-6 .visible-lg-block {
   color: #468847;
   background-color: #dff0d8;
   border: 1px solid #d6e9c6;
@@ -1162,15 +1162,15 @@ body.ouice {
  * Special styles for displaying the icons and their classes in the docs.
  */
 
-.ouice .bs-glyphicons {
+.ou-web-ui .bs-glyphicons {
   margin: 0 -10px 20px;
   overflow: hidden;
 }
-.ouice .bs-glyphicons-list {
+.ou-web-ui .bs-glyphicons-list {
   padding-left: 0;
   list-style: none;
 }
-.ouice .bs-glyphicons li {
+.ou-web-ui .bs-glyphicons li {
   float: left;
   width: 25%;
   height: 115px;
@@ -1181,27 +1181,27 @@ body.ouice {
   background-color: #f9f9f9;
   border: 1px solid #fff;
 }
-.ouice .bs-glyphicons .glyphicon {
+.ou-web-ui .bs-glyphicons .glyphicon {
   margin-top: 5px;
   margin-bottom: 10px;
   font-size: 24px;
 }
-.ouice .bs-glyphicons .glyphicon-class {
+.ou-web-ui .bs-glyphicons .glyphicon-class {
   display: block;
   text-align: center;
   word-wrap: break-word; /* Help out IE10+ with class names */
 }
-.ouice .bs-glyphicons li:hover {
+.ou-web-ui .bs-glyphicons li:hover {
   color: #fff;
   background-color: #036;
 }
 
 @media (min-width: 768px) {
-  .ouice .bs-glyphicons {
+  .ou-web-ui .bs-glyphicons {
     margin-right: 0;
     margin-left: 0;
   }
-  .ouice .bs-glyphicons li {
+  .ou-web-ui .bs-glyphicons li {
     width: 12.5%;
     font-size: 12px;
   }
@@ -1216,38 +1216,38 @@ body.ouice {
  * buttons and actions.
  */
 
-.ouice .bs-customizer .toggle {
+.ou-web-ui .bs-customizer .toggle {
   float: right;
   margin-top: 25px;
 }
 
 /* Headings and form contrls */
-.ouice .bs-customizer label {
+.ou-web-ui .bs-customizer label {
   margin-top: 10px;
   font-weight: 500;
   color: #555;
 }
-.ouice .bs-customizer h2 {
+.ou-web-ui .bs-customizer h2 {
   padding-top: 30px;
   margin-top: 0;
   margin-bottom: 5px;
 }
-.ouice .bs-customizer h3 {
+.ou-web-ui .bs-customizer h3 {
   margin-bottom: 0;
 }
-.ouice .bs-customizer h4 {
+.ou-web-ui .bs-customizer h4 {
   margin-top: 15px;
   margin-bottom: 0;
 }
-.ouice .bs-customizer .bs-callout h4 {
+.ou-web-ui .bs-customizer .bs-callout h4 {
   margin-top: 0; /* lame, but due to specificity we have to duplicate */
   margin-bottom: 5px;
 }
-.ouice .bs-customizer input[type="text"] {
+.ou-web-ui .bs-customizer input[type="text"] {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   background-color: #fafafa;
 }
-.ouice .bs-customizer .help-block {
+.ou-web-ui .bs-customizer .help-block {
   margin-bottom: 5px;
   font-size: 12px;
 }
@@ -1258,12 +1258,12 @@ body.ouice {
 }
 
 /* Downloads */
-.ouice .bs-customize-download .btn-outline {
+.ou-web-ui .bs-customize-download .btn-outline {
   padding: 20px;
 }
 
 /* Error handling */
-.ouice .bs-customizer-alert {
+.ou-web-ui .bs-customizer-alert {
   position: fixed;
   top: 0;
   right: 0;
@@ -1276,17 +1276,17 @@ body.ouice {
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
           box-shadow: inset 0 1px 0 rgba(255,255,255,.25);
 }
-.ouice .bs-customizer-alert .close {
+.ou-web-ui .bs-customizer-alert .close {
   margin-top: -4px;
   font-size: 24px;
 }
-.ouice .bs-customizer-alert p {
+.ou-web-ui .bs-customizer-alert p {
   margin-bottom: 0;
 }
-.ouice .bs-customizer-alert .glyphicon {
+.ou-web-ui .bs-customizer-alert .glyphicon {
   margin-right: 5px;
 }
-.ouice .bs-customizer-alert pre {
+.ou-web-ui .bs-customizer-alert pre {
   margin: 10px 0 0;
   color: #fff;
   background-color: #a83c3a;
@@ -1295,7 +1295,7 @@ body.ouice {
           box-shadow: inset 0 2px 4px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
 }
 
-.ouice .bs-dropzone {
+.ou-web-ui .bs-dropzone {
   position: relative;
   padding: 20px;
   margin-bottom: 20px;
@@ -1304,16 +1304,16 @@ body.ouice {
   border: 2px dashed #eee;
   border-radius: 4px;
 }
-.ouice .bs-dropzone .import-header {
+.ou-web-ui .bs-dropzone .import-header {
   margin-bottom: 5px;
 }
-.ouice .bs-dropzone .glyphicon-download-alt {
+.ou-web-ui .bs-dropzone .glyphicon-download-alt {
   font-size: 40px;
 }
-.ouice .bs-dropzone hr {
+.ou-web-ui .bs-dropzone hr {
   width: 100px;
 }
-.ouice .bs-dropzone .lead {
+.ou-web-ui .bs-dropzone .lead {
   margin-bottom: 10px;
   font-weight: normal;
   color: #333;
@@ -1321,7 +1321,7 @@ body.ouice {
 /*.bs-dropzone*/ #import-manual-trigger {
   cursor: pointer;
 }
-.ouice .bs-dropzone p:last-child {
+.ou-web-ui .bs-dropzone p:last-child {
   margin-bottom: 0;
 }
 
@@ -1332,7 +1332,7 @@ body.ouice {
  */
 
 /* Logo series wrapper */
-.ouice .bs-brand-logos {
+.ou-web-ui .bs-brand-logos {
   display: table;
   width: 100%;
   margin-bottom: 15px;
@@ -1343,31 +1343,31 @@ body.ouice {
 }
 
 /* Individual items */
-.ouice .bs-brand-item {
+.ou-web-ui .bs-brand-item {
   padding: 60px 0;
   text-align: center;
 }
-.ouice .bs-brand-item + .ouice .bs-brand-item {
+.ou-web-ui .bs-brand-item + .ou-web-ui .bs-brand-item {
   border-top: 1px solid #fff;
 }
-.ouice .bs-brand-logos .inverse {
+.ou-web-ui .bs-brand-logos .inverse {
   color: #fff;
   background-color: #036;
 }
 
 /* Heading content within */
-.ouice .bs-brand-item h1,
-.ouice .bs-brand-item h3 {
+.ou-web-ui .bs-brand-item h1,
+.ou-web-ui .bs-brand-item h3 {
   margin-top: 0;
   margin-bottom: 0;
 }
-.ouice .bs-brand-item .bs-docs-booticon {
+.ou-web-ui .bs-brand-item .bs-docs-booticon {
   margin-right: auto;
   margin-left: auto;
 }
 
 /* Make the icons stand out on what is/isn't okay */
-.ouice .bs-brand-item .glyphicon {
+.ou-web-ui .bs-brand-item .glyphicon {
   width: 30px;
   height: 30px;
   margin: 10px auto -10px;
@@ -1375,23 +1375,23 @@ body.ouice {
   color: #fff;
   border-radius: 50%;
 }
-.ouice .bs-brand-item .glyphicon-ok {
+.ou-web-ui .bs-brand-item .glyphicon-ok {
   background-color: #5cb85c;
 }
-.ouice .bs-brand-item .glyphicon-remove {
+.ou-web-ui .bs-brand-item .glyphicon-remove {
   background-color: #d9534f;
 }
 
 @media (min-width: 768px) {
-  .ouice .bs-brand-item {
+  .ou-web-ui .bs-brand-item {
     display: table-cell;
     width: 1%;
   }
-  .ouice .bs-brand-item + .ouice .bs-brand-item {
+  .ou-web-ui .bs-brand-item + .ou-web-ui .bs-brand-item {
     border-top: 0;
     border-left: 1px solid #fff;
   }
-  .ouice .bs-brand-item h1 {
+  .ou-web-ui .bs-brand-item h1 {
     font-size: 60px;
   }
 }
