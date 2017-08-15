@@ -1,13 +1,16 @@
 .creative {
   background-color: #e7eff7;
 	color: #222;
-	position:relative;
-  min-height: 250px;
-  margin-bottom: @margin-base;
+	position: relative;
+
+  @media (min-width: @screen-sm-min) {
+    min-height: 250px;
+  }
 
   img {
-    width: 100%;
+    max-width: 1500px;
     display: block;
+    margin: 0 auto;
   }
 
   .caption {

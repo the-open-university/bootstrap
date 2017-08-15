@@ -39,21 +39,22 @@
 
 	COLOURS
 
-		Red                 #E3294A
+		Red                 #B5002E
 		Pink				#E80074
-		Yellow              #FFD400
-		Purple				#5F4997
+		Yellow              #F4C400
+		Purple				#4E247B
 		Dark blue           #003366
-		Blue            	#0E56A7
-		Light blue          #549DD0
+		Blue*            	#0b55a8
+		Light blue          #A6D2FF
 		Purple              #880088
 		Orange              #C5540A
-		Burgundy			#7B003F
-		Dark green			#3F644A
-		Turquoise			#00B7B2
-		Beige				#CFC285
+		Burgundy			#630031
+		Dark green			#4A5E4A
+		Turquoise			#00B0AC
+		Beige				#D1D1A5
 		Green*				#539d3c
-		Light green			#A2B52D
+		Light green			#A4A400
+    Teal*        #068293
 
 		*not in official palette but useful for web, review
 
@@ -1727,7 +1728,7 @@
 }
 .ouice .blockquote-sm {
   min-height: 0;
-  padding: 15px 15px 20px 60px;
+  padding: 20px 15px 35px 55px;
   background-image: url("../img/icons/icon-quotemarks.png");
   background-position: 20px 22px;
   -webkit-background-size: 26px 21px;
@@ -1823,7 +1824,7 @@
 }
 @media (min-width: 1200px) {
   .ouice .container {
-    width: 1160px;
+    width: 1200px;
   }
 }
 .ouice .container-fluid {
@@ -3323,7 +3324,7 @@
 .ouice .btn {
   display: inline-block;
   padding: 10px 15px;
-  margin-bottom: 0;
+  margin-bottom: 15px;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.6;
@@ -3374,6 +3375,9 @@
 .ouice a.btn.disabled,
 .ouice fieldset[disabled] a.btn {
   pointer-events: none;
+}
+.ouice input.btn {
+  margin-bottom: 0;
 }
 .ouice .btn-default {
   color: #fff;
@@ -3998,6 +4002,7 @@
 .ouice .btn-group-vertical > .btn {
   position: relative;
   float: left;
+  margin-bottom: 0;
 }
 .ouice .btn-group > .btn:hover,
 .ouice .btn-group-vertical > .btn:hover,
@@ -4017,6 +4022,9 @@
 }
 .ouice .btn-toolbar {
   margin-left: -5px;
+}
+.ouice .btn-toolbar .btn {
+  margin-bottom: 0;
 }
 .ouice .btn-toolbar .btn,
 .ouice .btn-toolbar .btn-group,
@@ -4088,6 +4096,9 @@
 .ouice .dropup .btn-lg .caret {
   border-width: 0 5px 5px;
 }
+.ouice .btn-group-vertical > .btn {
+  margin-bottom: 0;
+}
 .ouice .btn-group-vertical > .btn,
 .ouice .btn-group-vertical > .btn-group,
 .ouice .btn-group-vertical > .btn-group > .btn {
@@ -4139,6 +4150,9 @@
   table-layout: fixed;
   border-collapse: separate;
 }
+.ouice .btn-group-justified > .btn {
+  margin-bottom: 0;
+}
 .ouice .btn-group-justified > .btn,
 .ouice .btn-group-justified > .btn-group {
   display: table-cell;
@@ -4150,6 +4164,9 @@
 }
 .ouice .btn-group-justified > .btn-group .dropdown-menu {
   left: auto;
+}
+.ouice [data-toggle="buttons"] > .btn {
+  margin-bottom: 0;
 }
 .ouice [data-toggle="buttons"] > .btn input[type="radio"],
 .ouice [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
@@ -4296,6 +4313,9 @@
   position: relative;
   font-size: 0;
   white-space: nowrap;
+}
+.ouice .input-group-btn .btn {
+  margin-bottom: 0;
 }
 .ouice .input-group-btn > .btn {
   position: relative;
@@ -4857,7 +4877,8 @@
 }
 .ouice .navbar-default {
   background-color: transparent;
-  border-color: rgba(0, 0, 0, 0);
+  border-color: #ddd;
+  border-bottom: 1px solid #ddd;
 }
 .ouice .navbar-default .navbar-brand {
   color: #039;
@@ -4906,7 +4927,7 @@
 }
 .ouice .navbar-default .navbar-collapse,
 .ouice .navbar-default .navbar-form {
-  border-color: rgba(0, 0, 0, 0);
+  border-color: #ddd;
 }
 .ouice .navbar-default .navbar-nav > .open > a,
 .ouice .navbar-default .navbar-nav > .open > a:hover,
@@ -6542,14 +6563,18 @@
 }
 .ouice .creative {
   position: relative;
-  min-height: 250px;
-  margin-bottom: 30px;
   color: #222;
   background-color: #e7eff7;
 }
+@media (min-width: 768px) {
+  .ouice .creative {
+    min-height: 250px;
+  }
+}
 .ouice .creative img {
   display: block;
-  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 .ouice .creative .caption {
   padding: 20px 25px;
@@ -6585,8 +6610,8 @@
 }
 @media (min-width: 1200px) {
   .ouice .creative .caption {
-    width: 356.66666667px;
-    margin-left: -565px;
+    width: 370px;
+    margin-left: -585px;
   }
 }
 .ouice .creative .caption p {
@@ -7362,6 +7387,7 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
 .ouice .carousel-caption .btn {
+  margin-bottom: 0;
   text-shadow: none;
 }
 @media screen and (min-width: 768px) {
@@ -7457,6 +7483,18 @@
 }
 .ouice .pull-left {
   float: left !important;
+}
+.ouice .pullout-right {
+  float: right !important;
+  margin: 0 0 15px 25px;
+}
+.ouice .pullout-left {
+  float: left !important;
+  margin: 0 25px 15px 0;
+}
+.ouice .pullout-centre {
+  display: block;
+  margin: 0 auto 15px auto;
 }
 .ouice .hide {
   display: none !important;
@@ -7694,7 +7732,7 @@
   color: #000 !important;
 }
 .ouice .text-red {
-  color: #e3294a !important;
+  color: #b5002e !important;
 }
 .ouice .text-pink {
   color: #e80074 !important;
@@ -7706,22 +7744,22 @@
   color: #333 !important;
 }
 .ouice .text-purple {
-  color: #5f4997 !important;
+  color: #4e247b !important;
 }
 .ouice .text-orange {
   color: #c5540a !important;
 }
 .ouice .text-burgundy {
-  color: #7b003f !important;
+  color: #630031 !important;
 }
 .ouice .text-dark-green {
-  color: #3f644a !important;
-}
-.ouice .text-blue {
-  color: #0e56a7 !important;
+  color: #4a5e4a !important;
 }
 .ouice .text-green {
   color: #539d3c !important;
+}
+.ouice .text-blue {
+  color: #0b55a8 !important;
 }
 .ouice .text-white {
   color: #fff !important;
@@ -7730,22 +7768,25 @@
   color: #a7a9ac !important;
 }
 .ouice .text-yellow {
-  color: #ffd400 !important;
+  color: #f4c400 !important;
 }
 .ouice .text-turquoise {
-  color: #00b7b2 !important;
+  color: #00b0ac !important;
 }
 .ouice .text-light-blue {
-  color: #549dd0 !important;
+  color: #a6d2ff !important;
 }
 .ouice .text-beige {
-  color: #cfc285 !important;
+  color: #d1d1a5 !important;
 }
 .ouice .text-light-green {
-  color: #a2b52d !important;
+  color: #a4a400 !important;
 }
 .ouice .text-light-grey {
   color: #e7eff7 !important;
+}
+.ouice .text-teal {
+  color: #068293 !important;
 }
 .ouice .bg-black {
   background-color: #000 !important;
@@ -7754,7 +7795,7 @@
   background-color: #333 !important;
 }
 .ouice .bg-red {
-  background-color: #e3294a !important;
+  background-color: #b5002e !important;
 }
 .ouice .bg-pink {
   background-color: #e80074 !important;
@@ -7763,25 +7804,25 @@
   background-color: #036 !important;
 }
 .ouice .bg-purple {
-  background-color: #5f4997 !important;
+  background-color: #4e247b !important;
 }
 .ouice .bg-orange {
   background-color: #c5540a !important;
 }
 .ouice .bg-burgundy {
-  background-color: #7b003f !important;
+  background-color: #630031 !important;
 }
 .ouice .bg-dark-green {
-  background-color: #3f644a !important;
+  background-color: #4a5e4a !important;
 }
 .ouice .bg-blue {
-  background-color: #0e56a7 !important;
+  background-color: #0b55a8 !important;
 }
 .ouice .bg-green {
   background-color: #539d3c !important;
 }
 .ouice .bg-teal {
-  background-color: #398090 !important;
+  background-color: #068293 !important;
 }
 .ouice .bg-white {
   background-color: #fff !important;
@@ -7790,19 +7831,19 @@
   background-color: #a7a9ac !important;
 }
 .ouice .bg-light-green {
-  background-color: #a2b52d !important;
+  background-color: #a4a400 !important;
 }
 .ouice .bg-turquoise {
-  background-color: #00b7b2 !important;
+  background-color: #00b0ac !important;
 }
 .ouice .bg-light-blue {
-  background-color: #549dd0 !important;
+  background-color: #a6d2ff !important;
 }
 .ouice .bg-yellow {
-  background-color: #ffd400 !important;
+  background-color: #f4c400 !important;
 }
 .ouice .bg-beige {
-  background-color: #cfc285 !important;
+  background-color: #d1d1a5 !important;
 }
 .ouice .bg-light-grey {
   background-color: #e7eff7 !important;

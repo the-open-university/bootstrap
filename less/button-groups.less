@@ -11,6 +11,7 @@
   > .btn {
     position: relative;
     float: left;
+    margin-bottom: 0;
     // Bring the "active" button to the front
     &:hover,
     &:focus,
@@ -35,6 +36,10 @@
 .btn-toolbar {
   margin-left: -5px; // Offset the first child's margin
   &:extend(.clearfix all);
+
+  .btn {
+    margin-bottom: 0;
+  }
 
   .btn,
   .btn-group,
@@ -142,6 +147,10 @@
 // ----------------------
 
 .btn-group-vertical {
+  > .btn {
+    margin-bottom: 0;
+  }
+
   > .btn,
   > .btn-group,
   > .btn-group > .btn {
@@ -203,6 +212,9 @@
   width: 100%;
   table-layout: fixed;
   border-collapse: separate;
+  > .btn {
+    margin-bottom: 0;
+  }
   > .btn,
   > .btn-group {
     float: none;
@@ -232,6 +244,9 @@
 // https://github.com/twbs/bootstrap/pull/14559 for more information.
 
 [data-toggle="buttons"] {
+  > .btn {
+    margin-bottom: 0;
+  }
   > .btn,
   > .btn-group > .btn {
     input[type="radio"],

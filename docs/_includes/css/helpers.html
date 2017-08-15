@@ -97,6 +97,14 @@
 }
 {% endhighlight %}
 
+  <h3 id="helper-classes-content-floats">Content floats</h3>
+  <p>Float an element to the left or right within content with a class. <code>!important</code> is included to avoid specificity issues.</p>
+{% highlight html %}
+<div class="pullout-left">...</div>
+<div class="pullout-right">...</div>
+<div class="pullout-center">...</div>
+{% endhighlight %}
+
   <div class="bs-callout bs-callout-warning" id="callout-helper-pull-navbar">
     <h4>Not for use in navbars</h4>
     <p>To align components in navbars with utility classes, use <code>.navbar-left</code> or <code>.navbar-right</code> instead. <a href="../components/#navbar-component-alignment">See the navbar docs</a> for details.</p>
