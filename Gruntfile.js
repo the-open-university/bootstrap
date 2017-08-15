@@ -41,7 +41,7 @@ module.exports = function (grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
-            ' * OU ICE v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * OU Web UI v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under the <%= pkg.license %> license\n' +
             ' */\n',
@@ -104,7 +104,7 @@ module.exports = function (grunt) {
         banner: '<%= banner %>\n<%= jqueryCheck %>\n<%= jqueryVersionCheck %>',
         stripBanners: false
       },
-      ouice: {
+      ouwebui: {
         src: [
           'js/transition.js',
           'js/alert.js',
@@ -132,7 +132,7 @@ module.exports = function (grunt) {
         preserveComments: /^!|@preserve|@license|@cc_on/i
       },
       core: {
-        src: '<%= concat.ouice.dest %>',
+        src: '<%= concat.ouwebui.dest %>',
         dest: 'dist/js/<%= pkg.name %>.min.js'
       },
       customize: {
@@ -221,8 +221,8 @@ module.exports = function (grunt) {
         csslintrc: 'less/.csslintrc'
       },
       dist: [
-        'dist/css/ouice.css'/*,
-        'dist/css/ouice-theme.css'*/
+        'dist/css/ou-web-ui.css'/*,
+        'dist/css/ou-web-ui-theme.css'*/
       ],
       examples: [
         'docs/examples/**/*.css'
@@ -427,7 +427,7 @@ module.exports = function (grunt) {
     compress: {
       main: {
         options: {
-          archive: 'ouice-<%= pkg.version %>-dist.zip',
+          archive: 'ou-web-ui-<%= pkg.version %>-dist.zip',
           mode: 'zip',
           level: 9,
           pretty: true
@@ -437,7 +437,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'dist/',
             src: ['**'],
-            dest: 'ouice-<%= pkg.version %>-dist'
+            dest: 'ou-web-ui-<%= pkg.version %>-dist'
           }
         ]
       }
@@ -510,7 +510,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('commonjs', 'Generate CommonJS entrypoint module in dist dir.', function () {
-    var srcFiles = grunt.config.get('concat.ouice.src');
+    var srcFiles = grunt.config.get('concat.ouwebui.src');
     var destFilepath = 'dist/js/npm.js';
     generateCommonJSModule(grunt, srcFiles, destFilepath);
   });

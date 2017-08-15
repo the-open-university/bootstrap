@@ -113,36 +113,36 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"\/dist\/css\/ouice.css": {
+	"\/dist\/css\/ou-web-ui.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/ouice-min.css",
+		"oAP": "\/dist\/css\/ou-web-ui-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/dist\/css\/ouice.css.map": {
+	"\/dist\/css\/ou-web-ui.css.map": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/dist\/css\/ouice.css.map",
+		"oAP": "\/dist\/css\/ou-web-ui.css.map",
 		"oF": 0
 		},
-	"\/dist\/css\/ouice.min.css": {
+	"\/dist\/css\/ou-web-ui.min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/dist\/css\/ouice.min-min.css",
+		"oAP": "\/dist\/css\/ou-web-ui.min-min.css",
 		"oF": 0,
 		"oS": 0
 		},
-	"\/dist\/css\/ouice.min.css.map": {
+	"\/dist\/css\/ou-web-ui.min.css.map": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/dist\/css\/ouice.min.css.map",
+		"oAP": "\/dist\/css\/ou-web-ui.min.css.map",
 		"oF": 0
 		},
 	"\/dist\/fonts\/glyphicons-halflings-regular.eot": {
@@ -188,20 +188,20 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/dist\/js\/ouice.js": {
+	"\/dist\/js\/ou-web-ui.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/dist\/js\/ouice-min.js",
+		"oAP": "\/dist\/js\/ou-web-ui-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
 		},
-	"\/dist\/js\/ouice.min.js": {
+	"\/dist\/js\/ou-web-ui.min.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/dist\/js\/ouice.min-min.js",
+		"oAP": "\/dist\/js\/ou-web-ui.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -3160,7 +3160,7 @@
 		"sM": 0,
 		"sU": 0
 		},
-	"\/less\/ouice.less": {
+	"\/less\/ou-web-ui.less": {
 		"aP": 0,
 		"bl": 0,
 		"dJ": 0,
@@ -3169,7 +3169,7 @@
 		"iI": 0,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "\/less\/ouice.css",
+		"oAP": "\/less\/ou-web-ui.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
@@ -3547,7 +3547,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 510834571,
-	"displayValue": "ouice-bootstrap",
+	"displayValue": "ou-web-ui",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-lotr"
 	},

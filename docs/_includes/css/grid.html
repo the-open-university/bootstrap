@@ -1,10 +1,10 @@
 <div class="bs-docs-section">
   <h1 id="grid" class="page-header">Grid system</h1>
 
-  <p class="lead">OU ICE includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes <a href="#grid-example-basic">predefined classes</a> for easy layout options, as well as powerful <a href="#grid-less">mixins for generating more semantic layouts</a>.</p>
+  <p class="lead">OU Web UI includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes <a href="#grid-example-basic">predefined classes</a> for easy layout options, as well as powerful <a href="#grid-less">mixins for generating more semantic layouts</a>.</p>
 
   <h2 id="grid-intro">Introduction</h2>
-  <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the OU ICE grid system works:</p>
+  <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the OU Web UI grid system works:</p>
   <ul>
     <li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding.</li>
     <li>Use rows to create horizontal groups of columns.</li>
@@ -22,7 +22,7 @@
   <p>We use the following media queries in our Less files to create the key breakpoints in our grid system.</p>
 {% highlight scss %}
 /* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in OU ICE */
+/* No media query since this is the default in OU Web UI */
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) { ... }
@@ -42,7 +42,7 @@
 {% endhighlight %}
 
   <h2 id="grid-options">Grid options</h2>
-  <p>See how aspects of the OU ICE grid system work across multiple devices with a handy table.</p>
+  <p>See how aspects of the OU Web UI grid system work across multiple devices with a handy table.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
@@ -391,7 +391,7 @@
 {% endhighlight %}
 
   <h2 id="grid-less">Less mixins and variables</h2>
-  <p>In addition to <a href="#grid-example-basic">prebuilt grid classes</a> for fast layouts, OU ICE includes Less variables and mixins for quickly generating your own simple, semantic layouts.</p>
+  <p>In addition to <a href="#grid-example-basic">prebuilt grid classes</a> for fast layouts, OU Web UI includes Less variables and mixins for quickly generating your own simple, semantic layouts.</p>
 
   <h3>Variables</h3>
   <p>Variables determine the number of columns, the gutter width, and the media query point at which to begin floating columns. We use these to generate the predefined grid classes documented above, as well as for the custom mixins listed below.</p>

@@ -1,5 +1,5 @@
 /*!
- * OU ICE v3.3.7 (http://the-open-university.github.io/ouice)
+ * OU Web UI v3.3.7 (http://the-open-university.github.io/ou-web-ui)
  * Copyright 2011-2017 The Open University
  * Licensed under the MIT license
  */

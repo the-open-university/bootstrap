@@ -1,14 +1,14 @@
 <div class="bs-docs-section">
   <h1 id="less" class="page-header">Using Less</h1>
 
-  <p class="lead">OU ICE's CSS is built on Less, a preprocessor with additional functionality like variables, mixins, and functions for compiling CSS. Those looking to use the source Less files instead of our compiled CSS files can make use of the numerous variables and mixins we use throughout the framework.</p>
+  <p class="lead">OU Web UI's CSS is built on Less, a preprocessor with additional functionality like variables, mixins, and functions for compiling CSS. Those looking to use the source Less files instead of our compiled CSS files can make use of the numerous variables and mixins we use throughout the framework.</p>
 
   <p>Grid variables and mixins are covered <a href="#grid-less">within the Grid system section</a>.</p>
 
 
-  <h2 id="less-ouice">Compiling OU ICE</h2>
-  <p>OU ICE can be used in at least two ways: with the compiled CSS or with the source Less files. To compile the Less files, <a href="../getting-started/#grunt">consult the Getting Started section</a> for how to setup your development environment to run the necessary commands.</p>
-  <p>Third party compilation tools may work with OU ICE, but they are not supported by our core team.</p>
+  <h2 id="less-ou-web-ui">Compiling OU Web UI</h2>
+  <p>OU Web UI can be used in at least two ways: with the compiled CSS or with the source Less files. To compile the Less files, <a href="../getting-started/#grunt">consult the Getting Started section</a> for how to setup your development environment to run the necessary commands.</p>
+  <p>Third party compilation tools may work with OU Web UI, but they are not supported by our core team.</p>
 
   <h2 id="less-variables">Variables</h2>
   <p>Variables are used throughout the entire project as a way to centralize and share commonly used values like colors, spacing, or font stacks. For a complete breakdown, please see <a href="../customize/#less-variables-section">the Customizer</a>.</p>
@@ -92,7 +92,7 @@ a {
   <p>Note that the <code>@link-hover-color</code> uses a function, another awesome tool from Less, to automagically create the right hover color. You can use <code>darken</code>, <code>lighten</code>, <code>saturate</code>, and <code>desaturate</code>.</p>
 
   <h3 id="less-variables-typography">Typography</h3>
-  <p>Easily set your typeface, text size, leading, and more with a few quick variables. OU ICE makes use of these as well to provide easy typographic mixins.</p>
+  <p>Easily set your typeface, text size, leading, and more with a few quick variables. OU Web UI makes use of these as well to provide easy typographic mixins.</p>
 {% highlight scss %}
 @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
@@ -127,7 +127,7 @@ a {
 {% endhighlight %}
 
   <h3 id="less-variables-components">Components</h3>
-  <p>Components throughout OU ICE make use of some default variables for setting common values. Here are the most commonly used.</p>
+  <p>Components throughout OU Web UI make use of some default variables for setting common values. Here are the most commonly used.</p>
 {% highlight scss %}
 @padding-base-vertical:          6px;
 @padding-base-horizontal:        12px;
@@ -171,7 +171,7 @@ a {
 {% endhighlight %}
 
   <h3 id="less-mixins-rounded-corners">Rounded corners</h3>
-  <p>Today all modern browsers support the non-prefixed <code>border-radius</code> property. As such, there is no <code>.border-radius()</code> mixin, but OU ICE does include shortcuts for quickly rounding two corners on a particular side of an object.</p>
+  <p>Today all modern browsers support the non-prefixed <code>border-radius</code> property. As such, there is no <code>.border-radius()</code> mixin, but OU Web UI does include shortcuts for quickly rounding two corners on a particular side of an object.</p>
 {% highlight scss %}
 .border-top-radius(@radius) {
   border-top-right-radius: @radius;
@@ -469,7 +469,7 @@ a {
 {% endhighlight %}
 
   <h3 id="less-mixins-retina-images">Retina images</h3>
-  <p>Specify two image paths and the @1x image dimensions, and OU ICE will provide an @2x media query. <strong>If you have many images to serve, consider writing your retina image CSS manually in a single media query.</strong></p>
+  <p>Specify two image paths and the @1x image dimensions, and OU Web UI will provide an @2x media query. <strong>If you have many images to serve, consider writing your retina image CSS manually in a single media query.</strong></p>
 {% highlight scss %}
 .img-retina(@file-1x; @file-2x; @width-1x; @height-1x) {
   background-image: url("@{file-1x}");

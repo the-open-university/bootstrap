@@ -2,11 +2,11 @@
   <h1 id="js-overview" class="page-header">Overview</h1>
 
   <h2 id="js-individual-compiled">Individual or compiled</h2>
-  <p>Plugins can be included individually (using OU ICE's individual <code>*.js</code> files), or all at once (using <code>ouice.js</code> or the minified <code>ouice.min.js</code>).</p>
+  <p>Plugins can be included individually (using OU Web UI's individual <code>*.js</code> files), or all at once (using <code>ou-web-ui.js</code> or the minified <code>ou-web-ui.min.js</code>).</p>
 
   <div class="bs-callout bs-callout-danger" id="callout-overview-not-both">
     <h4>Using the compiled JavaScript</h4>
-    <p>Both <code>ouice.js</code> and <code>ouice.min.js</code> contain all plugins in a single file. Include only one.</p>
+    <p>Both <code>ou-web-ui.js</code> and <code>ou-web-ui.min.js</code> contain all plugins in a single file. Include only one.</p>
   </div>
 
   <div class="bs-callout bs-callout-danger" id="callout-overview-dependencies">
@@ -15,7 +15,7 @@
   </div>
 
   <h2 id="js-data-attrs">Data attributes</h2>
-  <p>You can use all OU ICE plugins purely through the markup API without writing a single line of JavaScript. This is OU ICE's first-class API and should be your first consideration when using a plugin.</p>
+  <p>You can use all OU Web UI plugins purely through the markup API without writing a single line of JavaScript. This is OU Web UI's first-class API and should be your first consideration when using a plugin.</p>
 
   <p>That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the document namespaced with <code>data-api</code>. This looks like this:</p>
 {% highlight js %}
@@ -33,7 +33,7 @@ $(document).off('.alert.data-api')
   </div>
 
   <h2 id="js-programmatic-api">Programmatic API</h2>
-  <p>We also believe you should be able to use all OU ICE plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
+  <p>We also believe you should be able to use all OU Web UI plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
 {% highlight js %}
 $('.btn.danger').button('toggle').addClass('fat')
 {% endhighlight %}
@@ -54,14 +54,14 @@ $.fn.modal.Constructor.DEFAULTS.keyboard = false // changes default for the moda
 {% endhighlight %}
 
   <h2 id="js-noconflict">No conflict</h2>
-  <p>Sometimes it is necessary to use OU ICE plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code>.noConflict</code> on the plugin you wish to revert the value of.</p>
+  <p>Sometimes it is necessary to use OU Web UI plugins with other UI frameworks. In these circumstances, namespace collisions can occasionally occur. If this happens, you may call <code>.noConflict</code> on the plugin you wish to revert the value of.</p>
 {% highlight js %}
-var ouiceButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
-$.fn.ouiceBtn = ouiceButton            // give $().ouiceBtn the OU ICE functionality
+var ou-web-uiButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+$.fn.ou-web-uiBtn = ou-web-uiButton            // give $().ou-web-uiBtn the OU Web UI functionality
 {% endhighlight %}
 
   <h2 id="js-events">Events</h2>
-  <p>OU ICE provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is triggered on the completion of an action.</p>
+  <p>OU Web UI provides custom events for most plugins' unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is triggered on the completion of an action.</p>
   <p>All infinitive events provide <code>preventDefault</code> functionality. This provides the ability to stop the execution of an action before it starts.</p>
 {% highlight js %}
 $('#myModal').on('show.bs.modal', function (e) {
@@ -70,16 +70,16 @@ $('#myModal').on('show.bs.modal', function (e) {
 {% endhighlight %}
 
   <h2 id="js-version-nums">Version numbers</h2>
-  <p>The version of each of OU ICE's jQuery plugins can be accessed via the <code>VERSION</code> property of the plugin's constructor. For example, for the tooltip plugin:</p>
+  <p>The version of each of OU Web UI's jQuery plugins can be accessed via the <code>VERSION</code> property of the plugin's constructor. For example, for the tooltip plugin:</p>
 {% highlight js %}
 $.fn.tooltip.Constructor.VERSION // => "{{ site.current_version }}"
 {% endhighlight %}
 
   <h2 id="js-disabled">No special fallbacks when JavaScript is disabled</h2>
-  <p>OU ICE's plugins don't fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a> to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.</p>
+  <p>OU Web UI's plugins don't fall back particularly gracefully when JavaScript is disabled. If you care about the user experience in this case, use <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript"><code>&lt;noscript&gt;</code></a> to explain the situation (and how to re-enable JavaScript) to your users, and/or add your own custom fallbacks.</p>
 
   <div class="bs-callout bs-callout-warning" id="callout-third-party-libs">
     <h4>Third-party libraries</h4>
-    <p><strong>OU ICE does not officially support third-party JavaScript libraries</strong> like Prototype or jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own.</p>
+    <p><strong>OU Web UI does not officially support third-party JavaScript libraries</strong> like Prototype or jQuery UI. Despite <code>.noConflict</code> and namespaced events, there may be compatibility problems that you need to fix on your own.</p>
   </div>
 </div>

@@ -7,22 +7,22 @@
   {% if page.layout == "home" %}
     {{ page.title }}
   {% else %}
-    {{ page.title }} &middot; OU ICE
+    {{ page.title }} &middot; OU Web UI
   {% endif %}
 </title>
 
-<!-- OU ICE core CSS -->
+<!-- OU Web UI core CSS -->
 {% if site.github %}
-<link href="../dist/css/ouice.min.css" rel="stylesheet">
+<link href="../dist/css/ou-web-ui.min.css" rel="stylesheet">
 {% else %}
-<link href="../dist/css/ouice.css" rel="stylesheet">
+<link href="../dist/css/ou-web-ui.css" rel="stylesheet">
 {% endif %}
 {% if page.slug == "css" or page.slug == "components" or page.slug == "js" %}
-  <!-- Optional OU ICE Theme -->
+  <!-- Optional OU Web UI Theme -->
 {% if site.github %}
-  <link href="data:text/css;charset=utf-8," data-href="../dist/css/ouice-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+  <link href="data:text/css;charset=utf-8," data-href="../dist/css/ou-web-ui-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
 {% else %}
-  <link href="data:text/css;charset=utf-8," data-href="../dist/css/ouice-theme.css" rel="stylesheet" id="bs-theme-stylesheet">
+  <link href="data:text/css;charset=utf-8," data-href="../dist/css/ou-web-ui-theme.css" rel="stylesheet" id="bs-theme-stylesheet">
 {% endif %}
 {% endif %}
 

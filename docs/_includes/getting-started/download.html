@@ -1,14 +1,14 @@
 <div class="bs-docs-section">
   <h1 id="download" class="page-header">Download</h1>
 
-  <p class="lead">OU ICE (currently v{{ site.current_version }}) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
+  <p class="lead">OU Web UI (currently v{{ site.current_version }}) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
 
   <div class="row bs-downloads">
     <div class="col-sm-6">
-      <h3 id="download-ouice">OU ICE</h3>
+      <h3 id="download-ou-web-ui">OU Web UI</h3>
       <p>Compiled and minified CSS, JavaScript, and fonts. No docs or original source files are included.</p>
       <p>
-        <a href="{{ site.download.dist }}" class="btn btn-lg btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download compiled');">Download OU ICE</a>
+        <a href="{{ site.download.dist }}" class="btn btn-lg btn-outline" onclick="ga('send', 'event', 'Getting started', 'Download', 'Download compiled');">Download OU Web UI</a>
       </p>
     </div>
     <div class="col-sm-6">
@@ -21,23 +21,23 @@
   </div>
 
   <h2 id="download-bower">Install with Bower</h2>
-  <p>You can also install and manage OU ICE's Less, CSS, JavaScript, and fonts using <a href="http://bower.io">Bower</a>:</p>
-  {% highlight bash %}$ bower install ouice{% endhighlight %}
+  <p>You can also install and manage OU Web UI's Less, CSS, JavaScript, and fonts using <a href="http://bower.io">Bower</a>:</p>
+  {% highlight bash %}$ bower install ou-web-ui{% endhighlight %}
 
   <h2 id="download-npm">Install with npm</h2>
-  <p>You can also install OU ICE using <a href="https://www.npmjs.com">npm</a>:</p>
-  {% highlight bash %}$ npm install ouice{% endhighlight %}
-  <p><code>require('ouice')</code> will load all of OU ICE's jQuery plugins onto the jQuery object. The <code>ouice</code> module itself does not export anything. You can manually load OU ICE's jQuery plugins individually by loading the <code>/js/*.js</code> files under the package's top-level directory.</p>
-  <p>OU ICE's <code>package.json</code> contains some additional metadata under the following keys:</p>
+  <p>You can also install OU Web UI using <a href="https://www.npmjs.com">npm</a>:</p>
+  {% highlight bash %}$ npm install ou-web-ui{% endhighlight %}
+  <p><code>require('ou-web-ui')</code> will load all of OU Web UI's jQuery plugins onto the jQuery object. The <code>ou-web-ui</code> module itself does not export anything. You can manually load OU Web UI's jQuery plugins individually by loading the <code>/js/*.js</code> files under the package's top-level directory.</p>
+  <p>OU Web UI's <code>package.json</code> contains some additional metadata under the following keys:</p>
   <ul>
-    <li><code>less</code> - path to OU ICE's main <a href="http://lesscss.org">Less</a> source file</li>
-    <li><code>style</code> - path to OU ICE's non-minified CSS that's been precompiled using the default settings (no customization)</li>
+    <li><code>less</code> - path to OU Web UI's main <a href="http://lesscss.org">Less</a> source file</li>
+    <li><code>style</code> - path to OU Web UI's non-minified CSS that's been precompiled using the default settings (no customization)</li>
   </ul>
 
   <h2 id="download-composer">Install with Composer</h2>
-  <p>You can also install and manage OU ICE's Less, CSS, JavaScript, and fonts using <a href="https://getcomposer.org">Composer</a>:</p>
-  {% highlight bash %}$ composer require the-open-university/ouice{% endhighlight %}
+  <p>You can also install and manage OU Web UI's Less, CSS, JavaScript, and fonts using <a href="https://getcomposer.org">Composer</a>:</p>
+  {% highlight bash %}$ composer require the-open-university/ou-web-ui{% endhighlight %}
 
   <h2 id="download-autoprefixer">Autoprefixer required for Less/Sass</h2>
-  <p>OU ICE uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to deal with <a href="http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm">CSS vendor prefixes</a>. If you're compiling OU ICE from its Less/Sass source and not using our Gruntfile, you'll need to integrate Autoprefixer into your build process yourself. If you're using precompiled OU ICE or using our Gruntfile, you don't need to worry about this because Autoprefixer is already integrated into our Gruntfile.</p>
+  <p>OU Web UI uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> to deal with <a href="http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm">CSS vendor prefixes</a>. If you're compiling OU Web UI from its Less/Sass source and not using our Gruntfile, you'll need to integrate Autoprefixer into your build process yourself. If you're using precompiled OU Web UI or using our Gruntfile, you don't need to worry about this because Autoprefixer is already integrated into our Gruntfile.</p>
 </div>

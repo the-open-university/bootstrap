@@ -1,31 +1,31 @@
 <div class="bs-docs-section">
   <h1 id="whats-included" class="page-header">What's included</h1>
 
-  <p class="lead">OU ICE is downloadable in two forms, within which you'll find the following directories and files, logically grouping common resources and providing both compiled and minified variations.</p>
+  <p class="lead">OU Web UI is downloadable in two forms, within which you'll find the following directories and files, logically grouping common resources and providing both compiled and minified variations.</p>
 
   <div class="bs-callout bs-callout-warning" id="jquery-required">
     <h4>jQuery required</h4>
     <p>Please note that <strong>all JavaScript plugins require jQuery</strong> to be included, as shown in the <a href="#template">starter template</a>. <a href="{{ site.repo }}/blob/v{{ site.current_version }}/bower.json">Consult our <code>bower.json</code></a> to see which versions of jQuery are supported.</p>
   </div>
 
-  <h2 id="whats-included-precompiled">Precompiled OU ICE</h2>
-  <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) OU ICE. You'll see something like this:</p>
+  <h2 id="whats-included-precompiled">Precompiled OU Web UI</h2>
+  <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) OU Web UI. You'll see something like this:</p>
 <!-- NOTE: This info is intentionally duplicated in the README.
 Copy any changes made here over to the README too. -->
 {% highlight bash %}
-ouice/
+ou-web-ui/
 ├── css/
-│   ├── ouice.css
-│   ├── ouice.css.map
-│   ├── ouice.min.css
-│   ├── ouice.min.css.map
-│   ├── ouice-theme.css
-│   ├── ouice-theme.css.map
-│   ├── ouice-theme.min.css
-│   └── ouice-theme.min.css.map
+│   ├── ou-web-ui.css
+│   ├── ou-web-ui.css.map
+│   ├── ou-web-ui.min.css
+│   ├── ou-web-ui.min.css.map
+│   ├── ou-web-ui-theme.css
+│   ├── ou-web-ui-theme.css.map
+│   ├── ou-web-ui-theme.min.css
+│   └── ou-web-ui-theme.min.css.map
 ├── js/
-│   ├── ouice.js
-│   └── ouice.min.js
+│   ├── ou-web-ui.js
+│   └── ou-web-ui.min.js
 └── fonts/
     ├── glyphicons-halflings-regular.eot
     ├── glyphicons-halflings-regular.svg
@@ -35,12 +35,12 @@ ouice/
 {% endhighlight %}
 <!-- NOTE: This info is intentionally duplicated in the README.
 Copy any changes made here over to the README too. -->
-  <p>This is the most basic form of OU ICE: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (<code>ouice.*</code>), as well as compiled and minified CSS and JS (<code>ouice.min.*</code>). CSS <a href="https://developer.chrome.com/devtools/docs/css-preprocessors">source maps</a> (<code>ouice.*.map</code>) are available for use with certain browsers' developer tools. Fonts from Glyphicons are included, as is the optional OU ICE theme.</p>
+  <p>This is the most basic form of OU Web UI: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (<code>ou-web-ui.*</code>), as well as compiled and minified CSS and JS (<code>ou-web-ui.min.*</code>). CSS <a href="https://developer.chrome.com/devtools/docs/css-preprocessors">source maps</a> (<code>ou-web-ui.*.map</code>) are available for use with certain browsers' developer tools. Fonts from Glyphicons are included, as is the optional OU Web UI theme.</p>
 
-  <h2 id="whats-included-source">OU ICE source code</h2>
-  <p>The OU ICE source code download includes the precompiled CSS, JavaScript, and font assets, along with source Less, JavaScript, and documentation. More specifically, it includes the following and more:</p>
+  <h2 id="whats-included-source">OU Web UI source code</h2>
+  <p>The OU Web UI source code download includes the precompiled CSS, JavaScript, and font assets, along with source Less, JavaScript, and documentation. More specifically, it includes the following and more:</p>
 {% highlight bash %}
-ouice/
+ou-web-ui/
 ├── less/
 ├── js/
 ├── fonts/
@@ -51,5 +51,5 @@ ouice/
 └── docs/
     └── examples/
 {% endhighlight %}
-  <p>The <code>less/</code>, <code>js/</code>, and <code>fonts/</code> are the source code for our CSS, JS, and icon fonts (respectively). The <code>dist/</code> folder includes everything listed in the precompiled download section above. The <code>docs/</code> folder includes the source code for our documentation, and <code>examples/</code> of OU ICE usage. Beyond that, any other included file provides support for packages, license information, and development.</p>
+  <p>The <code>less/</code>, <code>js/</code>, and <code>fonts/</code> are the source code for our CSS, JS, and icon fonts (respectively). The <code>dist/</code> folder includes everything listed in the precompiled download section above. The <code>docs/</code> folder includes the source code for our documentation, and <code>examples/</code> of OU Web UI usage. Beyond that, any other included file provides support for packages, license information, and development.</p>
 </div>
