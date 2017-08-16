@@ -20,15 +20,27 @@
 }
 .pullout-right {
 	float: right !important;
+  width: 40%;
 	margin: 0 0 15px 25px;
 }
 .pullout-left {
 	float: left !important;
+  width: 40%;
 	margin: 0 25px 15px 0;
 }
 .pullout-centre {
 	display: block;
 	margin: 0 auto 15px auto;
+}
+
+@media(max-width: @screen-xs-max) {
+  .pullout-right,
+  .pullout-left,
+  .pullour-centre {
+    width: 100%;
+    float: none;
+    margin: 0 0 20px 0;
+  }
 }
 
 
