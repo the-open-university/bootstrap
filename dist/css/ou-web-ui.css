@@ -3381,13 +3381,13 @@
 }
 .ou-web-ui .btn-default {
   color: #fff;
-  background-color: #888;
+  background-color: #767676;
   border-color: #ccc;
 }
 .ou-web-ui .btn-default:focus,
 .ou-web-ui .btn-default.focus {
   color: #fff;
-  background-color: #6f6f6f;
+  background-color: #5d5d5d;
   border-color: #8c8c8c;
 }
 .ou-web-ui .btn-default:hover {
@@ -3399,7 +3399,7 @@
 .ou-web-ui .btn-default.active,
 .ou-web-ui .open > .dropdown-toggle.btn-default {
   color: #fff;
-  background-color: #6f6f6f;
+  background-color: #5d5d5d;
   border-color: #adadad;
 }
 .ou-web-ui .btn-default:active:hover,
@@ -3412,7 +3412,7 @@
 .ou-web-ui .btn-default.active.focus,
 .ou-web-ui .open > .dropdown-toggle.btn-default.focus {
   color: #fff;
-  background-color: #5d5d5d;
+  background-color: #4b4b4b;
   border-color: #8c8c8c;
 }
 .ou-web-ui .btn-default:active,
@@ -3433,7 +3433,7 @@
   border-color: #ccc;
 }
 .ou-web-ui .btn-default .badge {
-  color: #888;
+  color: #767676;
   background-color: #fff;
 }
 .ou-web-ui .btn-primary {
@@ -6565,6 +6565,7 @@
   position: relative;
   color: #222;
   background-color: #e7eff7;
+  border-bottom: 1px solid #eee;
 }
 @media (min-width: 768px) {
   .ou-web-ui .creative {
