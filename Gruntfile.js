@@ -41,7 +41,7 @@ module.exports = function (grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
-            ' * Bootstrap v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * OU Web UI v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2011-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under the <%= pkg.license %> license\n' +
             ' */\n',
@@ -104,7 +104,7 @@ module.exports = function (grunt) {
         banner: '<%= banner %>\n<%= jqueryCheck %>\n<%= jqueryVersionCheck %>',
         stripBanners: false
       },
-      bootstrap: {
+      ouwebui: {
         src: [
           'js/transition.js',
           'js/alert.js',
@@ -132,7 +132,7 @@ module.exports = function (grunt) {
         preserveComments: /^!|@preserve|@license|@cc_on/i
       },
       core: {
-        src: '<%= concat.bootstrap.dest %>',
+        src: '<%= concat.ouwebui.dest %>',
         dest: 'dist/js/<%= pkg.name %>.min.js'
       },
       customize: {
@@ -153,6 +153,13 @@ module.exports = function (grunt) {
     },
 
     less: {
+      compileBootstrap: {
+        options: {
+          strictMath: true
+        },
+        src: 'less/bootstrap.less',
+        dest: 'dist/css/bootstrap.css'
+      },
       compileCore: {
         options: {
           strictMath: true,
@@ -161,9 +168,13 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= pkg.name %>.css.map',
           sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
         },
-        src: 'less/bootstrap.less',
+        src: 'less/<%= pkg.name %>.less',
         dest: 'dist/css/<%= pkg.name %>.css'
-      },
+      }
+      /*,
+
+      // Removed theme compilation to simplify dist files. - JB
+
       compileTheme: {
         options: {
           strictMath: true,
@@ -174,7 +185,7 @@ module.exports = function (grunt) {
         },
         src: 'less/theme.less',
         dest: 'dist/css/<%= pkg.name %>-theme.css'
-      }
+      }*/
     },
 
     autoprefixer: {
@@ -187,12 +198,13 @@ module.exports = function (grunt) {
         },
         src: 'dist/css/<%= pkg.name %>.css'
       },
+      /*
       theme: {
         options: {
           map: true
         },
         src: 'dist/css/<%= pkg.name %>-theme.css'
-      },
+      },*/
       docs: {
         src: ['docs/assets/css/src/docs.css']
       },
@@ -209,8 +221,8 @@ module.exports = function (grunt) {
         csslintrc: 'less/.csslintrc'
       },
       dist: [
-        'dist/css/bootstrap.css',
-        'dist/css/bootstrap-theme.css'
+        'dist/css/ou-web-ui.css'/*,
+        'dist/css/ou-web-ui-theme.css'*/
       ],
       examples: [
         'docs/examples/**/*.css'
@@ -237,11 +249,11 @@ module.exports = function (grunt) {
       minifyCore: {
         src: 'dist/css/<%= pkg.name %>.css',
         dest: 'dist/css/<%= pkg.name %>.min.css'
-      },
+      },/*
       minifyTheme: {
         src: 'dist/css/<%= pkg.name %>-theme.css',
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
-      },
+      },*/
       docs: {
         src: [
           'docs/assets/css/ie10-viewport-bug-workaround.css',
@@ -278,6 +290,10 @@ module.exports = function (grunt) {
       fonts: {
         expand: true,
         src: 'fonts/**',
+        dest: 'dist/'
+      },
+      images: {
+        src: 'img/**',
         dest: 'dist/'
       },
       docs: {
@@ -411,7 +427,7 @@ module.exports = function (grunt) {
     compress: {
       main: {
         options: {
-          archive: 'bootstrap-<%= pkg.version %>-dist.zip',
+          archive: 'ou-web-ui-<%= pkg.version %>-dist.zip',
           mode: 'zip',
           level: 9,
           pretty: true
@@ -421,7 +437,7 @@ module.exports = function (grunt) {
             expand: true,
             cwd: 'dist/',
             src: ['**'],
-            dest: 'bootstrap-<%= pkg.version %>-dist'
+            dest: 'ou-web-ui-<%= pkg.version %>-dist'
           }
         ]
       }
@@ -474,14 +490,14 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify:core', 'commonjs']);
 
   // CSS distribution task.
-  grunt.registerTask('less-compile', ['less:compileCore', 'less:compileTheme']);
-  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core', 'autoprefixer:theme', 'csscomb:dist', 'cssmin:minifyCore', 'cssmin:minifyTheme']);
+  grunt.registerTask('less-compile', ['less:compileBootstrap', 'less:compileCore'/*, 'less:compileTheme'*/]);
+  grunt.registerTask('dist-css', ['less-compile', 'autoprefixer:core'/*, 'autoprefixer:theme'*/, 'csscomb:dist', 'cssmin:minifyCore'/*, 'cssmin:minifyTheme'*/]);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);
+  grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js']);
 
   // Default task.
-  grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);
+  grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'copy:images', 'test']);
 
   grunt.registerTask('build-glyphicons-data', function () { generateGlyphiconsData.call(this, grunt); });
 
@@ -494,7 +510,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('commonjs', 'Generate CommonJS entrypoint module in dist dir.', function () {
-    var srcFiles = grunt.config.get('concat.bootstrap.src');
+    var srcFiles = grunt.config.get('concat.ouwebui.src');
     var destFilepath = 'dist/js/npm.js';
     generateCommonJSModule(grunt, srcFiles, destFilepath);
   });

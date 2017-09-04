@@ -15,7 +15,7 @@
     <p>There are some caveats regarding using modals on mobile devices. <a href="../getting-started/#support-fixed-position-keyboards">See our browser support docs</a> for details.</p>
   </div>
 
-  <p><strong class="text-danger">Due to how HTML5 defines its semantics, the <code>autofocus</code> HTML attribute has no effect in Bootstrap modals.</strong> To achieve the same effect, use some custom JavaScript:</p>
+  <p><strong class="text-danger">Due to how HTML5 defines its semantics, the <code>autofocus</code> HTML attribute has no effect in OU Web UI modals.</strong> To achieve the same effect, use some custom JavaScript:</p>
 {% highlight js %}
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').focus()
@@ -147,7 +147,7 @@ $('#myModal').on('shown.bs.modal', function () {
 
   <div class="bs-callout bs-callout-info" id="callout-modal-youtube">
     <h4>Embedding YouTube videos</h4>
-    <p>Embedding YouTube videos in modals requires additional JavaScript not in Bootstrap to automatically stop playback and more. <a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">See this helpful Stack Overflow post</a> for more information.</p>
+    <p>Embedding YouTube videos in modals requires additional JavaScript not in OU Web UI to automatically stop playback and more. <a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">See this helpful Stack Overflow post</a> for more information.</p>
   </div>
 
   <h2 id="modals-sizes">Optional sizes</h2>
@@ -219,7 +219,7 @@ $('#myModal').on('shown.bs.modal', function () {
 {% endhighlight %}
 
   <h2 id="modals-grid-system">Using the grid system</h2>
-  <p>To take advantage of the Bootstrap grid system within a modal, just nest <code>.row</code>s within the <code>.modal-body</code> and then use the normal grid system classes.</p>
+  <p>To take advantage of the OU Web UI grid system within a modal, just nest <code>.row</code>s within the <code>.modal-body</code> and then use the normal grid system classes.</p>
 <!-- sample modal content -->
   <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
     <div class="modal-dialog" role="document">
@@ -478,7 +478,7 @@ $('#myModal').modal({
   {% highlight js %}$('#myModal').modal('handleUpdate'){% endhighlight %}
 
   <h3 id="modals-events">Events</h3>
-  <p>Bootstrap's modal class exposes a few events for hooking into modal functionality.</p>
+  <p>OU Web UI's modal class exposes a few events for hooking into modal functionality.</p>
   <p>All modal events are fired at the modal itself (i.e. at the <code>&lt;div class="modal"&gt;</code>).</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped bs-events-table">

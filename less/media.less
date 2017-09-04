@@ -1,9 +1,13 @@
 .media {
+  border-bottom: 1px solid #ddd;
   // Proper spacing between instances of .media
-  margin-top: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 
-  &:first-child {
-    margin-top: 0;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -15,6 +19,19 @@
 
 .media-body {
   width: 10000px;
+
+  // Nested media object
+  > .media {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 0;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
 }
 
 .media-object {
@@ -28,12 +45,12 @@
 
 .media-right,
 .media > .pull-right {
-  padding-left: 10px;
+  padding-left: @margin-base;
 }
 
 .media-left,
 .media > .pull-left {
-  padding-right: 10px;
+  padding-right: @margin-base;
 }
 
 .media-left,
@@ -55,6 +72,10 @@
 .media-heading {
   margin-top: 0;
   margin-bottom: 5px;
+
+  a {
+    display: block;
+  }
 }
 
 // Media list variation
@@ -63,4 +84,72 @@
 .media-list {
   padding-left: 0;
   list-style: none;
+}
+
+// Set some implicit image sizes
+.media {
+  .media-left {
+    img {
+      width: 140px;
+    }
+  }
+
+  &.media-lg {
+    .media-left {
+      img {
+        width: 180px;
+      }
+    }
+  }
+
+  &.media-sm {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+    .media-left {
+      padding-right: (@margin-base/2);
+
+      img {
+        width: 90px;
+      }
+    }
+
+    .media-body {
+      .media-heading {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// Striped
+.media-striped {
+  .media {
+    padding: @margin-base;
+    margin: 0;
+    border: 0;
+
+    &:nth-child(odd) {
+      background: #e7eff7;
+    }
+  }
+}
+
+// Stacked
+.media-stacked {
+  .media {
+    padding-bottom: 0;
+    border: 0;
+
+    .media-left {
+      display: block;
+      padding: 0;
+      margin-bottom: (@margin-base/2);
+
+      img {
+        .img-responsive();
+        width: auto;
+      }
+    }
+  }
 }

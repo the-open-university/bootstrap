@@ -1,0 +1,40 @@
+
+/*! Namespace all styles */
+.ou-web-ui {
+	/*!
+	Import pre-compiled core bootstrap so that prefixing works correctly, see https://github.com/less/less.js/issues/2052#issuecomment-45681469 for an
+	explanation of the issues surrounding Bootstrap and LESS's "Parent Selectors"
+	and namespacing.
+	*/
+
+	@import (less) "../dist/css/bootstrap.css";
+
+
+	/*! Core variables and mixins */
+	@import (reference) "variables.less";
+	@import (reference) "mixins.less";
+
+	/*!
+	Re-iterate out-of-scope styles on the root class - see:
+	https://github.com/the-open-university/ou-web-ui/issues/1
+	*/
+
+	/*! normalize.less - html */
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+	/*! normalize.less - body */
+	margin: 0;
+
+	/*! scaffolding.less - html */
+	font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	/*! scaffolding.less - body */
+	font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+  background-color: @body-bg;
+}

@@ -26,17 +26,6 @@
       <div class="media-body">
         <h4 class="media-heading">Media heading</h4>
         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-        <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <img class="media-object" data-src="holder.js/64x64" alt="Generic placeholder image">
-            </a>
-          </div>
-          <div class="media-body">
-            <h4 class="media-heading">Nested media heading</h4>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </div>
-        </div>
       </div>
     </div>
     <div class="media">
@@ -158,7 +147,7 @@
             </div>
             <div class="media-body">
               <h4 class="media-heading">Nested media heading</h4>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
               <!-- Nested media object -->
               <div class="media">
                 <div class="media-left">
@@ -168,7 +157,7 @@
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading">Nested media heading</h4>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                  <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
                 </div>
               </div>
             </div>
@@ -182,7 +171,7 @@
             </div>
             <div class="media-body">
               <h4 class="media-heading">Nested media heading</h4>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+              <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
             </div>
           </div>
         </div>
@@ -203,5 +192,53 @@
     </div>
   </li>
 </ul>
+{% endhighlight %}
+
+  <h2 id="media-stacked">Stacked media</h2>
+  <p>If you would prefer your media objects to appear above the textual content, use <code>.media-stacked</code> on the parent element.</p>
+
+  <div class="bs-example" data-example-id="media-stacked">
+    <div class="blocks cols-3 media-stacked">
+
+      <div class="media">
+        <div class="media-left">
+          <a href="#"><img data-src="holder.js/250x100" alt="Generic placeholder image"></a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><a href="#">Title one</a></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adpiscing elit. Aliquam dolor nisi, feugiat sit amet lacinia sit amet, maltis eu neque.</p>
+        </div>
+      </div>
+
+      <div class="media">
+        <div class="media-left">
+          <a href="#"><img data-src="holder.js/250x100" alt="Generic placeholder image"></a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><a href="#">Title two</a></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adpiscing elit.</p>
+        </div>
+      </div>
+
+      <div class="media">
+        <div class="media-left">
+          <a href="#"><img data-src="holder.js/250x100" alt="Generic placeholder image"></a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><a href="#">Title three</a></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adpiscing elit. Aliquam dolor nisi.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% highlight html %}
+<div class="media-stacked">
+  <div class="media">
+    ...
+  </div>
+  ...
+</div>
 {% endhighlight %}
 </div>

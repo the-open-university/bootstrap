@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "ou-web-ui",
+  "description": "OU Web UI is a set of design patterns, components and templates so we can provide our students with a consistent user experience.",
   "version": "3.3.7",
   "keywords": [
     "css",
@@ -11,22 +11,22 @@
     "framework",
     "web"
   ],
-  "homepage": "http://getbootstrap.com",
-  "author": "Twitter, Inc.",
+  "homepage": "http://the-open-university.github.io/ou-web-ui",
+  "author": "The Open University",
   "scripts": {
     "change-version": "node grunt/change-version.js",
     "update-shrinkwrap": "npm shrinkwrap --dev && shx mv ./npm-shrinkwrap.json ./grunt/npm-shrinkwrap.json",
     "test": "grunt test"
   },
-  "style": "dist/css/bootstrap.css",
-  "less": "less/bootstrap.less",
+  "style": "dist/css/ou-web-ui.css",
+  "less": "less/ou-web-ui.less",
   "main": "./dist/js/npm",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/bootstrap.git"
+    "url": "https://github.com/the-open-university/ou-web-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/bootstrap/issues"
+    "url": "https://github.com/the-open-university/ou-web-ui/issues"
   },
   "license": "MIT",
   "devDependencies": {
@@ -73,9 +73,9 @@
     "LICENSE"
   ],
   "jspm": {
-    "main": "js/bootstrap",
+    "main": "js/ou-web-ui",
     "shim": {
-      "js/bootstrap": {
+      "js/ou-web-ui": {
         "deps": "jquery",
         "exports": "$"
       }

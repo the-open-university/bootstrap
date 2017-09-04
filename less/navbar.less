@@ -12,7 +12,6 @@
   position: relative;
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
-  border: 1px solid transparent;
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
@@ -232,10 +231,15 @@
 .navbar-nav {
   margin: (@navbar-padding-vertical / 2) -@navbar-padding-horizontal;
 
-  > li > a {
-    padding-top:    10px;
-    padding-bottom: 10px;
-    line-height: @line-height-computed;
+  > li {
+
+    > a {
+      padding-top:    10px;
+      padding-bottom: 10px;
+      padding-left:   (@margin-base/2);
+      padding-right:  (@margin-base/2);
+      line-height: @line-height-computed;
+    }
   }
 
   @media (max-width: @grid-float-breakpoint-max) {
@@ -269,9 +273,17 @@
 
     > li {
       float: left;
+      margin-right: @margin-base;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
       > a {
         padding-top:    @navbar-padding-vertical;
         padding-bottom: @navbar-padding-vertical;
+        padding-left:   0;
+        padding-right:  0;
       }
     }
   }
@@ -381,6 +393,15 @@
     .pull-right();
     margin-right: -@navbar-padding-horizontal;
 
+    > li {
+      margin-right: 0;
+      margin-left: @margin-base;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
     ~ .navbar-right {
       margin-right: 0;
     }
@@ -395,6 +416,7 @@
 .navbar-default {
   background-color: @navbar-default-bg;
   border-color: @navbar-default-border;
+  border-bottom: 1px solid @navbar-default-border;
 
   .navbar-brand {
     color: @navbar-default-brand-color;
@@ -412,19 +434,23 @@
   .navbar-nav {
     > li > a {
       color: @navbar-default-link-color;
+      border-bottom: 2px solid transparent;
 
       &:hover,
       &:focus {
         color: @navbar-default-link-hover-color;
         background-color: @navbar-default-link-hover-bg;
+        border-bottom-color: #ccc;
       }
     }
     > .active > a {
       &,
       &:hover,
       &:focus {
+        font-weight: bold;
         color: @navbar-default-link-active-color;
         background-color: @navbar-default-link-active-bg;
+        border-bottom-color: #036;
       }
     }
     > .disabled > a {

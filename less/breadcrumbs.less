@@ -5,6 +5,7 @@
 
 .breadcrumb {
   padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
+  margin-top: @line-height-computed;
   margin-bottom: @line-height-computed;
   list-style: none;
   background-color: @breadcrumb-bg;
@@ -17,6 +18,9 @@
       content: "@{breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
       padding: 0 5px;
       color: @breadcrumb-color;
+      background-color: transparent;
+      font-family: "Hiragino Mincho ProN";
+      font-size: 10px;
     }
   }
 

@@ -14,16 +14,56 @@
     > a,
     > span {
       display: inline-block;
-      padding: 5px 14px;
+      padding: @padding-base-vertical @padding-base-horizontal;
       background-color: @pager-bg;
       border: 1px solid @pager-border;
-      border-radius: @pager-border-radius;
+
+      &:before,
+      &:after {
+        color: #999;
+        background-color: transparent;
+        font-family: "Hiragino Mincho ProN";
+        font-size: 10px;
+        content: "\25c0";
+        display: inline-block;
+        margin: 0 6px 0 0;
+      }
     }
 
     > a:hover,
     > a:focus {
       text-decoration: none;
       background-color: @pager-hover-bg;
+      border-color: @pager-hover-bg;
+      color: #ffffff;
+
+      &:before,
+      &:after {
+        color: #ffffff;
+      }
+    }
+
+    &:first-child {
+      a {
+        border-color: transparent;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &:last-child {
+      a {
+        &:before {
+          display: none;
+        }
+
+        &:after {
+          content: "\25b6";
+          margin: 0 0 0 6px;
+        }
+      }
     }
   }
 

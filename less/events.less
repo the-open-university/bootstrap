@@ -1,0 +1,135 @@
+
+/*
+-------------------------------------------
+	Events
+-------------------------------------------
+*/
+
+.events {
+
+  .pager {
+    background-color: #eee;
+
+    li {
+      background-color: transparent;
+
+      a {
+        border: none;
+        background-color: transparent;
+
+        &:hover {
+          background-color: @brand-primary;
+        }
+      }
+
+      &:first-child {
+        a {
+          border-right: 1px solid #ddd;
+        }
+      }
+
+      &:nth-child(2) {
+        display: inline-block;
+        padding: 10px 15px;
+        font-weight: bold;
+      }
+
+      &:last-child {
+        a {
+          border-left: 1px solid #ddd;
+        }
+      }
+    }
+  }
+
+  .event {
+  	border-bottom: 1px solid #eee;
+  	margin: 0 0 15px 0;
+  	padding-bottom: 15px;
+  	min-height: 90px;
+
+    &:last-child {
+      border-bottom:0;
+    }
+  }
+
+  .date {
+  	width: 55px;
+    height: auto;
+    float: left;
+    margin: 3px 10px 0 0;
+
+    em {
+    	font-style: normal;
+      font-size: .9em;
+      color: #fff;
+      background-color: #E3294A;
+      padding: 3px;
+      text-align: center;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    strong {
+    	text-align: center;
+      color: #000;
+      background-color: #eee;
+      font-size: 25px;
+      font-weight: normal;
+      display: block;
+      padding: 5px 0;
+    	border-radius: 0 0 4px 4px;
+    }
+
+    &.multiple {
+      strong {
+        font-size: 16px;
+        padding: 11px 0;
+      }
+    }
+  }
+
+  .details {
+    margin-left: 75px;
+
+    .event-heading {
+    	font-size: 16px;
+    	margin: 0 0 6px 0;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    time,
+    .location,
+    .contact {
+      display: block;
+    	background-color: transparent;
+      color: #777;
+      font-size: 13px;
+    	margin: 0 0 5px 0;
+      line-height: 1.2;
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      margin: 0 0 5px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.ou-events--single {
+    .ou-events__event-description {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,14 +1,14 @@
 <div class="bs-docs-section">
   <h1 id="less" class="page-header">Using Less</h1>
 
-  <p class="lead">Bootstrap's CSS is built on Less, a preprocessor with additional functionality like variables, mixins, and functions for compiling CSS. Those looking to use the source Less files instead of our compiled CSS files can make use of the numerous variables and mixins we use throughout the framework.</p>
+  <p class="lead">OU Web UI's CSS is built on Less, a preprocessor with additional functionality like variables, mixins, and functions for compiling CSS. Those looking to use the source Less files instead of our compiled CSS files can make use of the numerous variables and mixins we use throughout the framework.</p>
 
   <p>Grid variables and mixins are covered <a href="#grid-less">within the Grid system section</a>.</p>
 
 
-  <h2 id="less-bootstrap">Compiling Bootstrap</h2>
-  <p>Bootstrap can be used in at least two ways: with the compiled CSS or with the source Less files. To compile the Less files, <a href="../getting-started/#grunt">consult the Getting Started section</a> for how to setup your development environment to run the necessary commands.</p>
-  <p>Third party compilation tools may work with Bootstrap, but they are not supported by our core team.</p>
+  <h2 id="less-ou-web-ui">Compiling OU Web UI</h2>
+  <p>OU Web UI can be used in at least two ways: with the compiled CSS or with the source Less files. To compile the Less files, <a href="../getting-started/#grunt">consult the Getting Started section</a> for how to setup your development environment to run the necessary commands.</p>
+  <p>Third party compilation tools may work with OU Web UI, but they are not supported by our core team.</p>
 
   <h2 id="less-variables">Variables</h2>
   <p>Variables are used throughout the entire project as a way to centralize and share commonly used values like colors, spacing, or font stacks. For a complete breakdown, please see <a href="../customize/#less-variables-section">the Customizer</a>.</p>
@@ -92,7 +92,7 @@ a {
   <p>Note that the <code>@link-hover-color</code> uses a function, another awesome tool from Less, to automagically create the right hover color. You can use <code>darken</code>, <code>lighten</code>, <code>saturate</code>, and <code>desaturate</code>.</p>
 
   <h3 id="less-variables-typography">Typography</h3>
-  <p>Easily set your typeface, text size, leading, and more with a few quick variables. Bootstrap makes use of these as well to provide easy typographic mixins.</p>
+  <p>Easily set your typeface, text size, leading, and more with a few quick variables. OU Web UI makes use of these as well to provide easy typographic mixins.</p>
 {% highlight scss %}
 @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
@@ -127,7 +127,7 @@ a {
 {% endhighlight %}
 
   <h3 id="less-variables-components">Components</h3>
-  <p>Components throughout Bootstrap make use of some default variables for setting common values. Here are the most commonly used.</p>
+  <p>Components throughout OU Web UI make use of some default variables for setting common values. Here are the most commonly used.</p>
 {% highlight scss %}
 @padding-base-vertical:          6px;
 @padding-base-horizontal:        12px;
@@ -162,7 +162,6 @@ a {
 
   <h3 id="less-mixins-box-sizing">Box-sizing</h3>
   <p>Reset your components' box model with a single mixin. For context, see this <a href="https://developer.mozilla.org/en-US/docs/CSS/box-sizing" target="_blank">helpful article from Mozilla</a>.</p>
-  <p>The mixin is <strong>deprecated</strong> as of v3.2.0, with the introduction of Autoprefixer. To preserve backwards-compatibility, Bootstrap will continue to use the mixin internally until Bootstrap v4.</p>
 {% highlight scss %}
 .box-sizing(@box-model) {
   -webkit-box-sizing: @box-model; // Safari <= 5
@@ -172,7 +171,7 @@ a {
 {% endhighlight %}
 
   <h3 id="less-mixins-rounded-corners">Rounded corners</h3>
-  <p>Today all modern browsers support the non-prefixed <code>border-radius</code> property. As such, there is no <code>.border-radius()</code> mixin, but Bootstrap does include shortcuts for quickly rounding two corners on a particular side of an object.</p>
+  <p>Today all modern browsers support the non-prefixed <code>border-radius</code> property. As such, there is no <code>.border-radius()</code> mixin, but OU Web UI does include shortcuts for quickly rounding two corners on a particular side of an object.</p>
 {% highlight scss %}
 .border-top-radius(@radius) {
   border-top-right-radius: @radius;
@@ -194,7 +193,6 @@ a {
 
   <h3 id="less-mixins-box-shadow">Box (Drop) shadows</h3>
   <p>If your target audience is using the latest and greatest browsers and devices, be sure to just use the <code>box-shadow</code> property on its own. If you need support for older Android (pre-v4) and iOS devices (pre-iOS 5), use the <strong>deprecated</strong> mixin to pick up the required <code>-webkit</code> prefix.</p>
-  <p>The mixin is <strong>deprecated</strong> as of v3.1.0, since Bootstrap doesn't officially support the outdated platforms that don't support the standard property. To preserve backwards-compatibility, Bootstrap will continue to use the mixin internally until Bootstrap v4.</p>
   <p>Be sure to use <code>rgba()</code> colors in your box shadows so they blend as seamlessly as possible with backgrounds.</p>
 {% highlight scss %}
 .box-shadow(@shadow: 0 1px 3px rgba(0,0,0,.25)) {
@@ -205,7 +203,6 @@ a {
 
   <h3 id="less-mixins-transitions">Transitions</h3>
   <p>Multiple mixins for flexibility. Set all transition information with one, or specify a separate delay and duration as needed.</p>
-  <p>The mixins are <strong>deprecated</strong> as of v3.2.0, with the introduction of Autoprefixer. To preserve backwards-compatibility, Bootstrap will continue to use the mixins internally until Bootstrap v4.</p>
 {% highlight scss %}
 .transition(@transition) {
   -webkit-transition: @transition;
@@ -237,7 +234,6 @@ a {
 
   <h3 id="less-mixins-transformations">Transformations</h3>
   <p>Rotate, scale, translate (move), or skew any object.</p>
-  <p>The mixins are <strong>deprecated</strong> as of v3.2.0, with the introduction of Autoprefixer. To preserve backwards-compatibility, Bootstrap will continue to use the mixins internally until Bootstrap v4.</p>
 {% highlight scss %}
 .rotate(@degrees) {
   -webkit-transform: rotate(@degrees);
@@ -294,7 +290,6 @@ a {
 
   <h3 id="less-mixins-animations">Animations</h3>
   <p>A single mixin for using all of CSS3's animation properties in one declaration and other mixins for individual properties.</p>
-  <p>The mixins are <strong>deprecated</strong> as of v3.2.0, with the introduction of Autoprefixer. To preserve backwards-compatibility, Bootstrap will continue to use the mixins internally until Bootstrap v4.</p>
 {% highlight scss %}
 .animation(@animation) {
   -webkit-animation: @animation;
@@ -474,7 +469,7 @@ a {
 {% endhighlight %}
 
   <h3 id="less-mixins-retina-images">Retina images</h3>
-  <p>Specify two image paths and the @1x image dimensions, and Bootstrap will provide an @2x media query. <strong>If you have many images to serve, consider writing your retina image CSS manually in a single media query.</strong></p>
+  <p>Specify two image paths and the @1x image dimensions, and OU Web UI will provide an @2x media query. <strong>If you have many images to serve, consider writing your retina image CSS manually in a single media query.</strong></p>
 {% highlight scss %}
 .img-retina(@file-1x; @file-2x; @width-1x; @height-1x) {
   background-image: url("@{file-1x}");

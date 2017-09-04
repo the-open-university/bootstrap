@@ -8,14 +8,14 @@
 
 .btn {
   display: inline-block;
-  margin-bottom: 0; // For input.btn
+  margin-bottom: (@margin-base/2);
   font-weight: @btn-font-weight;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
+  border: 0;
   white-space: nowrap;
   .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
   .user-select(none);
@@ -46,8 +46,8 @@
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
+    background-color: #ccc;
     cursor: @cursor-disabled;
-    .opacity(.65);
     .box-shadow(none);
   }
 
@@ -57,6 +57,10 @@
       pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
     }
   }
+}
+
+input.btn {
+  margin-bottom: 0;
 }
 
 
@@ -91,7 +95,9 @@
 // -------------------------
 
 // Make a button look and behave like a link
-.btn-link {
+
+.btn-link,
+.btn-top {
   color: @link-color;
   font-weight: normal;
   border-radius: 0;
@@ -126,6 +132,25 @@
   }
 }
 
+// Back to top button
+// --------------------------------------------------
+
+.btn-top {
+  &:before {
+    color: #ccc;
+    background-color: transparent;
+    font-size: 12px;
+    content: "\25b2";
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  &:hover {
+    &:before {
+      color: @brand-primary;
+    }
+  }
+}
 
 // Button Sizes
 // --------------------------------------------------
