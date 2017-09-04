@@ -1,7 +1,7 @@
 {
   "name": "ou-web-ui",
-  "description": "OU Web UI is a set of design patterns, components and templates so we can provide our students with a consistent user experience.",
-  "version": "3.3.7",
+  "description": "OU Web UI is a set of design patterns, components and templates to provide our students with a consistent user experience.",
+  "version": "1.0",
   "keywords": [
     "css",
     "less",

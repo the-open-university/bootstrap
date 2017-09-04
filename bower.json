@@ -1,6 +1,6 @@
 {
-  "name": "bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "ou-web-ui",
+  "description": "OU Web UI is a set of design patterns, components and templates to provide our students with a consistent user experience.",
   "keywords": [
     "css",
     "js",
@@ -11,12 +11,12 @@
     "framework",
     "web"
   ],
-  "homepage": "http://getbootstrap.com",
+  "homepage": "http://the-open-university.github.io/ou-web-ui",
   "license": "MIT",
   "moduleType": "globals",
   "main": [
-    "less/bootstrap.less",
-    "dist/js/bootstrap.js"
+    "less/ou-web-ui.less",
+    "dist/js/ou-web-ui.js"
   ],
   "ignore": [
     "/.*",

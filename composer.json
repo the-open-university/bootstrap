@@ -1,6 +1,6 @@
 {
-  "name": "twbs/bootstrap",
-  "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "name": "the-open-university/ou-web-ui",
+  "description": "OU Web UI is a set of design patterns, components and templates to provide our students with a consistent user experience.",
   "keywords": [
     "css",
     "js",
@@ -11,27 +11,19 @@
     "framework",
     "web"
   ],
-  "homepage": "http://getbootstrap.com",
+  "homepage": "http://the-open-university.github.io/ou-web-ui",
   "authors": [
     {
-      "name": "Mark Otto",
-      "email": "markdotto@gmail.com"
+      "name": "Sam Leicester",
+      "email": "sam.leicester@open.ac.uk"
     },
     {
-      "name": "Jacob Thornton",
-      "email": "jacobthornton@gmail.com"
+      "name": "Jay Bayley",
+      "email": "jay.bayley@open.ac.uk"
     }
   ],
   "support": {
-    "issues": "https://github.com/twbs/bootstrap/issues"
+    "issues": "https://github.com/the-open-university/ou-web-ui/issues"
   },
-  "license": "MIT",
-  "extra": {
-    "branch-alias": {
-      "dev-master": "3.3.x-dev"
-    }
-  },
-  "replace": {
-    "twitter/bootstrap": "self.version"
-  }
+  "license": "MIT"
 }
